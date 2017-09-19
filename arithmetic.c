@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main(const int argc, const char** argv) {
+int main() {
 	float n1 = 10;
 	float n2 = 20;
 	float sum = n1 + n2;
