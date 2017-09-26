@@ -1,7 +1,9 @@
 #include<stdio.h>
 int main() {
-	float n1 = 10;
-	float n2 = 20;
+	float n1;
+	float n2;
+	printf("Enter two numbers: ");
+	scanf("%f %f", &n1, &n2);
 	float sum = n1 + n2;
 	float difference = n1 - n2;
 	float product = n1 * n2;
