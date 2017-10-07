@@ -10,6 +10,14 @@ bool even(int n) {
 	return (n % 2 == 0);
 }
 
+int factorial(int n) {
+	int product = 1;
+	for(int i = n; i > 0; i--) {
+		product = product * i;
+	}
+	return product;
+}
+
 // function to check whether a number is prime or not
 bool prime(int n) {
 	int ctr = 0;
@@ -25,8 +33,8 @@ int main() {
 	puts("Enter an integer number: ");
 	scanf("%d", &number);
 	// menu
-	puts("\nMenu\n1: Prime Number Test\n2: Even Odd Test\n3: Exit\n");
-	puts("Enter your choice (1 | 2 | 3) : ");
+	puts("\nMenu\n1: Prime Number Test\n2: Even Odd Test\n3: Fatorial\n4: Exit\n");
+	puts("Enter your choice (1 | 2 | 3 | 4) : ");
 	scanf("%d", &choice);
 	// cases to switch
 	switch(choice) {
@@ -39,6 +47,9 @@ int main() {
 			puts(((even(number)) ? "Even Number" : "Odd Number"));
 			break;
 		case 3:
+			// print factorial
+			printf("Factorial value is %d\n", factorial(number));
+		case 4:
 			exit(0);
 			break;
 		default:
