@@ -9,9 +9,8 @@ int main() {
 	scanf("%d", &number);
 	// reverse the number
 	int reverse = 0;
-	while(number > 0) {
+	for(; number > 0; number = number / 10) {
 		reverse = (reverse * 10) + (number % 10);
-		number = number / 10;
 	}
 	// print the reversed number
 	printf("Reversed number: %d\n", reverse);
