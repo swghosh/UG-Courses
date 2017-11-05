@@ -9,6 +9,6 @@ int main() {
 	for(ctr = 1; ctr <= n; ctr++) {
 		sum = sum + ctr;
 	}
-	printf("Sum: %d", sum);
+	printf("Sum: %d.\n", sum);
 	return 0;
 }
