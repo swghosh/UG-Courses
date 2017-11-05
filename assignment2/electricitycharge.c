@@ -13,6 +13,7 @@ int main() {
     // take user input
     printf("Enter number of electricity units -> ");
     scanf("%d", &units);
+    // bill when units are more than 250
     if(units > 250) {
         rate = 1.50;
         part = rate * (units - 250);
@@ -21,6 +22,7 @@ int main() {
         part = (100 * 1.20) + (100 * 0.75) + (50 * 0.50);
         bill = bill + part;
     }
+    // bill when units are more than 150    
     else if(units > 150) {
         rate = 1.20;
         part = rate * (units - 150);
@@ -28,6 +30,7 @@ int main() {
         part = (100 * 0.75) + (50 * 0.50);
         bill = bill + part;
     }
+    // bill when units are more than 50    
     else if(units > 50) {
         rate = 0.75;
         part = rate * (units - 50);
@@ -35,6 +38,7 @@ int main() {
         part = (50 * 0.50);
         bill = bill + part;
     }
+    // bill when units are less than 50
     else {
         rate = 0.50;
         part = rate * units;
