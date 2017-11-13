@@ -33,7 +33,7 @@ int main() {
 	puts("Enter an integer number: ");
 	scanf("%d", &number);
 	// menu
-	puts("\nMenu\n1: Prime Number Test\n2: Even Odd Test\n3: Fatorial\n4: Exit\n");
+	puts("\nMenu\n1: Prime Number Test\n2: Even Odd Test\n3: Factorial\n4: Exit\n");
 	puts("Enter your choice (1 | 2 | 3 | 4) : ");
 	scanf("%d", &choice);
 	// cases to switch
