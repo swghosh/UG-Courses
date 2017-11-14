@@ -38,7 +38,7 @@ int main(void) {
     }
 
     // print multiplied array
-    puts("\nSum of matrices: ");
+    puts("\nProduct of matrices: ");
     for(rIndex = 0; rIndex < rSize; rIndex++) {
         printf("| ");
         for(cIndex = 0; cIndex < cSize; cIndex++) {
