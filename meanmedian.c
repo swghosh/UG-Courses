@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stddef.h>
 
-int mean(int*, size_t);
-int median(int*, size_t);
+/* function prototype for mean and median */
+float mean(int*, size_t);
+float median(int*, size_t);
 
+/* main method that is to be executed at runtime */
 int main(void) {
     // take user input of sizes
-    printf("Specify how many numbers you want to enter? (seperated by spaces; integers expected)... ");
+    printf("Specify how many numbers you want to enter? (seperated by spaces, integer expected)... ");
     size_t limit;
     scanf("%lu", &limit);
     int a1[limit];
@@ -16,13 +18,17 @@ int main(void) {
     for(index = 0; index < limit; index++) {
         scanf("%d", &a1[index]);
     }
+    // make a pointer to the required array
     int* numbers = a1;
-    printf("Mean = %d, median = %d.\n", mean(numbers, limit), median(numbers, limit));
+    // print values of mean and median by calling respective functions
+    printf("Mean = %.2f, median = %.2f.\n", mean(numbers, limit), median(numbers, limit));
     return 0;
 }
 
+/* selection sort a given array of integers by passing a pointer to the array and its number of elements */
 int* selectionSort(int* numbers, size_t limit) {
     size_t index, index2;
+    // selection sort
     for(index = 0; index < limit - 1; index++) {
         for(index2 = index + 1; index2 < limit; index2++) {
             if(numbers[index2] < numbers[index]) {
@@ -36,20 +42,28 @@ int* selectionSort(int* numbers, size_t limit) {
     return numbers;
 }
 
-int mean(int* numbers, size_t limit) {
+/* calculate the mean of few numbers by passing a pointer to the array and its number of elements */
+float mean(int* numbers, size_t limit) {
     int sum = 0;
     size_t index;
+    // add all the elements in the array
     for(index = 0; index < limit; index++) {
         sum = sum + numbers[index];
     }
-    return (sum / limit);
+    // return the mean
+    return ((float)sum / limit);
 }
 
-int median(int* numbers, size_t limit) {
+/* calculate the median of few numbers by passing a pointer to the array and its number of elements */
+float median(int* numbers, size_t limit) {
+    // sort the array so as to obtain a sorted array
+    numbers = selectionSort(numbers, limit);
+    // find median in case of even number of elements
     if(limit % 2 == 0) {
-        return (numbers[(limit / 2)] + numbers[(limit / 2) + 1]) / 2;
+        return (float)(numbers[(limit / 2) - 1] + numbers[(limit / 2)]) / 2;
     }
+    // find mode in case of odd number of elements
     else {
-        return numbers[(limit + 1) / 2];
+        return (float)numbers[((limit + 1) / 2) - 1];
     }
 }
