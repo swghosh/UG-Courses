@@ -20,7 +20,7 @@ int main(void) {
 	printf("|%5s | %6s|\n", "Index", "Value");
 	puts("----------------");
 	for(index = 0; index < A_SIZE; index++) {
-		printf("|%5u | %6d|\n", index, a[index]);
+		printf("|%5lu | %6d|\n", index, a[index]);
 	}
 	puts("----------------");
 	return 0;

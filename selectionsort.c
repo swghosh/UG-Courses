@@ -8,7 +8,7 @@ int main(void) {
     // initialise variables
     int a[ARRAY_LIMIT];
     // take user input of size
-    printf("Specify sizes of two collections (seperated by spaces; integers 1-10 expected)... ");
+    printf("Specify size of collection (integer 1-10 expected)... ");
     size_t limit;
     scanf("%lu", &limit);
     // take user input of array elements

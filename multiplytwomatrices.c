@@ -9,7 +9,7 @@ int main(void) {
     puts("Specify the order of the first matrix. (row size followed by column size) (two integers expected)...");
     scanf("%lu %lu", &rSize1, &cSize1);
 
-    puts("Please make sure that you choose that the order of the second matrix be such that it be compatible to be multiplied with te first matrix.");
+    puts("Please make sure that you choose that the order of the second matrix be such that it allow multiplication with the first matrix.");
 
     // take size of second 2D array
     size_t rSize2, cSize2;
