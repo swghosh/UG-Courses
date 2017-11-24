@@ -7,7 +7,7 @@ float average(int[], size_t);
 /* main method that is to be executed at runtime */
 int main(void) {
     // take user input of sizes
-    printf("Specify how many numbers you want to enter? (seperated by spaces, integer expected)... ");
+    printf("Specify how many numbers you want to enter? (integer expected)... ");
     size_t length;
     scanf("%lu", &length);
     int a1[length];
@@ -22,7 +22,7 @@ int main(void) {
     return 0;
 }
 
-/* calculate the average of few numbers by passing a pointer to the array and its number of elements */
+/* calculate the average of few numbers by passing a reference to the array and its number of elements */
 float average(int numbers[], size_t length) {
     size_t index;
     int sum = 0;

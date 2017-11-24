@@ -7,7 +7,7 @@ int sum(int*, size_t);
 /* main method that is to be executed at runtime */
 int main(void) {
     // take user input of sizes
-    printf("Specify how many numbers you want to enter? (seperated by spaces, integer expected)... ");
+    printf("Specify how many numbers you want to enter? (integer expected)... ");
     size_t length;
     scanf("%lu", &length);
     int a1[length];
@@ -17,7 +17,7 @@ int main(void) {
     for(index = 0; index < length; index++) {
         scanf("%d", &a1[index]);
         if(a1[index] == 0) {
-            printf("You've entered zero at location %lu, so program will exit..", (index + 1));
+            printf("You've entered zero at location %lu, so program will exit..\n", (index + 1));
             return 1;
         }
     }
