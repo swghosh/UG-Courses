@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 // program to write a string to a file on disk
 int main() {
@@ -24,6 +23,7 @@ int main() {
         printf("%c", ch);
     }
 
+    fclose(fPtr);
     puts("");
 
     return 0;
