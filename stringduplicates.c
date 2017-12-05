@@ -12,8 +12,7 @@ int frequencyOfDuplicate(char*);
 // main method that is to be executed
 int main(void) {
     // initialisations
-    char userString[STR_LIMIT], *remDuplicates;
-    int freqOfHighest;
+    char userString[STR_LIMIT];
 
     // user input of a string
     printf("Specify a string (%d characters or less, not seperated by any space)... ", STR_LIMIT - 1);
