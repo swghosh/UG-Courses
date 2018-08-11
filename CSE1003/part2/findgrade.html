@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8" />
+        <title>Grading.</title>
+        <style>
+            body {
+                margin: 5%;
+                font-family: monospace;
+            }
+            input[type=number], input[type=text], select {
+                background-color: #fff;
+                color: #000;
+                font-size: 1.2em;
+                outline: none;
+                border: none;
+                border-bottom: 1px dotted white;
+                font-family: monospace;
+                margin: 2%;
+            }
+        </style>
+	</head>
+	<body>
+		<h1>Grade</h1>
+		<form method="GET" action="findgrade.php">
+            <input type="text" name="subject" placeholder="subject" />
+            <input type="number" name="marks" placeholder="marks" />
+            <input type="submit" value="Grade" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+CREATE TABLE links (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    url TEXT
+);
+
+CREATE TABLE visitor (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    useragent TEXT,
+    script VARCHAR(50)
+);

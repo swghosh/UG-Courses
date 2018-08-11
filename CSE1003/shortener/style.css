@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+body {
+    /*background-color: #1B1B4C; */
+    background-color: #444;
+    color: #fff;
+    font-family: 'Oxygen', sans-serif;
+    margin: 10%;
+    text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+input.link {
+  font-family: 'Oxygen';
+  font-size: 1.5em;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  outline: none;
+  margin: 1%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+input.button {
+  font-family: 'Oxygen', sans-serif;
+  /*background-color: #1B1B4C; */
+  background-color: #444;
+  color: #fff;
+}

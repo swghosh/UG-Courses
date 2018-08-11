@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8" />
+        <title>Making a simple calulator.</title>
+        <style>
+            body {
+                margin: 5%;
+                font-family: monospace;
+            }
+            input[type=number], select {
+                background-color: #fff;
+                color: #000;
+                font-size: 1.2em;
+                outline: none;
+                border: none;
+                border-bottom: 1px dotted white;
+                font-family: monospace;
+                margin: 2%;
+            }
+        </style>
+	</head>
+	<body>
+		<h1>Calculator</h1>
+		<form method="GET" action="calculator.php">
+            <input type="number" name="number1" placeholder="first number" />
+            <select name="operation">
+                <option value="+" /> + </option>
+                <option value="-" /> - </option>
+                <option value="*" /> * </option>
+                <option value="/" /> / </option>
+            </select>
+            <input type="number" name="number2" placeholder="second number" />
+            <input type="submit" value="Calculate" />
+		</form>
+	</body>
+</html>

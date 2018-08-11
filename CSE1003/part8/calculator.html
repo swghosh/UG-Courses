@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8" />
+		<title>Learning JavaScript! Making a simple calulator.</title>
+		<script src="calculator.js" type="text/javascript" language="javascript">
+		</script>
+		<style>
+		body {
+			background-color: #000;
+			color: #fff;
+			margin: 5%;
+			font-family: monospace;
+		}
+		input, select {
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0);
+			border: none;
+			font-size: 1.2em;
+			outline: none;
+			border-bottom: 1px dotted white;
+			font-family: monospace;
+			margin: 1%;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Calculator</h1>
+		<form>
+			<input type="number" name="number1" placeholder="first number" />
+			<select name="operation">
+				<option value="+" /> + </option>
+				<option value="-" /> - </option>
+				<option value="*" /> * </option>
+				<option value="/" /> / </option>
+			</select>
+			<input type="number" name="number2" placeholder="second number" />
+			<input type="submit" value="Calculate" onclick="onCalculateClick()" />
+		</form>
+	</body>
+</html>

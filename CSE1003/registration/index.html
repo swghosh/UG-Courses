@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Registration | GD Goenka University</title>
+        <meta name="author" content="SwG Ghosh" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>GD Goenka University</h1>
+        <div>Re-registration Form</div>
+        <h2>Even Semester</h2>
+        <form method="POST" action="register.php">
+            <ol>
+                <li>Name of the student <input type="text" name="name" placeholder="eg. John Smith" required="yes"> </li>
+                <li>
+                    <ol type="a">
+                        <li>Father's Name <input type="text" name="fathername" placeholder="eg. Joe Smith" required="yes"> </li>
+                        <li>Occupation of Father <input type="text" name="fatheroccupation" placeholder="eg. Service" required="yes"> </li>
+                        <li>Father's Mobile Number <input type="tel" name="fathermobile" placeholder="+91xxxxxxxxxx" required="yes"> </li>
+                        <li>Father's Email Address <input type="email" name="fatheremail" placeholder="john@xyz.com"> </li>
+                    </ol>
+                </li>
+                <li>
+                    <ol type="a">
+                        <li>Mother's Name <input type="text" name="mothername" placeholder="eg. Smith" required="yes"> </li>
+                        <li>Occupation of Mother <input type="text" name="motheroccupation" placeholder="Service" required="yes"> </li>
+                        <li>Mother's Mobile Number <input type="tel" name="mothermobile" placeholder="+91xxxxxxxxxx" required="yes"> </li>
+                        <li>Mother's Email Address <input type="email" name="motheremail" placeholder="smith@xyz.com"> </li>
+                    </ol>
+                <li>
+                    Enrolment Number <input type="number" name="enrolmentnumber" placeholder="xxxxxxxxxxxx" required="yes">
+                </li>
+                <li>
+                    School
+                    <select name="school">
+                        <option value="soe">School of Engineering</option>
+                        <option value="som">School of Management</option>
+                        <option value="soh">School of Hospitality</option>
+                        <option value="sol">School of Law</option>
+                        <option value="somas">School of Medical and Allied Sciences</option>
+                        <option value="soc">School of Communication</option>
+                        <option value="sohas">School of Humanities and Applied Sciences</option>
+                        <option value="soap">School of Architecture and Planning</option>
+                        <option value="soed">School of Education</option>
+                        <option value="sofd">School of Fashion and Design</option>
+                    </select>
+                </li>
+                <li>
+                    Programme <input type="text" name="programme" placeholder="B.Something or M.Something" required="yes">
+                </li>
+                <li>
+                    Semester
+                    <select name="semester">
+                        <option>2</option>
+                        <option>4</option>
+                        <option>6</option>
+                        <option>8</option>
+                    </select>
+                </li>
+                <li>
+                    Additional Information
+                    <ol type="a">
+                        <li><input type="radio" name="domicile" value="Haryana" required="yes"> Haryana <input type="radio" name="domicile" value="other" required="yes"> Others </li>
+                        <li><input type="radio" name="hostel" value="Hosteller" required="yes">Hosteller <input type="radio" name="hostel" value="Day Boarder" required="yes">Day Boarder</li>
+                    </ol>
+                </li>
+                <li>
+                    Course(s)
+                    <table>
+                        <tr> <th>Course Code</th> <th>Course Title</th> </tr>
+                        <tr> <td><input type="text" name="coursecodes[]" placeholder="ABCxxxx"></td> <td><input type="text" name="coursenames[]" placeholder="Course title"></td> </tr>
+                        <tr> <td><input type="text" name="coursecodes[]" placeholder="ABCxxxx"></td> <td><input type="text" name="coursenames[]" placeholder="Course title"></td> </tr>
+                        <tr> <td><input type="text" name="coursecodes[]" placeholder="ABCxxxx"></td> <td><input type="text" name="coursenames[]" placeholder="Course title"></td> </tr>
+                        <tr> <td><input type="text" name="coursecodes[]" placeholder="ABCxxxx"></td> <td><input type="text" name="coursenames[]" placeholder="Course title"></td> </tr>
+                        <tr> <td><input type="text" name="coursecodes[]" placeholder="ABCxxxx"></td> <td><input type="text" name="coursenames[]" placeholder="Course title"></td> </tr>
+                        <tr> <td><input type="text" name="coursecodes[]" placeholder="ABCxxxx"></td> <td><input type="text" name="coursenames[]" placeholder="Course title"></td> </tr>
+                        <tr> <td><input type="text" name="coursecodes[]" placeholder="ABCxxxx"></td> <td><input type="text" name="coursenames[]" placeholder="Course title"></td> </tr>
+                        <tr> <td><input type="text" name="coursecodes[]" placeholder="ABCxxxx"></td> <td><input type="text" name="coursenames[]" placeholder="Course title"></td> </tr>
+                        <tr> <td><input type="text" name="coursecodes[]" placeholder="ABCxxxx"></td> <td><input type="text" name="coursenames[]" placeholder="Course title"></td> </tr>
+                        <tr> <td><input type="text" name="coursecodes[]" placeholder="ABCxxxx"></td> <td><input type="text" name="coursenames[]" placeholder="Course title"></td> </tr>
+                    </table>
+                </li>
+                <li>
+                    Date <input type="date" name="date" placeholder="YYYY-MM-DD">
+                </li>
+                <li>
+                    Fee Receipts Enclosed <input type="radio" value="yes" name="feereceipts" required="yes">Yes <input type="radio" value="no" name="feereceipts" required="yes">No
+                </li>
+                <li>
+                    Address <input type="text" name="address" placeholder="Street name, Town, City XXXXXX" required="yes">
+                </li>
+                <li>
+                    Email Address <input type="text" name="emailaddress" placeholder="someone@xyz.com" required="yes">
+                </li>
+                <li>
+                    Mobile Number <input type="text" name="mobile" placeholder="+91xxxxxxxxxx" required="yes">
+                </li>
+                <li>
+                    Verified by Faculty <input type="text" name="facultyname" placeholder="eg. Far Smith" required="yes">
+                </li>
+            </ol>
+            <input type="submit" value="Register">
+        </form>
+    </body>
+</html>

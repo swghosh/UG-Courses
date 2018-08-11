@@ -1,0 +1,48 @@
+* {
+    transition: all 0.2s;
+}
+body {
+    font-family: 'Avenir Next', sans-serif;
+    margin: 3%;
+}
+div {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    padding: 0.5%;
+}
+table {
+    width: 80vw;
+}
+input[type=text], input[type=tel], input[type=email], input[type=number], input[type=date] {
+    border: none;
+    width: 70%;
+    border-bottom: dashed 1px grey;
+    margin: 1%;
+    outline: none;
+    font-size: 1.1em;
+    font-family: monospace;
+}
+input[type=radio] {
+    margin: 0.5%;
+}
+input[type=submit] {
+    border: none;
+    color: #fff;
+    padding: 1%;
+    background-color: #333;
+    font-family: inherit;
+}
+input[type=submit]:hover {
+    background-color: #000;
+}
+input:focus {
+    font-size: 1.5em;
+    border-bottom: 1px solid #000;
+}
+@media print {
+    input[type=submit] {
+        display: none;
+    }
+}

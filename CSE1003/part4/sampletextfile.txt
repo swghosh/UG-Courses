@@ -1,0 +1,71 @@
+Node.js Application to run a backend API with few API parts
+
+import the required modules
+
+define constants for credentials to access database
+
+create connections to mysql server and required database
+
+API Part 1 : Stocks List
+
+function to return a json that stores a list of stocks defining name, current, difference, percentage, sector, profile
+---- defines the name of the sql table
+---- sql query
+---- if profile of the current stock is required
+---- ---- pass the rows obtained from the database to the callback function----   
+
+API Part 2 : Headlines List
+
+function to return a json that stores a list of headlines defining news, time
+---- defines the name of the sql table
+---- sql query
+---- ---- pass the rows obtained from the database to the callback function
+
+API Part 3 : Full Stock
+
+function to return a json defining a stock name, current, difference, percentage, sector, profile, pclose, ovalue, lcircuit, ucircuit, dividend, bvalue, updates
+---- defines the name of the sql table
+---- sql query
+---- ---- pass the rows obtained from the database to the callback function
+
+API Part 4 : Stock Updates List
+
+function to return a json that stores a list of updates defining time, current
+
+---- defines the name of the sql table
+---- sql query
+---- ---- pass the rows obtained to the callback function
+
+API Key to access API
+
+HTTP Web Server
+
+callback function to handle HTTP requests and pass responses
+---- path of the requested resource
+---- query string of the request
+---- store all GET parameters and arguments as an array
+
+---- test if the API key doesn't match prematurely terminates with 401
+
+---- callback function that sends the queried data result as a json HTTP response
+---- ---- in case rows is undefined or null prematurely terminate with 404
+
+---- ---- current date and time
+---- ---- adjusts the date object to use UTC + 5:30 IST instead of system time zone provided time
+---- ---- adjust the 0 for date string
+---- ---- the full date as a string
+---- ---- data that is to be passed as JSON object in the HTTP response
+
+---- ---- pass the required HTTP response as a JSON
+
+---- ---- specify whether profile is required or not
+---- ---- call the appropriate API function to make the database query and invoke the callback function for part 1
+---- ---- call the appropriate API function to make the database query and invoke the callback function for part 2
+---- ---- call the appropriate API function to make the database query and invoke the callback function for part 3
+---- ---- call the appropriate API function to make the database query and invoke the callback function for part 4
+
+create an HTTP server with the required callback function
+
+define the HTTP web server port
+
+start the web server
