@@ -10,7 +10,7 @@ import java.util.Scanner;
  * 
  */
 
-class SumOfDigits {
+public class SumOfDigits {
 
     /**
      * Method to find the sum of digits of an integer

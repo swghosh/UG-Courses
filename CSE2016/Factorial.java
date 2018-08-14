@@ -10,7 +10,7 @@ import java.util.Scanner;
  * 
  */
 
-class Factorial {
+public class Factorial {
 
     /**
      * Method to find the factorial of an integer 

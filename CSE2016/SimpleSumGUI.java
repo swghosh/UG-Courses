@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  * 
  * @see javax.swing.JOptionPane
  */
-class SimpleSumGUI {
+public class SimpleSumGUI {
     /** 
      * Main method that is to be executed at runtime, 
      * will take input from dialog

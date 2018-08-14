@@ -7,7 +7,7 @@
  * @author Swarup Ghosh
  */
 
-class SimpleSum {
+public class SimpleSum {
     /** 
      * Main method that is to be executed at runtime
      * @param args command line arguments (must contain two integers) 

@@ -6,7 +6,7 @@
  * @version 0.1
  * @author Swarup Ghosh
  */
-class HelloWorld {
+public class HelloWorld {
     /**
      * Main method that is to be executed at runtime
      * @param args command line arguments
