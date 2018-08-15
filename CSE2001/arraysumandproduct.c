@@ -1,12 +1,12 @@
 #include <stdio.h>
 #define MAX_ELEMENTS 100
 
-int sumOfArray(int*, int);
-int productOfArray(int*, int);
+long sumOfArray(int*, int);
+long productOfArray(int*, int);
 
 int main() {
     int numbers[MAX_ELEMENTS], userLength, iterIndex;
-    printf("How many numbers? (integer < 100, expected) > ");
+    printf("How many numbers? (integer < %d, expected) > ", MAX_ELEMENTS);
     scanf("%d", &userLength);
 
     printf("Specify all numbers. (space seperated, %d integers expected) > ", userLength);
@@ -14,12 +14,12 @@ int main() {
         scanf("%d", &numbers[iterIndex]);
     }
 
-    printf("Sum and product of all the elements are %d and %d respectively. \n", sumOfArray(numbers, userLength), productOfArray(numbers, userLength));
+    printf("Sum and product of all the elements are %ld and %ld respectively. \n", sumOfArray(numbers, userLength), productOfArray(numbers, userLength));
     return 0;
 }
 
-int sumOfArray(int* arrayPointer, int reqdLength) {
-    int iterIndex, sum = 0;
+long sumOfArray(int* arrayPointer, int reqdLength) {
+    int iterIndex; long sum = 0;
     for(iterIndex = 0; iterIndex < reqdLength; iterIndex++) {
         sum += *arrayPointer;
         arrayPointer++;
@@ -27,8 +27,8 @@ int sumOfArray(int* arrayPointer, int reqdLength) {
     return sum;
 }
 
-int productOfArray(int* arrayPointer, int reqdLength) {
-    int iterIndex, product = 1;
+long productOfArray(int* arrayPointer, int reqdLength) {
+    int iterIndex; long product = 1;
     for(iterIndex = 0; iterIndex < reqdLength; iterIndex++) {
         product *= *arrayPointer;
         arrayPointer++;

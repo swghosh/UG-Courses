@@ -5,7 +5,7 @@
 int main() {
     int numbers[MAX_ELEMENTS], userLength, iterIndex;
     int max = INT_MIN, min = INT_MAX;
-    printf("How many numbers? (integer < 100, expected) > ");
+    printf("How many numbers? (integer < %d, expected) > ", MAX_ELEMENTS);
     scanf("%d", &userLength);
 
     printf("Specify all numbers. (space seperated, %d integers expected) > ", userLength);
