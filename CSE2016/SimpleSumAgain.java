@@ -11,11 +11,23 @@ import java.util.Scanner;
 
 public class SimpleSumAgain {
     private long sum = 0l;
+    /**
+     * Simple non static function that
+     * computes sum of two integers
+     * @param firstNumber first integer
+     * @param secondNumber second integer
+     * @return sum of firstNumber and secondNumber
+     */
     public long getSum(int firstNumber, int secondNumber) {
         sum = (long)firstNumber + (long)secondNumber;
         return sum;
     }
 
+    /**
+     * Main method that is to be executed
+     * at runtime
+     * @param args Command line arguments (not necessary)
+     */
     public static void main(String[] args) {
         SimpleSumAgain sumHelper = new SimpleSumAgain();
         Scanner in = new Scanner(System.in);

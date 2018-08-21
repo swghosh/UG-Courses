@@ -10,10 +10,22 @@ import java.util.Scanner;
  */
 
 public class SimpleSumOnceMore {
+    /**
+     * Simple static method to find sum
+     * of two numbers
+     * @param firstNumber first integer
+     * @param secondNumber second integer
+     * @return sum of firstNumber and secondNumber
+     */
     public static long sum(int firstNumber, int secondNumber) {
         return (long)firstNumber + (long)secondNumber;
     }
 
+    /**
+     * Main method that is to be executed
+     * at runtime
+     * @param args Command line arguments (not necessary)
+     */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
