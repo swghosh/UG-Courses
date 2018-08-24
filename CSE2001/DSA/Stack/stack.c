@@ -8,6 +8,10 @@
 
 #include "stack.h"
 
+void init(STACK *stack) {
+    (*stack).top = -1;
+}
+
 void push(STACK *stack, int element) {
     if((*stack).top + 1 == STACK_CAPACITY) {
         printf("Stack Overflow Error.");
@@ -29,4 +33,5 @@ void traversePrint(STACK *stack) {
     for(iterIndex = 0; iterIndex <= (*stack).top; iterIndex++) {
         printf("%d | ", (*stack).elements[iterIndex]);
     }
+    puts("");
 }

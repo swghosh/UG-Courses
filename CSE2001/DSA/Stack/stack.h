@@ -21,6 +21,8 @@ struct stack {
 
 #define STACK struct stack
 
+void init(STACK *stack);
+
 void push(STACK *stack, int element);
 
 int pop(STACK *stack);
