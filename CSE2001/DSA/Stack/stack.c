@@ -14,7 +14,7 @@ void init(STACK *stack) {
 
 void push(STACK *stack, int element) {
     if((*stack).top + 1 == STACK_CAPACITY) {
-        printf("Stack Overflow Error.");
+        puts("Stack Overflow Error.");
         return;
     }
     (*stack).elements[++(*stack).top] = element;
@@ -22,7 +22,7 @@ void push(STACK *stack, int element) {
 
 int pop(STACK *stack) {
     if((*stack).top == -1) {
-        printf("Stack Underflow Error.");
+        puts("Stack Underflow Error.");
         return INT_MIN;
     }
     return (*stack).elements[(*stack).top--];

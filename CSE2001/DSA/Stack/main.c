@@ -51,7 +51,7 @@ int main(void) {
                 break;
                 
             default:
-                puts("Invalid Choice, please retry.");
+                puts("Invalid choice, please retry.");
                 break;
         }
     }
