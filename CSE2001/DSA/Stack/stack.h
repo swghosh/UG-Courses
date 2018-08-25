@@ -7,6 +7,8 @@
 //
 
 #ifndef stack_h
+
+/* Xcode generated define for include header once */
 #define stack_h
 
 #include <stdio.h>

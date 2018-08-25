@@ -2,3 +2,4 @@
 *.class
 .vscode
 xcuserdata/
+*.in.txt

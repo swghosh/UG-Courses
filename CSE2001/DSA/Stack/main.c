@@ -6,11 +6,11 @@
 //  Copyright © 2018 Swarup Ghosh. All rights reserved.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+#include <stdio.h> /* puts, printf, scanf */
+#include <stdlib.h> /* exit */
+#include <stdbool.h> /* bool */
 
-#include "stack.h"
+#include "stack.h" /* STACK, init, push, pop, traversePrint */
 
 int main(void) {
     STACK stack;
