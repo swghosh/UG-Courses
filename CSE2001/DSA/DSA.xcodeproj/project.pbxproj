@@ -9,10 +9,30 @@
 /* Begin PBXBuildFile section */
 		C82560DA21308498008DCB80 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C82560D921308498008DCB80 /* main.c */; };
 		C82560E321308731008DCB80 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = C82560E221308731008DCB80 /* stack.c */; };
+		C88186572132E56000DF0A90 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C88186562132E56000DF0A90 /* main.c */; };
+		C88186622132E98300DF0A90 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C88186612132E98300DF0A90 /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C82560D521308498008DCB80 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C88186522132E56000DF0A90 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C881865D2132E98300DF0A90 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -28,10 +48,28 @@
 		C82560D921308498008DCB80 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C82560E121308731008DCB80 /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
 		C82560E221308731008DCB80 /* stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
+		C88186542132E56000DF0A90 /* Linear Search */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Linear Search"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C88186562132E56000DF0A90 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C881865F2132E98300DF0A90 /* Binary Search */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Binary Search"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C88186612132E98300DF0A90 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C82560D421308498008DCB80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C88186512132E56000DF0A90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C881865C2132E98300DF0A90 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				C82560D821308498008DCB80 /* Stack */,
+				C88186552132E56000DF0A90 /* Linear Search */,
+				C88186602132E98300DF0A90 /* Binary Search */,
 				C82560CA21308454008DCB80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				C82560D721308498008DCB80 /* Stack */,
+				C88186542132E56000DF0A90 /* Linear Search */,
+				C881865F2132E98300DF0A90 /* Binary Search */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +107,22 @@
 				C82560E221308731008DCB80 /* stack.c */,
 			);
 			path = Stack;
+			sourceTree = "<group>";
+		};
+		C88186552132E56000DF0A90 /* Linear Search */ = {
+			isa = PBXGroup;
+			children = (
+				C88186562132E56000DF0A90 /* main.c */,
+			);
+			path = "Linear Search";
+			sourceTree = "<group>";
+		};
+		C88186602132E98300DF0A90 /* Binary Search */ = {
+			isa = PBXGroup;
+			children = (
+				C88186612132E98300DF0A90 /* main.c */,
+			);
+			path = "Binary Search";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +145,40 @@
 			productReference = C82560D721308498008DCB80 /* Stack */;
 			productType = "com.apple.product-type.tool";
 		};
+		C88186532132E56000DF0A90 /* Linear Search */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C881865A2132E56000DF0A90 /* Build configuration list for PBXNativeTarget "Linear Search" */;
+			buildPhases = (
+				C88186502132E56000DF0A90 /* Sources */,
+				C88186512132E56000DF0A90 /* Frameworks */,
+				C88186522132E56000DF0A90 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Linear Search";
+			productName = "Linear Search";
+			productReference = C88186542132E56000DF0A90 /* Linear Search */;
+			productType = "com.apple.product-type.tool";
+		};
+		C881865E2132E98300DF0A90 /* Binary Search */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C88186632132E98300DF0A90 /* Build configuration list for PBXNativeTarget "Binary Search" */;
+			buildPhases = (
+				C881865B2132E98300DF0A90 /* Sources */,
+				C881865C2132E98300DF0A90 /* Frameworks */,
+				C881865D2132E98300DF0A90 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Binary Search";
+			productName = "Binary Search";
+			productReference = C881865F2132E98300DF0A90 /* Binary Search */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,6 +189,12 @@
 				ORGANIZATIONNAME = "Swarup Ghosh";
 				TargetAttributes = {
 					C82560D621308498008DCB80 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					C88186532132E56000DF0A90 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					C881865E2132E98300DF0A90 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -114,6 +212,8 @@
 			projectRoot = "";
 			targets = (
 				C82560D621308498008DCB80 /* Stack */,
+				C88186532132E56000DF0A90 /* Linear Search */,
+				C881865E2132E98300DF0A90 /* Binary Search */,
 			);
 		};
 /* End PBXProject section */
@@ -125,6 +225,22 @@
 			files = (
 				C82560E321308731008DCB80 /* stack.c in Sources */,
 				C82560DA21308498008DCB80 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C88186502132E56000DF0A90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C88186572132E56000DF0A90 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C881865B2132E98300DF0A90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C88186622132E98300DF0A90 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +374,42 @@
 			};
 			name = Release;
 		};
+		C88186582132E56000DF0A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C88186592132E56000DF0A90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C88186642132E98300DF0A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C88186652132E98300DF0A90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -275,6 +427,24 @@
 			buildConfigurations = (
 				C82560DC21308498008DCB80 /* Debug */,
 				C82560DD21308498008DCB80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C881865A2132E56000DF0A90 /* Build configuration list for PBXNativeTarget "Linear Search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C88186582132E56000DF0A90 /* Debug */,
+				C88186592132E56000DF0A90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C88186632132E98300DF0A90 /* Build configuration list for PBXNativeTarget "Binary Search" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C88186642132E98300DF0A90 /* Debug */,
+				C88186652132E98300DF0A90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
