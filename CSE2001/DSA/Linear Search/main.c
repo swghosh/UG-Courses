@@ -1,5 +1,5 @@
 //
-//  main.c
+//  linearsearch.c
 //  Linear Search
 //
 //  Created by Swarup Ghosh on 26/08/18.
@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 
+int linearSearch(int *haystack, int size, int needle);
 // linear search algorithm to search
 // `needle` element from the given
 // `haystack` array, returns index
@@ -39,7 +40,7 @@ int main(void) {
     
     searchedIndex = linearSearch(numbers, userLength, searchElement);
     
-    printf(((searchedIndex != -1) ? "Search completed. Element found at %d.\n" : "Search completed. Element not found.\n"), searchedIndex + 1);
+    printf(((searchedIndex != -1) ? "Search completed. Element found at location %d.\n" : "Search completed. Element not found.\n"), searchedIndex + 1);
     
     return 0;
 }
