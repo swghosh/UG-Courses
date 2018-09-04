@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fcc854-4c9b-4345-aece-89674396ecb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../CSE2001/DSA/Binary Search/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/BubbleSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -54,33 +54,34 @@
           <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="5" />
+          <entry key="java" value="6" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="5" />
+          <entry key="JAVA" value="6" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1652" />
+          <entry key="java" value="2892" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1652" />
+          <entry key="JAVA" value="2892" />
         </counts>
       </usages-collector>
     </session>
@@ -90,18 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Animal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="11" column="21" lean-forward="true" selection-end-line="59" />
-              <folding>
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#571#572#0" expanded="true" />
-                <element signature="e#654#655#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
-                <element signature="e#816#817#0" expanded="true" />
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#1002#1003#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="11" column="21" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -109,25 +100,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/DomesticAnimal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="16" column="29" lean-forward="true" selection-end-line="48" />
-              <folding>
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
-                <element signature="e#835#836#0" expanded="true" />
-                <element signature="e#889#890#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="29" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/AnimalTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-53">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="15" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/AnimalTest.java">
+        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/BubbleSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+            <state relative-caret-position="283">
+              <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -164,6 +156,7 @@
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Animal.java" />
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/DomesticAnimal.java" />
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/AnimalTest.java" />
+        <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/BubbleSort.java" />
       </list>
     </option>
   </component>
@@ -181,18 +174,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="OOPJ" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOPJ" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OOPJ" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOPJ" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OOPJ" type="b2602c69:ProjectViewProjectNode" />
@@ -209,12 +196,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535475424139" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536040103497" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -229,9 +217,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AnimalTest">
+  <component name="RunManager" selected="Application.BubbleSort">
     <configuration name="AnimalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.AnimalTest" />
+      <module name="OOPJ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.gdgu.swghosh.cse2016.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.BubbleSort" />
       <module name="OOPJ" />
       <extension name="coverage">
         <pattern>
@@ -273,9 +274,11 @@
       <item itemvalue="Application.HelloWorld" />
       <item itemvalue="Application.AnimalTest" />
       <item itemvalue="Application.SocketServerTest" />
+      <item itemvalue="Application.BubbleSort" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BubbleSort" />
         <item itemvalue="Application.AnimalTest" />
         <item itemvalue="Application.SocketServerTest" />
         <item itemvalue="Application.HelloWorld" />
@@ -314,7 +317,7 @@
     <frame x="47" y="22" width="1286" height="835" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23151125" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23472668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -323,7 +326,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32974428" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -388,40 +391,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Animal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="11" column="21" lean-forward="true" selection-end-line="59" />
-          <folding>
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="11" column="21" selection-end-line="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/DomesticAnimal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="16" column="29" lean-forward="true" selection-end-line="48" />
-          <folding>
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-end-line="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/AnimalTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        <state relative-caret-position="-53">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/BubbleSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
         </state>
       </provider>
     </entry>
