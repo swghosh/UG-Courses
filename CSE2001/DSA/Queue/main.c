@@ -19,12 +19,12 @@ int main(int argc, const char * argv[]) {
     int choice, element;
     
     puts("-----------------");
-    puts("|No.\t|Choice\t|");
+    puts("|No.\t|Choice\t\t|");
     puts("-----------------");
     puts("|1\t\t|Enqueue\t|");
     puts("|2\t\t|Dequeue\t|");
-    puts("|3\t\t|Print\t|");
-    puts("|4\t\t|Exit\t|");
+    puts("|3\t\t|Print\t\t|");
+    puts("|4\t\t|Exit\t\t|");
     puts("-----------------");
     
     while(true) {
@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
             case 1:
                 printf("Specify element to enqueue (integer expected) ->");
                 scanf("%d", &element);
-                printf("Enqueuing element, %d\n", element);
+                printf("Enqueuing element, %d.\n", element);
                 enqueue(&queue, element);
                 break;
             case 2:
