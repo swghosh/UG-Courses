@@ -13,6 +13,8 @@
 		C82560E321308731008DCB80 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = C82560E221308731008DCB80 /* stack.c */; };
 		C88186572132E56000DF0A90 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C88186562132E56000DF0A90 /* main.c */; };
 		C88186622132E98300DF0A90 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C88186612132E98300DF0A90 /* main.c */; };
+		C8A79A652148CD400024B0EB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8A79A642148CD400024B0EB /* main.c */; };
+		C8A79A6B2148CD5F0024B0EB /* cqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = C8A79A6A2148CD5F0024B0EB /* cqueue.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +54,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		C8A79A602148CD400024B0EB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +78,10 @@
 		C88186562132E56000DF0A90 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C881865F2132E98300DF0A90 /* Binary Search */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Binary Search"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88186612132E98300DF0A90 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C8A79A622148CD400024B0EB /* Circular Queue */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Circular Queue"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A79A642148CD400024B0EB /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C8A79A692148CD5F0024B0EB /* cqueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cqueue.h; sourceTree = "<group>"; };
+		C8A79A6A2148CD5F0024B0EB /* cqueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cqueue.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +113,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C8A79A5F2148CD400024B0EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,6 +140,7 @@
 				C88186552132E56000DF0A90 /* Linear Search */,
 				C88186602132E98300DF0A90 /* Binary Search */,
 				C808BBF6213F96440049B6F2 /* Queue */,
+				C8A79A632148CD400024B0EB /* Circular Queue */,
 				C82560CA21308454008DCB80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +152,7 @@
 				C88186542132E56000DF0A90 /* Linear Search */,
 				C881865F2132E98300DF0A90 /* Binary Search */,
 				C808BBF5213F96440049B6F2 /* Queue */,
+				C8A79A622148CD400024B0EB /* Circular Queue */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +181,16 @@
 				C88186612132E98300DF0A90 /* main.c */,
 			);
 			path = "Binary Search";
+			sourceTree = "<group>";
+		};
+		C8A79A632148CD400024B0EB /* Circular Queue */ = {
+			isa = PBXGroup;
+			children = (
+				C8A79A642148CD400024B0EB /* main.c */,
+				C8A79A692148CD5F0024B0EB /* cqueue.h */,
+				C8A79A6A2148CD5F0024B0EB /* cqueue.c */,
+			);
+			path = "Circular Queue";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +264,23 @@
 			productReference = C881865F2132E98300DF0A90 /* Binary Search */;
 			productType = "com.apple.product-type.tool";
 		};
+		C8A79A612148CD400024B0EB /* Circular Queue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8A79A662148CD400024B0EB /* Build configuration list for PBXNativeTarget "Circular Queue" */;
+			buildPhases = (
+				C8A79A5E2148CD400024B0EB /* Sources */,
+				C8A79A5F2148CD400024B0EB /* Frameworks */,
+				C8A79A602148CD400024B0EB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Circular Queue";
+			productName = "Circular Queue";
+			productReference = C8A79A622148CD400024B0EB /* Circular Queue */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -251,6 +302,9 @@
 					C881865E2132E98300DF0A90 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					C8A79A612148CD400024B0EB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = C82560C421308454008DCB80 /* Build configuration list for PBXProject "DSA" */;
@@ -269,6 +323,7 @@
 				C88186532132E56000DF0A90 /* Linear Search */,
 				C881865E2132E98300DF0A90 /* Binary Search */,
 				C808BBF4213F96440049B6F2 /* Queue */,
+				C8A79A612148CD400024B0EB /* Circular Queue */,
 			);
 		};
 /* End PBXProject section */
@@ -305,6 +360,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C88186622132E98300DF0A90 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A79A5E2148CD400024B0EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A79A652148CD400024B0EB /* main.c in Sources */,
+				C8A79A6B2148CD5F0024B0EB /* cqueue.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +556,24 @@
 			};
 			name = Release;
 		};
+		C8A79A672148CD400024B0EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C8A79A682148CD400024B0EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -536,6 +618,15 @@
 			buildConfigurations = (
 				C88186642132E98300DF0A90 /* Debug */,
 				C88186652132E98300DF0A90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8A79A662148CD400024B0EB /* Build configuration list for PBXNativeTarget "Circular Queue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8A79A672148CD400024B0EB /* Debug */,
+				C8A79A682148CD400024B0EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
