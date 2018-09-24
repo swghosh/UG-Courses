@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fcc854-4c9b-4345-aece-89674396ecb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/SimpleExpressionEval.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/ExceptionsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,40 +51,40 @@
     <session id="949869041">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="3" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="9" />
+          <entry key="java" value="10" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="10" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5007" />
-          <entry key="txt" value="46" />
+          <entry key="java" value="5592" />
+          <entry key="txt" value="96" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5007" />
-          <entry key="PLAIN_TEXT" value="46" />
+          <entry key="JAVA" value="5592" />
+          <entry key="PLAIN_TEXT" value="96" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -101,11 +101,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/SimpleExpressionEval.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+            <state relative-caret-position="390">
+              <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/ExceptionsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -146,6 +155,7 @@
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/WildAnimal.java" />
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Swapper.java" />
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/SimpleExpressionEval.java" />
+        <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/ExceptionsTest.java" />
       </list>
     </option>
   </component>
@@ -163,6 +173,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,13 +196,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537249566084" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537251166136" />
     <property name="last.edited.regexp" value="," />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -207,9 +217,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SimpleExpressionEval">
-    <configuration name="AnimalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.AnimalTest" />
+  <component name="RunManager" selected="Application.ExceptionsTest">
+    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.BubbleSort" />
       <module name="OOPJ" />
       <extension name="coverage">
         <pattern>
@@ -221,8 +231,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.BubbleSort" />
+    <configuration name="ExceptionsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.ExceptionsTest" />
       <module name="OOPJ" />
       <extension name="coverage">
         <pattern>
@@ -274,19 +284,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AnimalTest" />
       <item itemvalue="Application.BubbleSort" />
       <item itemvalue="Application.Swapper" />
       <item itemvalue="Application.SwapperTest" />
       <item itemvalue="Application.SimpleExpressionEval" />
+      <item itemvalue="Application.ExceptionsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExceptionsTest" />
         <item itemvalue="Application.SimpleExpressionEval" />
         <item itemvalue="Application.SwapperTest" />
         <item itemvalue="Application.Swapper" />
         <item itemvalue="Application.BubbleSort" />
-        <item itemvalue="Application.AnimalTest" />
       </list>
     </recent_temporary>
   </component>
@@ -329,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536645391203</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Simple Arithmetic Expression Eval to CSE2016">
+      <created>1537249670369</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1537249670369</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -345,7 +362,7 @@
     <frame x="47" y="22" width="1286" height="835" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24115756" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24517685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -354,7 +371,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32974428" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -381,7 +398,8 @@
     <MESSAGE value="Added an inheritance program to CSE2016" />
     <MESSAGE value="Added bubble sort program to CSE2016" />
     <MESSAGE value="Added swapping program to CSE2016" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added swapping program to CSE2016" />
+    <MESSAGE value="Added Simple Arithmetic Expression Eval to CSE2016" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Simple Arithmetic Expression Eval to CSE2016" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/HelloWorld.java" />
@@ -463,8 +481,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/SimpleExpressionEval.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+        <state relative-caret-position="390">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/ExceptionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
         </state>
       </provider>
     </entry>
