@@ -15,7 +15,7 @@ NODE *createNode(int value) {
     return new;
 }
 
-// will initialise a
+// will initialise
 // a stack list with
 // start as null
 // O(1) complexity
@@ -37,6 +37,7 @@ void push(STACK *stack, int newValue) {
     // when the stack is not empty
     else {
         stack->tail->next = createNode(newValue);
+        stack->tail = stack->tail->next;
     }
 }
 

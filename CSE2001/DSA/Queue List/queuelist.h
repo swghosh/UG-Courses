@@ -1,14 +1,14 @@
 //
-//  stacklist.h
-//  Stack List
+//  queuelist.h
+//  Queue List
 //
 //  Created by Swarup Ghosh on 26/09/18.
 //  Copyright © 2018 Swarup Ghosh. All rights reserved.
 //
 
-#ifndef stacklist_h
+#ifndef queuelist_h
 /* Xcode generated define, for inclusion only once */
-#define stacklist_h
+#define queuelist_h
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,18 +20,18 @@ struct node {
 };
 #define NODE struct node
 
-struct stackList {
+struct queueList {
     NODE *start;
     NODE *tail;
 };
-#define STACKLIST struct stackList
-#define STACK struct stackList
+#define QUEUELIST struct queueList
+#define QUEUE struct queueList
 
-NODE *createNode(int value);
+NODE *createNode(int newValue);
 
-void init(STACK *stack);
-void push(STACK *stack, int newValue);
-int pop(STACK *stack);
-void traversePrint(STACK *stack);
+void init(QUEUE *queue);
+void enqueue(QUEUE *queue, int newValue);
+int dequeue(QUEUE *queue);
+void traversePrint(QUEUE *queue);
 
-#endif /* stacklist_h */
+#endif /* queuelist_h */
