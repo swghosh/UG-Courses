@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fcc854-4c9b-4345-aece-89674396ecb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../CSE2001/DSA/Queue List/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../CSE2001/DSA/Queue List/queuelist.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../CSE2001/DSA/Queue List/queuelist.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CSE2001/DSA/DSA.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSE2001/DSA/DSA.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CSE2001/DSA/Stack List/stacklist.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSE2001/DSA/Stack List/stacklist.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CSE2001/DSA/Stack List/stacklist.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../CSE2001/DSA/Stack List/stacklist.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/CountedObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,39 +51,39 @@
     <session id="949869041">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.12" value="4" />
+          <entry key="project.open.time.12" value="5" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="10" />
+          <entry key="java" value="11" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="10" />
+          <entry key="JAVA" value="11" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5592" />
+          <entry key="java" value="6302" />
           <entry key="txt" value="131" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5592" />
+          <entry key="JAVA" value="6302" />
           <entry key="PLAIN_TEXT" value="131" />
         </counts>
       </usages-collector>
@@ -96,20 +92,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Swapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/SimpleExpressionEval.java">
+        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/CountedObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            <state relative-caret-position="450">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,6 +151,7 @@
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Swapper.java" />
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/SimpleExpressionEval.java" />
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/ExceptionsTest.java" />
+        <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/CountedObject.java" />
       </list>
     </option>
   </component>
@@ -205,7 +197,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537822343731" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539065045259" />
     <property name="last.edited.regexp" value="," />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -221,9 +213,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SimpleExpressionEval">
-    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.BubbleSort" />
+  <component name="RunManager" selected="Application.CountedObject">
+    <configuration name="CountedObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.CountedObject" />
       <module name="OOPJ" />
       <extension name="coverage">
         <pattern>
@@ -288,19 +280,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BubbleSort" />
       <item itemvalue="Application.Swapper" />
       <item itemvalue="Application.SwapperTest" />
       <item itemvalue="Application.SimpleExpressionEval" />
       <item itemvalue="Application.ExceptionsTest" />
+      <item itemvalue="Application.CountedObject" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CountedObject" />
         <item itemvalue="Application.SimpleExpressionEval" />
         <item itemvalue="Application.ExceptionsTest" />
         <item itemvalue="Application.SwapperTest" />
         <item itemvalue="Application.Swapper" />
-        <item itemvalue="Application.BubbleSort" />
       </list>
     </recent_temporary>
   </component>
@@ -371,9 +363,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="23" width="1286" height="835" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25321543" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25723472" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -484,6 +475,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/SimpleExpressionEval.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Swapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -498,10 +496,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/SimpleExpressionEval.java">
+    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/CountedObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

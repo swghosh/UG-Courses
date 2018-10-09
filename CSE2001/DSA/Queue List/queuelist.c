@@ -32,7 +32,7 @@ void enqueue(QUEUE *queue, int newValue) {
 }
 
 int dequeue(QUEUE *queue) {
-    int popValue;
+    int deletedValue; NODE *toDelete;
     // when queue is empty
     if(queue->start == NULL) {
         fprintf(stderr, "Queue Underflow Error.");
@@ -40,9 +40,11 @@ int dequeue(QUEUE *queue) {
     }
     // when queue is not empty
     else {
-        popValue = queue->start->value;
-        queue->start = queue->start->next;
-        return popValue;
+        toDelete = queue->start;
+        deletedValue = toDelete->value;
+        queue->start = toDelete->next;
+        free(toDelete);
+        return deletedValue;
     }
 }
 
