@@ -105,3 +105,63 @@ int deleteEnd(LIST *ll) {
         return deleteValue;
     }
 }
+
+int search(LIST *haystack, int needle) {
+    NODE *iter = haystack->start;
+    int iterIndex = 0;
+    while (iter != NULL) {
+        if(iter->value == needle) {
+            return iterIndex;
+        }
+        iterIndex++;
+        iter = iter->next;
+    }
+    return -1;
+}
+
+void insertMiddle(LIST *ll, int position, int newValue) {
+    int iterIndex = 0;
+    NODE *iter = ll->start;
+    if(position > count(ll)) {
+        fprintf(stderr, "Insertion not possible at given position.");
+    }
+    else {
+        while(iterIndex < position - 1) {
+            iterIndex++;
+            iter = iter->next;
+        }
+        NODE *temp = iter->next->next;
+        NODE *new = createNode(newValue);
+        new->next = temp;
+        iter->next = new;
+        
+        if(ll->end->next == new) {
+            ll->end = new;
+        }
+    }
+}
+
+int deleteMiddle(LIST *ll, int position) {
+    int iterIndex = 0;
+    NODE *iter = ll->start;
+    if(position > count(ll)) {
+        fprintf(stderr, "Deletion not possible at given position.");
+        return INT_MIN;
+    }
+    else {
+        while(iterIndex < position - 1) {
+            iterIndex++;
+            iter = iter->next;
+        }
+        NODE *toDelete = iter->next;
+        
+        if(ll->end == toDelete) {
+            ll->end = iter;
+        }
+        
+        int deleteValue = toDelete->value;
+        free(toDelete);
+        iter->next = iter->next->next;
+        return deleteValue;
+    }
+}
