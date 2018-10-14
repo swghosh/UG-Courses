@@ -28,16 +28,18 @@ struct linkedList {
 #define LIST struct linkedList
 
 NODE *createNode(int value);
+NODE *swapAdjacent(NODE *first);
 
 void init(LIST *ll);
 void insertBeginning(LIST *ll, int newValue);
-void insertMiddle(LIST *ll, int position, int newValue);
+//void insertMiddle(LIST *ll, int position, int newValue);
 void insertEnd(LIST *ll, int newValue);
 int deleteBeginning(LIST *ll);
-int deleteMiddle(LIST *ll, int position);
+//int deleteMiddle(LIST *ll, int position);
 int deleteEnd(LIST *ll);
 int count(LIST *ll);
 int search(LIST *haystack, int needle);
 void traversePrint(LIST *ll);
+void bubbleSort(LIST *ll);
 
 #endif /* linkedlist_h */

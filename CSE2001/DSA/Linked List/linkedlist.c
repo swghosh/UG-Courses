@@ -15,6 +15,23 @@ NODE *createNode(int newValue) {
     return new;
 }
 
+NODE *swapAdjacent(NODE *first) {
+    NODE *second, *third, *final;
+    // case of failure
+    if(first == NULL || first->next == NULL) {
+        fprintf(stderr, "Swapping between null values aint allowed.\n");
+        return NULL;
+    }
+    second = first->next;
+    third = second->next;
+    
+    final = second;
+    final->next = first;
+    final->next->next = third;
+    
+    return final;
+}
+
 void init(LIST *ll) {
     ll->start = ll->end = NULL;
 }
@@ -119,49 +136,18 @@ int search(LIST *haystack, int needle) {
     return -1;
 }
 
-void insertMiddle(LIST *ll, int position, int newValue) {
-    int iterIndex = 0;
-    NODE *iter = ll->start;
-    if(position > count(ll)) {
-        fprintf(stderr, "Insertion not possible at given position.");
-    }
-    else {
-        while(iterIndex < position - 1) {
-            iterIndex++;
-            iter = iter->next;
+void bubbleSort(LIST *ll) {
+    NODE *iter; int temp;
+    int length = count(ll);
+    int indexA, indexB;
+    for(indexA = 0; indexA < length - 1; indexA++) {
+        iter = ll->start;
+        for(indexB = 0; indexB < length - indexA - 1; indexB++, iter = iter->next) {
+            if(iter->value > iter->next->value) {
+                temp = iter->value;
+                iter->value = iter->next->value;
+                iter->next->value = temp;
+            }
         }
-        NODE *temp = iter->next->next;
-        NODE *new = createNode(newValue);
-        new->next = temp;
-        iter->next = new;
-        
-        if(ll->end->next == new) {
-            ll->end = new;
-        }
-    }
-}
-
-int deleteMiddle(LIST *ll, int position) {
-    int iterIndex = 0;
-    NODE *iter = ll->start;
-    if(position > count(ll)) {
-        fprintf(stderr, "Deletion not possible at given position.");
-        return INT_MIN;
-    }
-    else {
-        while(iterIndex < position - 1) {
-            iterIndex++;
-            iter = iter->next;
-        }
-        NODE *toDelete = iter->next;
-        
-        if(ll->end == toDelete) {
-            ll->end = iter;
-        }
-        
-        int deleteValue = toDelete->value;
-        free(toDelete);
-        iter->next = iter->next->next;
-        return deleteValue;
     }
 }
