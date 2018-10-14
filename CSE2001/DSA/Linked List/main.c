@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
     puts("|4\t\t|Delete R.\t|");
     puts("|5\t\t|Search\t\t|");
     puts("|6\t\t|Count\t\t|");
-    puts("|7\t\t|Print\t\t|");
+    puts("|7\t\t|Sort\t\t|");
     puts("|8\t\t|Print\t\t|");
     puts("|9\t\t|Exit\t\t|");
     puts("---------------------");
