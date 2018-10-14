@@ -14,13 +14,6 @@
 
 int main(int argc, const char * argv[]) {
     LIST list;
-    init(&list);
-    
-    LIST a;
-    init(&a);
-    LIST b;
-    init(&b);
-    
     int choice, element, position;
     
     puts("---------------------");
