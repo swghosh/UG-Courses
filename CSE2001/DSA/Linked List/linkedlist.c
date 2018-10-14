@@ -15,23 +15,6 @@ NODE *createNode(int newValue) {
     return new;
 }
 
-NODE *swapAdjacent(NODE *first) {
-    NODE *second, *third, *final;
-    // case of failure
-    if(first == NULL || first->next == NULL) {
-        fprintf(stderr, "Swapping between null values aint allowed.\n");
-        return NULL;
-    }
-    second = first->next;
-    third = second->next;
-    
-    final = second;
-    final->next = first;
-    final->next->next = third;
-    
-    return final;
-}
-
 void init(LIST *ll) {
     ll->start = ll->end = NULL;
 }
