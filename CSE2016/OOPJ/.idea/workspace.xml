@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fcc854-4c9b-4345-aece-89674396ecb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Cone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Sphere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Dress.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -67,27 +65,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="15" />
+          <entry key="java" value="18" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="15" />
+          <entry key="JAVA" value="18" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7670" />
-          <entry key="txt" value="131" />
+          <entry key="java" value="8450" />
+          <entry key="txt" value="175" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7670" />
-          <entry key="PLAIN_TEXT" value="131" />
+          <entry key="JAVA" value="8450" />
+          <entry key="PLAIN_TEXT" value="175" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -95,52 +93,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/TestFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#557#558#0" expanded="true" />
-                <element signature="e#602#603#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Shape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Cone.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="7" />
-              <folding>
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#439#440#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Dress.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+              <folding>
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
+                <element signature="e#855#856#0" expanded="true" />
+                <element signature="e#891#892#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Sphere.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-              <folding>
-                <element signature="e#114#115#0" expanded="true" />
-                <element signature="e#140#141#0" expanded="true" />
-                <element signature="e#171#172#0" expanded="true" />
-                <element signature="e#222#223#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="8" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -150,6 +126,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -187,13 +164,15 @@
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Shape.java" />
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Cone.java" />
         <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Sphere.java" />
+        <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Wearable.java" />
+        <option value="$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Dress.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="164" />
+    <option name="x" value="73" />
     <option name="y" value="23" />
-    <option name="width" value="975" />
+    <option name="width" value="1066" />
     <option name="height" value="835" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -232,7 +211,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539633059148" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539634027985" />
     <property name="last.edited.regexp" value="," />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -248,7 +227,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Shape">
+  <component name="RunManager" selected="Application.Dress">
     <configuration name="CountedObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.CountedObject" />
       <module name="OOPJ" />
@@ -262,8 +241,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExceptionsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.ExceptionsTest" />
+    <configuration name="Dress" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.Dress" />
       <module name="OOPJ" />
       <extension name="coverage">
         <pattern>
@@ -288,8 +267,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleExpressionEval" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.SimpleExpressionEval" />
+    <configuration name="Sphere" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.gdgu.swghosh.cse2016.Sphere" />
       <module name="OOPJ" />
       <extension name="coverage">
         <pattern>
@@ -315,19 +294,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SimpleExpressionEval" />
-      <item itemvalue="Application.ExceptionsTest" />
       <item itemvalue="Application.CountedObject" />
       <item itemvalue="Application.TestFrame" />
       <item itemvalue="Application.Shape" />
+      <item itemvalue="Application.Sphere" />
+      <item itemvalue="Application.Dress" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Dress" />
+        <item itemvalue="Application.Sphere" />
         <item itemvalue="Application.Shape" />
         <item itemvalue="Application.TestFrame" />
         <item itemvalue="Application.CountedObject" />
-        <item itemvalue="Application.SimpleExpressionEval" />
-        <item itemvalue="Application.ExceptionsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -384,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537822210748</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added shape, cone, sphere to CSE2016">
+      <created>1539633207525</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1539633207525</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -397,10 +383,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="164" y="23" width="975" height="835" extended-state="0" />
+    <frame x="73" y="23" width="1066" height="835" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26259378" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23925781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -409,8 +395,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
@@ -438,7 +424,8 @@
     <MESSAGE value="Added swapping program to CSE2016" />
     <MESSAGE value="Added Simple Arithmetic Expression Eval to CSE2016" />
     <MESSAGE value="Added exception test to cse2016" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added exception test to cse2016" />
+    <MESSAGE value="Added shape, cone, sphere to CSE2016" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added shape, cone, sphere to CSE2016" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/HelloWorld.java" />
@@ -539,6 +526,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Cone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="31" lean-forward="true" selection-end-line="25" />
+          <folding>
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/TestFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -550,33 +555,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Shape.java">
+    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Wearable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Cone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="7" />
-          <folding>
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Sphere.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state relative-caret-position="90">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gdgu/swghosh/cse2016/Dress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
           <folding>
-            <element signature="e#114#115#0" expanded="true" />
-            <element signature="e#140#141#0" expanded="true" />
-            <element signature="e#171#172#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
           </folding>
         </state>
       </provider>
