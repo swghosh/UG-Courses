@@ -1,5 +1,13 @@
 package org.gdgu.swghosh.cse2016;
 
+/**
+ * Simple program to print
+ * information about current thread
+ *
+ * @author Swarup Ghosh
+ * @version 1.0
+ * @since 2018-10-26
+ */
 public class ThreadInfo {
     public static void main(String args[]) {
         Thread current = Thread.currentThread();

@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class SocketServerTest {
+public class ServerSocketHTTPTest {
     public static void main(String args[]) throws IOException {
         ServerSocket daemon = new ServerSocket(8961);
         Socket client = daemon.accept();
