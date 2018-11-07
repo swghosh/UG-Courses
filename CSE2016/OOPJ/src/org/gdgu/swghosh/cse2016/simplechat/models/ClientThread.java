@@ -1,5 +1,6 @@
 package org.gdgu.swghosh.cse2016.simplechat.models;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
@@ -14,15 +15,15 @@ public class ClientThread implements Runnable {
     }
 
     public String receiveMessage() {
-
+        return null;
     }
     public void sendMessage() {
 
     }
 
     public void run() {
-        Scanner fromClient = new Scanner(client.getInputStream());
-
-        PrintWriter toClient = new PrintWriter(client.getOutputStream());
+//        Scanner fromClient = new Scanner(client.getInputStream());
+//
+//        PrintWriter toClient = new PrintWriter(client.getOutputStream());
     }
 }
