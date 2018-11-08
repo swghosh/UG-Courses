@@ -30,6 +30,6 @@ void traverseInOrder(TREE *bst); // interanlly uses traverse()
 
 NODE *createNode(int data);
 void putData(NODE *node, int data);
-void traverse(NODE *node);
+void traverseNode(NODE *node);
 
 #endif /* bstree_h */

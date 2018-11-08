@@ -60,13 +60,13 @@ void insert(TREE *bst, int data) {
 
 // traverse each node of the
 // tree recursively in order
-void traverse(NODE *node) {
+void traverseNode(NODE *node) {
     if(node->left != NULL) {
-        traverse(node->left);
+        traverseNode(node->left);
     }
     printf("%d -- ", node->dataValue);
     if(node->right != NULL) {
-        traverse(node->right);
+        traverseNode(node->right);
     }
 }
 
@@ -77,7 +77,6 @@ void traverseInOrder(TREE *bst) {
         fprintf(stderr, "Empty Binary Search Tree.");
     }
     else {
-        traverse(bst->root);
+        traverseNode(bst->root);
     }
 }
-
