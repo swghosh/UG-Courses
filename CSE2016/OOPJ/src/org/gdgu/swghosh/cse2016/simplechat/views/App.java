@@ -2,8 +2,6 @@ package org.gdgu.swghosh.cse2016.simplechat.views;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Date;
 
 public class App extends JFrame {
@@ -11,7 +9,7 @@ public class App extends JFrame {
     private JLabel messagesHead, senderHead;
     private JTextArea messagesField;
     private JScrollPane messagesPane;
-    private JTextField senderField;
+    private JTextArea senderField;
     private JButton sendButton, clearButton;
 
     static final int MARGIN_WIDTH = 25,
@@ -37,7 +35,7 @@ public class App extends JFrame {
         messagesHead = new JLabel("Available Messages");
         senderHead = new JLabel("New Message");
         messagesField = new JTextArea();
-        senderField = new JTextField();
+        senderField = new JTextArea();
         sendButton = new JButton("Send");
         clearButton = new JButton("Clear");
 
@@ -46,7 +44,9 @@ public class App extends JFrame {
         getContentPane().add(messagesHead);
 
         messagesField.setEditable(false);
+        messagesField.setForeground(Color.DARK_GRAY);
         messagesPane = new JScrollPane(messagesField);
+        messagesPane.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
         messagesPane.setBounds(MARGIN_WIDTH, (MARGIN_HEIGHT * 2) + 20, fixedWidth, (WINDOW_HEIGHT / 2) - (3 * MARGIN_HEIGHT + 20));
         getContentPane().add(messagesPane);
 
@@ -55,18 +55,32 @@ public class App extends JFrame {
         getContentPane().add(senderHead);
 
         senderField.setBounds(MARGIN_WIDTH, (WINDOW_HEIGHT / 2) + MARGIN_HEIGHT + 20, fixedWidth, (WINDOW_HEIGHT / 2) - (5 * MARGIN_HEIGHT + 20));
+        senderField.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
         getContentPane().add(senderField);
 
         sendButton.setBounds(MARGIN_WIDTH, WINDOW_HEIGHT - 2 * MARGIN_HEIGHT - 30, 100, 30);
+        sendButton.addActionListener((event) -> {
+            String userMessage = senderField.getText();
+            System.out.printf("[%s] : %s\n", new Date().toString(), userMessage);
+            message(userMessage);
+            senderField.setText("");
+        });
         getContentPane().add(sendButton);
 
         clearButton.setBounds((2 * MARGIN_WIDTH) + 100, WINDOW_HEIGHT - 2 * MARGIN_HEIGHT - 30, 100, 30);
+        clearButton.addActionListener((event) -> {
+            clearMessages();
+        });
         getContentPane().add(clearButton);
     }
 
-    public void messagify(String message) {
+    public void message(String message) {
         messagesField.setText(
-                String.format("%s\n[%s]: %s\n", messagesField.getText().trim(), new Date().toString(), message)
+                String.format("%s\n[%s] : %s", messagesField.getText(), new Date().toString(), message)
         );
+    }
+
+    public void clearMessages() {
+        messagesField.setText("");
     }
 }
