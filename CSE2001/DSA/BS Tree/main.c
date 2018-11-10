@@ -10,12 +10,24 @@
 
 #include "bstree.h"
 
+#define LIMIT 500
+#define COUNT 10
+
 int main() {
-    TREE myBst;
-    init(&myBst);
-    for(int index = 0; index < 20; index++) {
-        insert(&myBst, rand() % 500);
+    TREE aBst;
+    init(&aBst);
+    
+    for(int index = 0; index < COUNT; index++) {
+        insert(&aBst, rand() % LIMIT);
     }
-    traverseInOrder(&myBst);
-    printf("\n");
+    
+    puts("In Order Traversal");
+    traverse(&aBst, inOrder);
+    printf("\n\n");
+    puts("Pre Order Traversal");
+    traverse(&aBst, preOrder);
+    printf("\n\n");
+    puts("Post Order Traversal");
+    traverse(&aBst, postOrder);
+    printf("\n\n");
 }

@@ -59,24 +59,53 @@ void insert(TREE *bst, int data) {
 }
 
 // traverse each node of the
-// tree recursively in order
-void traverseNode(NODE *node) {
-    if(node->left != NULL) {
-        traverseNode(node->left);
-    }
-    printf("%d -- ", node->dataValue);
-    if(node->right != NULL) {
-        traverseNode(node->right);
+// tree recursively based on
+// provided order
+void traverseNode(NODE *node, ORDER order) {
+    switch(order) {
+        case inOrder:
+            // in order is left root right
+            // first, left
+            if(node->left != NULL) {
+                traverseNode(node->left, order);
+            }
+            // then, root
+            printf("%d -- ", node->dataValue);
+            // then, right
+            if(node->right != NULL) {
+                traverseNode(node->right, order);
+            }
+            break;
+        case preOrder:
+            // pre order is root left right
+            printf("%d -- ", node->dataValue);
+            if(node->left != NULL) {
+                traverseNode(node->left, order);
+            }
+            if(node->right != NULL) {
+                traverseNode(node->right, order);
+            }
+            break;
+        case postOrder:
+            // post order is left right root
+            if(node->left != NULL) {
+                traverseNode(node->left, order);
+            }
+            if(node->right != NULL) {
+                traverseNode(node->right, order);
+            }
+            printf("%d -- ", node->dataValue);
+            break;
     }
 }
 
 // traverses a given tree
 // using the in order technique
-void traverseInOrder(TREE *bst) {
+void traverse(TREE *bst, ORDER order) {
     if(bst->root == NULL) {
         fprintf(stderr, "Empty Binary Search Tree.");
     }
     else {
-        traverseNode(bst->root);
+        traverseNode(bst->root, order);
     }
 }

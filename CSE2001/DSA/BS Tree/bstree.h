@@ -24,12 +24,17 @@ struct bsTree {
 };
 #define TREE struct bsTree
 
+enum order {
+    inOrder, preOrder, postOrder
+};
+#define ORDER enum order
+
 void init(TREE *bst);
 void insert(TREE *bst, int data); // internally uses putData() and createNode()
-void traverseInOrder(TREE *bst); // interanlly uses traverse()
+void traverse(TREE *bst, ORDER order); // interanlly uses traverse()
 
 NODE *createNode(int data);
 void putData(NODE *node, int data);
-void traverseNode(NODE *node);
+void traverseNode(NODE *node, ORDER order);
 
 #endif /* bstree_h */
