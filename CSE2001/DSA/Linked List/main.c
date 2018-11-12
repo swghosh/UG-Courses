@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
     puts("---------------------");
     
     while(true) {
-        printf("Specify choice (integer 1-4, expected) -> ");
+        printf("Specify choice (integer 1-9, expected) -> ");
         scanf("%d", &choice);
         
         switch (choice) {

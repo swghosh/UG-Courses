@@ -31,7 +31,7 @@ enum order {
 
 void init(TREE *bst);
 void insert(TREE *bst, int data); // internally uses putData() and createNode()
-void traverse(TREE *bst, ORDER order); // interanlly uses traverse()
+void traverse(TREE *bst, ORDER order); // interanlly uses traverseNode()
 
 NODE *createNode(int data);
 void putData(NODE *node, int data);

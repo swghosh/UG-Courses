@@ -100,7 +100,7 @@ void traverseNode(NODE *node, ORDER order) {
 }
 
 // traverses a given tree
-// using the in order technique
+// using the provided order
 void traverse(TREE *bst, ORDER order) {
     if(bst->root == NULL) {
         fprintf(stderr, "Empty Binary Search Tree.");
