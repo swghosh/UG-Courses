@@ -27,6 +27,7 @@
 		C8D7FFD1215B4E4C000E78B0 /* queuelist.c in Sources */ = {isa = PBXBuildFile; fileRef = C8D7FFD0215B4E4C000E78B0 /* queuelist.c */; };
 		C8F3AF1C219B279E004D1C78 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8F3AF1B219B279E004D1C78 /* main.c */; };
 		C8F3AF27219B27B9004D1C78 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8F3AF26219B27B9004D1C78 /* main.c */; };
+		C8F3AF2D219B3781004D1C78 /* graph.c in Sources */ = {isa = PBXBuildFile; fileRef = C8F3AF2C219B3781004D1C78 /* graph.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -190,6 +191,8 @@
 		C8F3AF1B219B279E004D1C78 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8F3AF24219B27B9004D1C78 /* Tower of Hanoi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Tower of Hanoi"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F3AF26219B27B9004D1C78 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C8F3AF2B219B3781004D1C78 /* graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = graph.h; sourceTree = "<group>"; };
+		C8F3AF2C219B3781004D1C78 /* graph.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = graph.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +436,8 @@
 			isa = PBXGroup;
 			children = (
 				C8F3AF1B219B279E004D1C78 /* main.c */,
+				C8F3AF2B219B3781004D1C78 /* graph.h */,
+				C8F3AF2C219B3781004D1C78 /* graph.c */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -848,6 +853,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8F3AF2D219B3781004D1C78 /* graph.c in Sources */,
 				C8F3AF1C219B279E004D1C78 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

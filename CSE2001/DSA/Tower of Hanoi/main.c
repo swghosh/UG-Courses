@@ -14,12 +14,12 @@
 void towerOfHanoi(int diskId, char fromRodId, char toRodId, char bwRodId) {
     // base case
     if(diskId == 1) {
-        printf("Moving disk with id %d from rod %d to %d rod.\n", diskId, fromRodId, toRodId);
+        printf("Moving disk with id %d from rod %c to %c rod.\n", diskId, fromRodId, toRodId);
     }
     // recursive case
     else {
         towerOfHanoi(diskId - 1, fromRodId, bwRodId, toRodId);
-        printf("Moving disk with id %d from rod %d to %d rod.\n", diskId, fromRodId, toRodId);
+        printf("Moving disk with id %d from rod %c to %c rod.\n", diskId, fromRodId, toRodId);
         towerOfHanoi(diskId - 1, bwRodId, toRodId, fromRodId);
     }
 }
@@ -34,5 +34,6 @@ int main() {
     // to rod Z
     // with rod in between Y
     towerOfHanoi(noOfDisks, 'X', 'Z', 'Y');
+    printf("\n");
     return 0;
 }
