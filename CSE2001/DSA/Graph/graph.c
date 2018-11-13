@@ -7,6 +7,7 @@
 //
 
 #include "graph.h"
+#include <string.h>
 
 void init(GRAPH *graph) {
     graph->vertices = NULL;
@@ -63,4 +64,26 @@ void addNewEdge(VERTICE *fromVertice, VERTICE *toVertice) {
         temp->next = fromVertice->edges;
         fromVertice->edges = temp;
     }
+}
+
+void verticeInfo(VERTICE *vertice) {
+    if(vertice == NULL) {
+        printf("No such vertice.\n");
+        return;
+    }
+    // vertice data
+    printf(":Vertice %d:\n", vertice->dataValue);
+    // iterate edges
+    ELISTN *iter = vertice->edges;
+    printf("Edges\n");
+    if(iter == NULL) {
+        printf("No edges.\n");
+    }
+    else {
+        while(iter != NULL) {
+            printf("%d -> %d;\n", vertice->dataValue, iter->point->dataValue);
+            iter = iter->next;
+        }
+    }
+    printf("\n");
 }

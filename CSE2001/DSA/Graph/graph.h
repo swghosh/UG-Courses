@@ -40,6 +40,8 @@ void init(GRAPH *graph);
 void addNewVertice(GRAPH *graph, VERTICE *vertice);
 void addNewEdge(VERTICE *fromVertice, VERTICE *toVertice);
 
+void verticeInfo(VERTICE *vertice);
+
 VERTICE *createVertice(int data);
 VLISTN *createVListNode(VERTICE *vertice);
 ELISTN *createEListNode(VERTICE *toVertice);
