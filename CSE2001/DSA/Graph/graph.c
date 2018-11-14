@@ -141,7 +141,7 @@ void bfTraverse(VERTICE *vertice) {
     while(!isBfQEmpty()) {
         vTemp = deBfQ();
         printf(":Vertice %d:\n", vTemp->dataValue);
-        eTemp = vertice->edges;
+        eTemp = vTemp->edges;
         while(eTemp != NULL) {
             if(!(eTemp->point->_visited)) {
                 enBfQ(eTemp->point);
