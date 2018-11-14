@@ -7,7 +7,6 @@
 //
 
 #include "graph.h"
-#include <string.h>
 
 void init(GRAPH *graph) {
     graph->vertices = NULL;
@@ -87,3 +86,69 @@ void verticeInfo(VERTICE *vertice) {
     }
     printf("\n");
 }
+
+VERTICE *bfQueue[QUEUE_MAX];
+int bfQFront = -1, bfQRear = -1;
+void enBfQ(VERTICE *vertice) {
+    if(bfQRear + 1 == QUEUE_MAX) {
+        fprintf(stderr, "Queue Overflow.\n");
+    }
+    else {
+        if(bfQFront == -1 && bfQRear == -1) bfQFront = bfQRear = 0;
+        else bfQRear++;
+        bfQueue[bfQRear] = vertice;
+    }
+}
+VERTICE *deBfQ() {
+    VERTICE *del;
+    if(bfQRear == -1 && bfQFront == -1) {
+        fprintf(stderr, "Queue Underflow.\n");
+        return NULL;
+    }
+    else {
+        del = bfQueue[bfQFront];
+        if(bfQFront == bfQRear) bfQFront = bfQRear = -1;
+        else bfQFront = bfQFront + 1;
+    }
+    return del;
+}
+bool isBfQEmpty() {
+    return (bfQFront == -1) && (bfQRear == -1);
+}
+
+void traverse(GRAPH *graph, VERTICE *start) {
+    // set all vertices to univisited
+    VLISTN *iter = graph->vertices;
+    // empty graph,
+    // premature termination
+    if(iter == NULL) return;
+    while(iter != NULL) {
+        iter->vertice->_visited = false;
+        iter = iter->next;
+    }
+    
+    bfQFront = bfQRear = -1;
+    bfTraverse(start);
+}
+
+void bfTraverse(VERTICE *vertice) {
+    VERTICE *vTemp; ELISTN *eTemp;
+    enBfQ(vertice);
+    vertice->_visited = true;
+    
+    // traverse across adjacency list
+    // with a queue
+    while(!isBfQEmpty()) {
+        vTemp = deBfQ();
+        printf(":Vertice %d:\n", vTemp->dataValue);
+        eTemp = vertice->edges;
+        while(eTemp != NULL) {
+            if(!(eTemp->point->_visited)) {
+                enBfQ(eTemp->point);
+                eTemp->point->_visited = true;
+            }
+            eTemp = eTemp->next;
+        }
+    }
+}
+

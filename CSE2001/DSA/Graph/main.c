@@ -88,6 +88,9 @@ void graphTest2() {
     verticeInfo(vert3);
     verticeInfo(vert4);
     verticeInfo(vert5);
+    
+    printf("BFS Traversal of graph\n");
+    traverse(&anotherGraphH, vert4);
 }
 
 int main() {
