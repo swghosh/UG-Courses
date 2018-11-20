@@ -1,4 +1,7 @@
 package org.gdgu.swghosh.cse2016.simplechat.models;
 
-public class SimpleChatClient {
+public class ChatClient {
+    ChatClient() {
+
+    }
 }
