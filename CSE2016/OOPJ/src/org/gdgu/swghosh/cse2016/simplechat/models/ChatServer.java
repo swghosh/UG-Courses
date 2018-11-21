@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class ChatServer {
 
     private ServerSocket daemon;
-    public final int PORT = 9090;
+    public static final int PORT = 9090;
 
     static ArrayList<String> messages = new ArrayList<>();
 
@@ -23,17 +23,19 @@ public class ChatServer {
         Socket client = daemon.accept();
         Scanner fromClient = new Scanner(client.getInputStream());
         PrintWriter toClient = new PrintWriter(client.getOutputStream(), true);
+        for(String message: messages) {
+            System.out.printf("[%s] Sending message to client: \"%s\".\n", new Date().toString(), message);
+            toClient.println(message);
+        }
 
         fromClient.useDelimiter("\n");
         while(fromClient.hasNext()) {
             String aMessage = fromClient.next();
             System.out.printf("[%s] Client message received: \"%s\".\n", new Date().toString(), aMessage);
-            if(!aMessage.trim().isEmpty()) messages.add(aMessage);
-        }
-
-        for(String message: messages) {
-            System.out.printf("[%s] Sending message to client: \"%s\".\n", new Date().toString(), message);
-            toClient.println(message);
+            if(!aMessage.trim().isEmpty()) {
+                messages.add(aMessage);
+                toClient.println(aMessage);
+            }
         }
 
         fromClient.close();

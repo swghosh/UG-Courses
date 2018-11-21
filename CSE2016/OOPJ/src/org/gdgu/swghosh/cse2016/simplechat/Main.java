@@ -8,6 +8,9 @@ import java.util.Date;
 
 public class Main {
     public static void main(String args[]) {
+        System.out.println("Starting SimpleChat App at " + new Date().toString() + ".");
+        App app = new App();
+
         // Thread to handle Chat Server
         Thread serverThread = new Thread(new Runnable() {
             @Override
@@ -25,11 +28,5 @@ public class Main {
             }
         });
         serverThread.start();
-
-        // Thread to handle Chat Client
-
-        System.out.println("Starting SimpleChat App at " + new Date().toString() + ".");
-        App app = new App();
-        app.message("Hello World");
     }
 }

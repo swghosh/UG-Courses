@@ -1,7 +1,10 @@
 package org.gdgu.swghosh.cse2016.simplechat.views;
 
+import org.gdgu.swghosh.cse2016.simplechat.models.ChatClient;
+
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 import java.util.Date;
 
 public class App extends JFrame {
@@ -60,10 +63,12 @@ public class App extends JFrame {
 
         sendButton.setBounds(MARGIN_WIDTH, WINDOW_HEIGHT - 2 * MARGIN_HEIGHT - 30, 100, 30);
         sendButton.addActionListener((event) -> {
-            String userMessage = senderField.getText();
-            System.out.printf("[%s] : %s\n", new Date().toString(), userMessage);
-            message(userMessage);
-            senderField.setText("");
+            try {
+                onSendMessage();
+            }
+            catch (IOException ie) {
+                System.err.println("Failed. " + ie.getMessage());
+            }
         });
         getContentPane().add(sendButton);
 
@@ -74,10 +79,13 @@ public class App extends JFrame {
         getContentPane().add(clearButton);
     }
 
-    public void message(String message) {
-        messagesField.setText(
-                String.format("%s\n[%s] : %s", messagesField.getText(), new Date().toString(), message)
-        );
+    public void onSendMessage() throws IOException {
+        String userMessage = senderField.getText();
+        String fullMessage = String.format("[%s] : %s\n", new Date().toString(), userMessage);
+        messagesField.setText(fullMessage);
+        senderField.setText("");
+        ChatClient.sendMessage(fullMessage);
+        messagesField.setText(ChatClient.getMessages());
     }
 
     public void clearMessages() {
