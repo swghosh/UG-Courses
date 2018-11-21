@@ -7,6 +7,14 @@ import java.awt.*;
 import java.io.IOException;
 import java.util.Date;
 
+/**
+ * Used to initialise the GUI
+ * application
+ *
+ * @version 1.0
+ * @author Swarup Ghosh
+ * @since 12-11-2018
+ */
 public class App extends JFrame {
 
     private JLabel messagesHead, senderHead;
@@ -15,13 +23,17 @@ public class App extends JFrame {
     private JTextArea senderField;
     private JButton sendButton, clearButton;
 
-    static final int MARGIN_WIDTH = 25,
+    private static final int MARGIN_WIDTH = 25,
                      MARGIN_HEIGHT = 25,
                      WINDOW_WIDTH = 600,
                      WINDOW_HEIGHT = 600,
                      POSITION_OFFSET = 100;
-    static final String WINDOW_TITLE = "Simple Chat App";
+    private static final String WINDOW_TITLE = "Simple Chat App";
 
+    /**
+     * Constructor of class App
+     * to initialise GUI application
+     */
     public App() {
         super(WINDOW_TITLE);
         setBounds(POSITION_OFFSET, POSITION_OFFSET, WINDOW_WIDTH, WINDOW_HEIGHT);
@@ -32,6 +44,9 @@ public class App extends JFrame {
         setVisible(true);
     }
 
+    /** Generate different UI components present
+     * in the GUI
+     */
     public void populate() {
         int fixedWidth = WINDOW_WIDTH - (2 * MARGIN_WIDTH);
 
@@ -79,6 +94,11 @@ public class App extends JFrame {
         getContentPane().add(clearButton);
     }
 
+    /**
+     * Method that is executed
+     * on each submit button press
+     * @throws IOException
+     */
     public void onSendMessage() throws IOException {
         String userMessage = senderField.getText();
         String fullMessage = String.format("[%s] : %s\n", new Date().toString(), userMessage);
@@ -88,6 +108,10 @@ public class App extends JFrame {
         messagesField.setText(ChatClient.getMessages());
     }
 
+    /**
+     * Method that is executed
+     * on each clear button press
+     */
     public void clearMessages() {
         messagesField.setText("");
     }

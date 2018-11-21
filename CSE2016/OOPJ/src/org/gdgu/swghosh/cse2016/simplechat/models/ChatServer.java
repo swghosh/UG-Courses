@@ -8,17 +8,46 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
+/**
+ * Used to perform server end
+ * functionality on a
+ * specified port
+ * to allow send and receiving of messages
+ * from clients.
+ * Clients may directly send messages
+ * over socket input streams, and
+ * may receive all persisted messages
+ * on respective output streams.
+ *
+ * @version 1.0
+ * @author Swarup Ghosh
+ * @since 12-11-2018
+ */
+
 public class ChatServer {
 
     private ServerSocket daemon;
+    /**
+     * Port 9090 used for Socket Server
+     */
     public static final int PORT = 9090;
 
     static ArrayList<String> messages = new ArrayList<>();
 
+    /**
+     * Initialise a server socket
+     * @throws IOException
+     */
     public ChatServer() throws IOException {
         daemon = new ServerSocket(PORT);
     }
 
+    /**
+     * Serve a single client
+     * using the server socket.
+     * Waits until a client connects
+     * @throws IOException
+     */
     public void serve() throws IOException {
         Socket client = daemon.accept();
         Scanner fromClient = new Scanner(client.getInputStream());
@@ -43,6 +72,10 @@ public class ChatServer {
         client.close();
     }
 
+    /**
+     * Close the server socket
+     * @throws IOException
+     */
     public void close() throws IOException {
         daemon.close();
     }
