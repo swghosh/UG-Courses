@@ -14,10 +14,13 @@ int main() {
     PQUEUE q;
     init(&q);
     enqueue(&q, 10, 5);
-    enqueue(&q, 20, 10);
-    enqueue(&q, 30, 6);
-    enqueue(&q, 30, 20);
+    enqueue(&q, 20, 200);
+    enqueue(&q, 30, 10);
     printf("HIGHEST PRIORITY :%d, priority = %d:\n", q.highestPriority->data, q.highestPriority->priority);
+    traversePrint(&q);
+    printf("Dequeued: %d.\n", dequeue(&q));
+    printf("Dequeued: %d.\n", dequeue(&q));
+    printf("Dequeued: %d.\n", dequeue(&q));
     traversePrint(&q);
     return 0;
 }

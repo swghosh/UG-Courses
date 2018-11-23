@@ -29,6 +29,7 @@ NODE *highestPriority(PQUEUE *q) {
             highPriority = iter->priority;
             hp = iter;
         }
+        iter = iter->next;
     }
     return hp;
 }
@@ -69,17 +70,27 @@ int dequeue(PQUEUE *q) {
         fprintf(stderr, "Dequeue not possible.\n");
         return INT_MIN;
     }
+    
     NODE *left, *right; int data;
     data = q->highestPriority->data;
     
     left = q->highestPriority->previous;
     right = q->highestPriority->next;
     
-    left->next = right;
-    right->previous = left;
+    if(left == NULL) {
+        q->start = right;
+    }
+    else {
+        left->next = right;
+    }
     
+    if(right == NULL) {
+        q->end = left;
+    }
+    else {
+        right->previous = left;
+    }
     free(q->highestPriority);
-    
     q->highestPriority = highestPriority(q);
     return data;
 }
