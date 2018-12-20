@@ -27,6 +27,8 @@
 		C8D7FFC3215B40DC000E78B0 /* stacklist.c in Sources */ = {isa = PBXBuildFile; fileRef = C8D7FFC2215B40DC000E78B0 /* stacklist.c */; };
 		C8D7FFCB215B4DEC000E78B0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8D7FFCA215B4DEC000E78B0 /* main.c */; };
 		C8D7FFD1215B4E4C000E78B0 /* queuelist.c in Sources */ = {isa = PBXBuildFile; fileRef = C8D7FFD0215B4E4C000E78B0 /* queuelist.c */; };
+		C8E896E421CBC1E200B594DE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8E896E321CBC1E200B594DE /* main.c */; };
+		C8E896EA21CBCB1000B594DE /* hashtable.c in Sources */ = {isa = PBXBuildFile; fileRef = C8E896E921CBCB1000B594DE /* hashtable.c */; };
 		C8F3AF1C219B279E004D1C78 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8F3AF1B219B279E004D1C78 /* main.c */; };
 		C8F3AF27219B27B9004D1C78 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8F3AF26219B27B9004D1C78 /* main.c */; };
 		C8F3AF2D219B3781004D1C78 /* graph.c in Sources */ = {isa = PBXBuildFile; fileRef = C8F3AF2C219B3781004D1C78 /* graph.c */; };
@@ -141,6 +143,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		C8E896DF21CBC1E100B594DE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		C8F3AF17219B279E004D1C78 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,6 +213,10 @@
 		C8D7FFCA215B4DEC000E78B0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8D7FFCF215B4E4C000E78B0 /* queuelist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = queuelist.h; sourceTree = "<group>"; };
 		C8D7FFD0215B4E4C000E78B0 /* queuelist.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = queuelist.c; sourceTree = "<group>"; };
+		C8E896E121CBC1E100B594DE /* Hash Table */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Hash Table"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8E896E321CBC1E200B594DE /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C8E896E821CBCB1000B594DE /* hashtable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hashtable.h; sourceTree = "<group>"; };
+		C8E896E921CBCB1000B594DE /* hashtable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hashtable.c; sourceTree = "<group>"; };
 		C8F3AF19219B279E004D1C78 /* Graph */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Graph; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F3AF1B219B279E004D1C78 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8F3AF24219B27B9004D1C78 /* Tower of Hanoi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Tower of Hanoi"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +310,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C8E896DE21CBC1E100B594DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C8F3AF16219B279E004D1C78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +377,7 @@
 				C8F3AF1A219B279E004D1C78 /* Graph */,
 				C8F3AF25219B27B9004D1C78 /* Tower of Hanoi */,
 				C87C72D521A7C00C00A2D5DB /* Priority Queue */,
+				C8E896E221CBC1E100B594DE /* Hash Table */,
 				C82560CA21308454008DCB80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -376,6 +399,7 @@
 				C8F3AF19219B279E004D1C78 /* Graph */,
 				C8F3AF24219B27B9004D1C78 /* Tower of Hanoi */,
 				C87C72D421A7C00C00A2D5DB /* Priority Queue */,
+				C8E896E121CBC1E100B594DE /* Hash Table */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -464,6 +488,16 @@
 				C8D7FFD0215B4E4C000E78B0 /* queuelist.c */,
 			);
 			path = "Queue List";
+			sourceTree = "<group>";
+		};
+		C8E896E221CBC1E100B594DE /* Hash Table */ = {
+			isa = PBXGroup;
+			children = (
+				C8E896E321CBC1E200B594DE /* main.c */,
+				C8E896E821CBCB1000B594DE /* hashtable.h */,
+				C8E896E921CBCB1000B594DE /* hashtable.c */,
+			);
+			path = "Hash Table";
 			sourceTree = "<group>";
 		};
 		C8F3AF1A219B279E004D1C78 /* Graph */ = {
@@ -691,6 +725,23 @@
 			productReference = C8D7FFC8215B4DEC000E78B0 /* Queue List */;
 			productType = "com.apple.product-type.tool";
 		};
+		C8E896E021CBC1E100B594DE /* Hash Table */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8E896E721CBC1E200B594DE /* Build configuration list for PBXNativeTarget "Hash Table" */;
+			buildPhases = (
+				C8E896DD21CBC1E100B594DE /* Sources */,
+				C8E896DE21CBC1E100B594DE /* Frameworks */,
+				C8E896DF21CBC1E100B594DE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hash Table";
+			productName = "Hash Table";
+			productReference = C8E896E121CBC1E100B594DE /* Hash Table */;
+			productType = "com.apple.product-type.tool";
+		};
 		C8F3AF18219B279E004D1C78 /* Graph */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8F3AF1F219B279E004D1C78 /* Build configuration list for PBXNativeTarget "Graph" */;
@@ -770,6 +821,9 @@
 					C8D7FFC7215B4DEC000E78B0 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					C8E896E021CBC1E100B594DE = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					C8F3AF18219B279E004D1C78 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -804,6 +858,7 @@
 				C8F3AF18219B279E004D1C78 /* Graph */,
 				C8F3AF23219B27B9004D1C78 /* Tower of Hanoi */,
 				C87C72D321A7C00C00A2D5DB /* Priority Queue */,
+				C8E896E021CBC1E100B594DE /* Hash Table */,
 			);
 		};
 /* End PBXProject section */
@@ -910,6 +965,15 @@
 			files = (
 				C8D7FFCB215B4DEC000E78B0 /* main.c in Sources */,
 				C8D7FFD1215B4E4C000E78B0 /* queuelist.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8E896DD21CBC1E100B594DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8E896EA21CBCB1000B594DE /* hashtable.c in Sources */,
+				C8E896E421CBC1E200B594DE /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1280,6 +1344,29 @@
 			};
 			name = Release;
 		};
+		C8E896E521CBC1E200B594DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C8E896E621CBC1E200B594DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C8F3AF1D219B279E004D1C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1442,6 +1529,15 @@
 			buildConfigurations = (
 				C8D7FFCD215B4DEC000E78B0 /* Debug */,
 				C8D7FFCE215B4DEC000E78B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8E896E721CBC1E200B594DE /* Build configuration list for PBXNativeTarget "Hash Table" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8E896E521CBC1E200B594DE /* Debug */,
+				C8E896E621CBC1E200B594DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
