@@ -1,0 +1,284 @@
+---
+title: "Experiment 1: Basic Operations"
+output: html_notebook
+---
+
+## Variables
+
+Variables are used to hold data values of any type.
+
+### Creating Variables
+
+```{r}
+x <- 131198
+y <- "Hello World"
+print(x)
+print(y)
+```
+
+### Modifying Values of Variables
+
+```{r}
+print(x) # initial value
+x <- 2 * x # value of x will be doubled
+print(x) # final value
+```
+
+### Removing Existing Variables
+
+```{r}
+rm(x)
+rm(y)
+print('x, y variables were removed')
+```
+
+## Environment
+
+An environment can be used to store multiple variables that are to be used for a common purpose. It is like a wrapper for holding multiple values in named fashion.
+
+### Creating an Environment
+
+```{r}
+anEnv <- new.env()
+```
+
+### Assign Variables to the Environment
+
+```{r}
+# assign a value to a variable
+# inside created environment
+assign('name', "Contoso", anEnv)
+# another one
+assign('age', 23, anEnv)
+```
+
+### Get the Value of the Variables
+
+```{r}
+# get the variable values
+get('name', anEnv)
+```
+
+```{r}
+get('age', anEnv)
+```
+
+### Display all Variables in Environment
+
+```{r}
+ls(anEnv)
+```
+
+### Remove Variables from Environment
+
+```{r}
+rm('name', envir = anEnv)
+print("removed variable 'name' from anEnv")
+```
+
+```{r}
+ls(anEnv) # only age will exist
+```
+
+### Remove the Environment
+
+```{r}
+rm(anEnv)
+print('removed environment anEnv')
+```
+
+## Working Directory
+
+Working directory refers to the current directory relative to which all script executions are held. The canonical alias of the standard unix-like command `pwd` is `getwd()` in R.
+
+### Get Current Directory
+```{r}
+getwd()
+```
+
+### Set the Current Directory
+
+```{r}
+# it may be set either relative to current directory 
+setwd('../CSE2019')
+afterFirstSet <- getwd()
+# or relative to system root
+setwd('/Users/Shared')
+afterSecondSet <- getwd()
+```
+
+```{r}
+print(afterFirstSet)
+print(afterSecondSet)
+```
+
+## Few Mathematical Functions
+
+### Logarithm Function
+
+```{r}
+log(16, base = 4) # using with custom base
+log2(8) # using with 2 as base
+log10(10000) # using with 10 as base
+log(exp(10), base = exp(1)) # natural logarithm, base = e
+```
+
+### Exponential Function
+
+```{r}
+# used to compute euler's const
+# and higher powers of exp fn
+exp(1) # euler's const
+exp(10) # e ^ 10
+```
+
+### Absolute Value
+
+```{r}
+# similar to modulus
+# computes absolute value of a numeric
+abs(-909)
+```
+
+### Factorial
+
+```{r}
+factorial(5) # 5 * 4 * 3 * 2 * 1
+```
+
+### Square Root
+
+```{r}
+sqrt(144) # will give 12 as 12 ^ 2 = 144
+```
+
+## Data Types
+
+### Numeric
+
+```{r}
+numY <- 17.29
+numY
+```
+
+### Integer
+
+```{r}
+intX <- 69L # L is used to denote it's integer value
+intX
+```
+
+### Complex
+
+```{r}
+point <- 3 + 2i
+print(point)
+```
+
+### Logical
+
+```{r}
+flag <- TRUE
+print(flag)
+anotherFlag <- FALSE
+print(anotherFlag)
+```
+
+### Character
+
+```{r}
+name <- "Contoso Smith"
+print(name)
+```
+
+### Date and Time
+
+```{r}
+aDate <- Sys.Date() # current date
+aTime <- Sys.time() # current time
+print(aDate)
+print(aTime)
+```
+
+### Coercion - Type Casting
+
+```{r}
+intY <- as.integer(9.9)
+print(intY)
+```
+
+```{r}
+numZ <- as.numeric(9L)
+print(numZ)
+```
+
+```{r}
+numA <- as.numeric(flag)
+print(numA) # logical bool to numeric
+```
+
+### Determining the Data Type
+
+```{r}
+class(flag)
+class(intX)
+class(aStr)
+class(aTime)
+class(aDate)
+class(numY)
+
+class(intX)
+class(numZ)
+```
+
+### Type Tests
+
+```{r}
+is.integer(9)
+is.character(intX)
+is.character(name)
+is.complex(point)
+```
+
+### Non Existent Values
+
+```{r}
+NaN
+NA
+1 / 0
+```
+
+```{r}
+is.finite(1 / 0)
+is.infinite(Inf)
+
+as.logical(x) # will produce NA, since x is character
+
+# example of NaN
+print(Inf - Inf)
+```
+
+## Characters
+
+A string, as in a sequence of characters belong to the class `character` in R.
+
+### Showing Part of a Character Variable
+
+```{r}
+aStr <- "Hello World"
+substr(aStr, 7, 11) # start stop index specified (inclusive)
+```
+
+### Concatenate Two Character Variable
+
+```{r}
+x <- "Welcome"
+y <- "Change"
+paste(x, y) # by default space used as seperator
+```
+
+### Length of Character Variable
+
+```{r}
+nchar(x)
+```
