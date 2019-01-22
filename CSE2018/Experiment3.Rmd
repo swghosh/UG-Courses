@@ -1,0 +1,132 @@
+---
+title: "Experiment 3: Collections"
+output: html_notebook
+---
+
+## Vectors
+
+### Creating a Vector
+
+```{r}
+aVect <- c(1, 3, 5, 7, 9)
+print(aVect)
+class(aVect)
+```
+
+Automatic coercion in list.
+
+
+```{r}
+vec <- c(1L, 2L, 3L)
+class(vec)
+str(vec)
+```
+
+### Using Sequences and Replicates
+
+```{r}
+# using sequences
+xv <- seq(1, 10, by = 0.1)
+# using replicate
+xu <- rep('a', 5)
+xv
+xu
+```
+
+### Creating a Merged Vector
+
+```{r}
+c(xu, xv)
+```
+
+```{r}
+friends <- c("John", "Smith", "Kenny")
+class(friends)
+tutorials <- c("MAT2701", "MAT2702")
+merged <- c(friends, tutorials)
+merged
+```
+
+### Length of a Vector
+
+```{r}
+print(length(xv))
+```
+
+### Get Specific Vector Element
+
+```{r}
+index <- 1
+friends[index] # friends, position 1
+```
+
+```{r}
+index <- 2:3
+friends[index] # friends, position 2, 3
+```
+
+### Sorting a Vector
+
+```{r}
+x <- order(friends)
+sort(friends)
+friends[x]
+```
+
+```{r}
+rev(friends)
+rev(order(friends))
+sort(friends)
+```
+
+### Remove missing Value
+
+```{r}
+myVec <- c(1, 2, 3, NA, 4)
+indices <- !is.na(myVec)
+myVec[indices]
+```
+
+## Random Sampling
+
+```{r}
+oneToHundred <- 1:100
+aSample <- sample(oneToHundred, 20)
+aSample
+class(aSample)
+```
+
+```{r}
+randSet <- runif(50, 1, 100)
+oneToHundred[randSet]
+```
+
+```{r}
+x <- sample(oneToHundred, 20, replace = T)
+x
+```
+
+## Lists
+
+```{r}
+l1 <- list(1L, 2.2, "a", TRUE, Inf)
+l1
+```
+
+```{r}
+class(l1[[1]])
+```
+
+## Matrix
+
+```{r}
+matr
+```
+
+
+
+
+
+
+
+
