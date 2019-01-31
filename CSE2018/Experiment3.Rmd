@@ -117,16 +117,53 @@ l1
 class(l1[[1]])
 ```
 
+```{r}
+names(l1) <- c('a', 'b', 'c', 'd', 'e')
+l1
+```
+
 ## Matrix
 
 ```{r}
-matr
+matrix(1:100, nrow = 20)
 ```
 
+```{r}
+vec1 <- seq(1, 20, 2)
+vec2 <- seq(31, 50, 2)
+m1 <- rbind(vec1, vec2)
+m2 <- cbind(vec1, vec2)
+length(m1)
+```
 
+```{r}
+str(m1)
+dim(m1) <- c(4, 5)
+```
 
+```{r}
+dimnames(m1)
+```
 
+```{r}
+threeDStuff <- array(1:12, c(2, 2, 3))
+threeDStuff
+```
 
+### Vector Recycling
 
+### Addition, Subtraction, etc on Vectors
+
+```{r}
+m1 <- matrix(1:4, nrow = 2)
+m2 <- 
+```
+
+### Generate a seq like 01230123, 000111222333
+
+```{r}
+paste(rep(0:3, 4), collapse = '')
+paste(strrep(as.character(0:3), 3), collapse = '')
+```
 
 

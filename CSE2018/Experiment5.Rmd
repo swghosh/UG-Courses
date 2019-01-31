@@ -1,0 +1,94 @@
+---
+title: "Experiment 5"
+output: html_notebook
+---
+
+Execute the following, observe and interpret the output:
+a <- c(1, -5, 3.4, -2, 5, 3)
+factor(a)
+factor(a, 1:5)
+factor(a, 3:5)
+factor(a, -10:5)
+
+```{r}
+a <- c(1, -5, 3.4, -2, 5, 3)
+factor(a)
+factor(a, 1:5)
+factor(a, 3:5)
+factor(a, -10:5)
+```
+
+Create the following vectors of size 10
+v1: vector of first names
+v2: vector of last names
+v3: vector of random nos from 1 to 50
+
+```{r}
+v1 <- c(
+  "John", "Joe", "Jacob", "Steve",
+  "Candis", "Jenny", "Angel", "Jill", "Mary"
+  )
+v2 <- c(
+  "Smith", "Allen", "Manor", "Gosling",
+  "Pegasus", "Trakersky", "Archer", "Jeffry", "Kim"
+  )
+length(v1) == length(v2)
+```
+
+```{r}
+# 20 random numbers between 1 to 50
+v3 <- sample(
+    seq(0, 50, by = 0.1),
+    length(v1)
+  )
+v3
+```
+
+Create a datafram from these vectors with appropriate headings.
+
+```{r}
+people <- data.frame(v3, v1, v2, stringsAsFactors = F)
+names(people) <- c("UniqueSerial", "FirstName", "LastName")
+people
+```
+
+Add a column ContactNumber to this data frame.
+
+```{r}
+people[[4]] <- c(
+  1e10 + seq(1, length(v1))
+)
+names(people)[4] <- "ContactNumber"
+people
+```
+
+```{r}
+column3 <- people[[1]]
+class(column3)
+column3 <- as.factor(column3)
+people$UniqueSerial <- column3
+class(people$UniqueSerial)
+```
+
+
+Create another df with columns:
+enrolment_number, semester and merge them with existing df
+
+```{r}
+enN <- 17002020 + seq(1, length(v1))
+sem <- sample(1:8, length(v1), replace = T)
+sem
+enN
+```
+
+```{r}
+people <- cbind(people, enN, sem)
+people
+```
+
+```{r}
+names(people)[5] <- "EnrolmentNumber"
+names(people)[6] <- "Semester"
+people
+```
+

@@ -1,0 +1,105 @@
+---
+title: 'Experiment 4: Data Frames and Factors'
+output:
+  word_document: default
+  html_notebook: default
+---
+
+# Data Frames
+
+## Creating a Data Frame
+
+```{r}
+n <- 1:5
+s <- rep('Name', 5)
+x <- c(rep(TRUE, 3), rep(FALSE, 2))
+
+df <- data.frame(n, s, x)
+df
+```
+
+```{r}
+class(df)
+class(df[1])
+class(df[[1]])
+is.vector(df[[1]])
+class(df$n)
+```
+
+## Naming columns 
+
+```{r}
+names(df) = c("Number", "Name", "Student")
+df
+```
+
+## Strings As Factors
+
+```{r}
+class(df$Name)
+df2 <- data.frame(n, s, x, stringsAsFactors = F)
+class(df2$s)
+```
+
+## Create a sample data frame
+
+```{r}
+serialNum <- 1:10
+names <- paste("Name", as.character(serialNum))
+salary <- 33000 * serialNum
+joiningDates <- rep(Sys.Date(), length(serialNum))
+
+employees <- data.frame(
+  serialNum, names, salary, joiningDates,
+  stringsAsFactors = F
+)
+print(employees)
+```
+
+# Factors
+
+## Play with Factors
+
+```{r}
+gender <- factor(c("Male", "Female", "Others"))
+class(gender)
+directions <- c("East", "West", "North", "South")
+print(directions)
+print(is.factor(directions))
+
+gender[[1]]
+levels(gender) <- c("male", "female", "others")
+gender
+```
+
+```{r}
+print(as.factor(directions))
+```
+
+## Create a Data Frame and Check for factors
+
+```{r}
+height <- seq(30, 50, by = 1.8)
+weight <- seq(40, 60, by = 1.8)
+halfLength <- length(height) / 2
+gender <- c(rep('Male', halfLength), rep('Female', halfLength))
+
+bmi <- data.frame(height, weight, gender)
+bmi
+```
+
+```{r}
+is.factor(bmi$gender)
+```
+
+
+
+
+
+
+
+
+
+
+
+
