@@ -1,0 +1,55 @@
+
+db.createCollection('messages')
+db.messages.insertMany([
+    {
+        "to": "student.a",
+        "from": "faculty.a",
+        "text": "Hello, welcome to the class"
+    },
+    {
+        "to": "student.a",
+        "from": "faculty.a",
+        "text": "Hello, welcome to the class? CSE1?"
+    },
+    {
+        "to": "student.b",
+        "from": "faculty.a",
+        "text": "Hello, welcome to the class? CSE2?"
+    },
+    {
+        "to": "student.b",
+        "from": "faculty.a",
+        "text": "Hello, welcome to the class? CSE3?"
+    },
+    {
+        "to": "student.a",
+        "from": "faculty.b",
+        "text": "Hello, welcome to the class? CSE4?"
+    },
+    {
+        "to": "student.b",
+        "from": "faculty.c",
+        "text": "Hello, welcome to the class? CSE5?"
+    },
+    {
+        "to": "student.b",
+        "from": "faculty.c",
+        "text": "Hello, welcome to the class? CSE6?"
+    },
+])
+// show messages from "faculty.a", "faculty.b"
+db.messages.find({
+    "from": {
+        "$in": ['faculty.a', 'faculty.b']
+    }
+})
+
+// Q2: CREATION OF A COLLECTION AND INSERTION OF DOCUMENTS IN MONGODB
+// createCollection, insertOne, insertMany
+
+// Q3: ENQUIRING THE DATA IN MONGODB
+// find with queries, use of selection, projection, $in, $or, $and
+
+/*
+$lt, $lte, $gt, $gte, $eq, $ne, $nin, $in, 
+*/
