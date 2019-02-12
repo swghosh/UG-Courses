@@ -6,8 +6,8 @@ Primarily, it will contain the source codes to various programs done as a part o
 
 This repository will constantly be updated until completion of degree.
 
-- CSE1003 - Introduction to Computer Science 
-- CSE1007 - Web Programming through PHP and HTML
+- CSE1007 - Introduction to Computer Science 
+- CSE1003 - Web Programming through PHP and HTML
 - CSE2001 - Data Structures and Algorithms
 - CSE2002 - Database Management Systems
 - CSE2016 - Object Oriented Programming through Java

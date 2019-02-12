@@ -1,0 +1,56 @@
+---
+title: "Experiment"
+output: html_notebook
+---
+
+## Functions
+
+```{r}
+greet <- function(name) {
+  print(paste('Hello, ', name, '! You are amazing.', sep = ''))
+}
+greet('Dev')
+```
+
+### Write a function to get square of number in sequence
+
+```{r}
+x <- 1:20
+squared <- function(i) {
+  return(i*i)
+}
+squared(x)
+```
+
+### Write a function to print a factors of a number
+
+```{r}
+factors <- function(x) {
+  y <- seq(1, x)
+  return(y[x %% y == 0])
+}
+
+print('Factors of 10 are')
+print(factors(10))
+
+print('Factors of 9190 are')
+print(factors(9190))
+```
+
+### Write a function to count sum of n natural numbers
+
+```{r}
+sumofnatural <- function(n) {
+  return(sum(0:n))
+}
+
+print('Sum of first 10 natural numbers')
+print(sumofnatural(10))
+```
+
+
+
+
+
+
+
