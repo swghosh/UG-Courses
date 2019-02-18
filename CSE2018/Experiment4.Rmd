@@ -1,105 +1,140 @@
 ---
-title: 'Experiment 4: Data Frames and Factors'
+title: 'Experiment 4: Conditionals and Functions'
 output:
   word_document: default
   html_notebook: default
 ---
 
-# Data Frames
-
-## Creating a Data Frame
+### Even Odd Number Test
 
 ```{r}
-n <- 1:5
-s <- rep('Name', 5)
-x <- c(rep(TRUE, 3), rep(FALSE, 2))
-
-df <- data.frame(n, s, x)
-df
-```
-
-```{r}
-class(df)
-class(df[1])
-class(df[[1]])
-is.vector(df[[1]])
-class(df$n)
-```
-
-## Naming columns 
-
-```{r}
-names(df) = c("Number", "Name", "Student")
-df
-```
-
-## Strings As Factors
-
-```{r}
-class(df$Name)
-df2 <- data.frame(n, s, x, stringsAsFactors = F)
-class(df2$s)
-```
-
-## Create a sample data frame
-
-```{r}
-serialNum <- 1:10
-names <- paste("Name", as.character(serialNum))
-salary <- 33000 * serialNum
-joiningDates <- rep(Sys.Date(), length(serialNum))
-
-employees <- data.frame(
-  serialNum, names, salary, joiningDates,
-  stringsAsFactors = F
+x <- as.integer(
+  readline('Specify a number:')
 )
-print(employees)
+if(x %% 2 == 0) {
+ print("Even number detected.") 
+} else { 
+  print("Odd number detected.")
+}
+print(x)
 ```
 
-# Factors
-
-## Play with Factors
+### Prime Composite Number Test
 
 ```{r}
-gender <- factor(c("Male", "Female", "Others"))
-class(gender)
-directions <- c("East", "West", "North", "South")
-print(directions)
-print(is.factor(directions))
+y <- as.numeric(
+  readline("Specify a number: ")
+)
+print(y)
+ctr <- 0
+for(index in seq(1, y)) {
+  if(y %% index == 0) ctr <- ctr + 1
+}
 
-gender[[1]]
-levels(gender) <- c("male", "female", "others")
-gender
+if(ctr == 2) {
+  print("Prime")
+} else {
+  print("Composite")
+}
 ```
+
+### Simple Calculator
 
 ```{r}
-print(as.factor(directions))
+print('An expression is of the format x1 op x2, where x1, x2 are two numbers, op is an operator like +, -, *, /. Please make sure that x1, op, x2 are space seperated.')
+user_input <- readline('Specify an expression! ')
+parts <- strsplit(user_input, " ")
+parts <- parts[[1]]
+
+x1 <- as.numeric(parts[1])
+op <- parts[2]
+x2 <- as.numeric(parts[3])
+
+value <- switch (op,
+  "+" = x1 + x2,
+  "-" = x1 - x2,
+  "*" = x1 * x2,
+  "/" = x1 / x2
+)
+print(
+  value
+)
 ```
 
-## Create a Data Frame and Check for factors
+## TWO THREE SIX
 
 ```{r}
-height <- seq(30, 50, by = 1.8)
-weight <- seq(40, 60, by = 1.8)
-halfLength <- length(height) / 2
-gender <- c(rep('Male', halfLength), rep('Female', halfLength))
-
-bmi <- data.frame(height, weight, gender)
-bmi
+numset <- 1:100
+for(x in numset) {
+  if(x %% 2 == 0 && x %% 3 == 0) print(paste(x, "SIX"))
+  else if(x %% 2 == 0) print(paste(x, "TWO"))
+  else if (x %% 3 == 0) print(paste(x, "THREE"))
+}
 ```
+
+### Armstrong Number Test
 
 ```{r}
-is.factor(bmi$gender)
+user_input <- as.integer(readline("Specify a number of your choice! > "))
+x_temp <- user_input
+dig_sum <- 0
+while(x_temp > 0) {
+  digit <- x_temp %% 10;
+  print(digit)
+  dig_sum <- dig_sum + (digit ^ 3)
+  x_temp <- x_temp %/% 10;
+}
+if(dig_sum == user_input) {
+  print("Armstrong number detected.")
+} else {
+  print("Armstrong number not detected.")
+}
 ```
 
 
+## Functions
 
+```{r}
+greet <- function(name) {
+  print(paste('Hello, ', name, '! You are amazing.', sep = ''))
+}
+greet('Dev')
+```
 
+### Write a function to get square of number in sequence
 
+```{r}
+x <- 1:20
+squared <- function(i) {
+  return(i*i)
+}
+squared(x)
+```
 
+### Write a function to print a factors of a number
 
+```{r}
+factors <- function(x) {
+  y <- seq(1, x)
+  return(y[x %% y == 0])
+}
 
+print('Factors of 10 are')
+print(factors(10))
 
+print('Factors of 9190 are')
+print(factors(9190))
+```
 
+### Write a function to count sum of n natural numbers
+
+```{r}
+sumofnatural <- function(n) {
+  return(sum(0:n))
+}
+
+print('Sum of first 10 natural numbers')
+print(sumofnatural(10))
+```
 
 

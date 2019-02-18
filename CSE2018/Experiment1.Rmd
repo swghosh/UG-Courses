@@ -1,6 +1,8 @@
 ---
-title: "Experiment 1: Basic Operations"
-output: html_notebook
+title: 'Experiment 1: Basic Operations'
+output:
+  word_document: default
+  html_notebook: default
 ---
 
 ## Variables
@@ -221,8 +223,7 @@ print(numA) # logical bool to numeric
 
 ```{r}
 class(flag)
-class(intX)
-class(aStr)
+class(intY)
 class(aTime)
 class(aDate)
 class(numY)
@@ -252,7 +253,7 @@ NA
 is.finite(1 / 0)
 is.infinite(Inf)
 
-as.logical(x) # will produce NA, since x is character
+as.logical(name) # will produce NA, since x is character
 
 # example of NaN
 print(Inf - Inf)
@@ -282,3 +283,87 @@ paste(x, y) # by default space used as seperator
 ```{r}
 nchar(x)
 ```
+
+The experiment was also designed to perform a set of simple calculations using the R language so as to make us familiar with basic R syntax.
+
+7 such sample calculations have been performed.
+
+## Number of Hours in a Leap Year
+
+```{r}
+# hours in leap year
+leapYearHours <- 24 * 366
+print(leapYearHours)
+```
+
+## Convert Kilometer to meter
+
+```{r}
+# convert km to m
+km <- readline('Input km: ')
+km <- as.numeric(km)
+print(paste('Output: ', km * 1000, 'm'))
+```
+
+## Number of Hours in a Non-Leap Year
+
+```{r}
+# hours in a year
+yearHours <- 24 * 365
+print(yearHours)
+```
+
+## Find Square Root
+
+```{r}
+inputNumber <- as.numeric(readline('Input number: '))
+print(paste("Square Root: ", sqrt(inputNumber)))
+```
+
+## Find the Volume of a Rod
+
+The volume of a rod is measured using the following formula:
+`V = pi * (r ^ 2) * h`
+
+```{r}
+# volume of rod
+radius = as.numeric(readline("Radius input: "))
+height = as.numeric(readline("Height input: "))
+volume = pi * radius * radius * height
+print(paste("Volume is ", volume))
+```
+
+## Value of a Light Year
+
+Light year is a unit of measurement of distance defined by the distance travelled by light in 1 year.
+
+```{r}
+# value of light year
+secondsInAYear = yearHours * 3600
+speedOfLight = 3e8
+lightYear = speedOfLight * secondsInAYear
+print(paste(as.character(lightYear),  "m"))
+```
+
+## Time since Unix Epoch
+
+Unix Epoch is defined to be the date 1 January, 1970. Most programming platforms allow use of datetime data type by internally storing the number of milliseconds elapsed since Unix Epoch. This approach expresses time as long values.
+
+```{r}
+# approx time since Unix epoch
+# assuming all years have 365 days
+
+# this is solely an approximation
+# due to ease of calculations
+yearsSinceEpoch = 2019 - 1970
+print(yearsSinceEpoch * secondsInAYear * 1000)
+```
+
+```{r}
+# using Unix Epoch long ms
+timeInSeconds = as.numeric(Sys.Date())
+timeInMs = timeInSeconds * 1000
+print(timeInMs)
+```
+
+
