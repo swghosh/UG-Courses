@@ -8,9 +8,7 @@ output:
 ### Even Odd Number Test
 
 ```{r}
-x <- as.integer(
-  readline('Specify a number:')
-)
+x <- 20893 # sample input
 if(x %% 2 == 0) {
  print("Even number detected.") 
 } else { 
@@ -22,10 +20,7 @@ print(x)
 ### Prime Composite Number Test
 
 ```{r}
-y <- as.numeric(
-  readline("Specify a number: ")
-)
-print(y)
+y <- 2293 # sample input
 ctr <- 0
 for(index in seq(1, y)) {
   if(y %% index == 0) ctr <- ctr + 1
@@ -75,14 +70,13 @@ for(x in numset) {
 ### Armstrong Number Test
 
 ```{r}
-user_input <- as.integer(readline("Specify a number of your choice! > "))
+user_input <- 153L # sample input
 x_temp <- user_input
 dig_sum <- 0
 while(x_temp > 0) {
-  digit <- x_temp %% 10;
-  print(digit)
+  digit <- x_temp %% 10
   dig_sum <- dig_sum + (digit ^ 3)
-  x_temp <- x_temp %/% 10;
+  x_temp <- x_temp %/% 10
 }
 if(dig_sum == user_input) {
   print("Armstrong number detected.")

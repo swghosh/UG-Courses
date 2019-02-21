@@ -8,12 +8,24 @@
     <artifactId>Places Catalogue</artifactId>
     <version>0.5-alpha</version>
     <dependencies>
+        <!-- https://mongodb.github.io/mongo-java-driver/3.9/driver/getting-started/installation/ -->
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver-sync</artifactId>
-            <version>3.9.1</version>
+            <version>3.9.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>9.0.16</version>
+        </dependency>
+        <!-- https://github.com/google/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
         </dependency>
     </dependencies>
-
 
 </project>
