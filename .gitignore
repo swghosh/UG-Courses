@@ -9,4 +9,4 @@ dconfig.json
 CSE2018/*.docx
 CSE2018/*.nb.html
 .Rhistory
-target/
+CSE2017/osms-api/target/
