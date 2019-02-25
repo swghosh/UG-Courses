@@ -1,0 +1,128 @@
+---
+title: "Simulation and Data Distributions"
+output: html_notebook
+---
+
+## Simulation
+It is the process of generation of data for a given purpose based on a choosen mathematical model. Simulation may be used produce datasets that are similar to data in another sample space or to reproduce datasets from random number generators.
+
+## Random Number Generator
+One of the most difficult tasks in computer science is to generate a random number that is completely unique. To avoid such tradeoffs, statiscal libraries as well as regular programming languages use pseudo-random number generators. Such pseudo-random numbers work on the concept of `seed`.
+
+A `seed` is a set value that is used to reproduce datasets when using pseudo random number generators.
+```{r}
+SEED = 10
+set.seed(SEED)
+```
+
+```{r}
+set.seed(SEED)
+x <- runif(10, 1, 100)
+print('10 random numbers between 1-100')
+x
+```
+
+All r\*, p\*, functions stated beneath behave in accordance with the seed that is set.
+
+## Histogram and Density
+Histogram is a simple way of representing the relationship between number of samples and the actual value for any given sample space. `hist()` function is used in R to generate histograms. Illustrations have been provided beneath.
+
+## Data Distribution
+There are varied linear models that can be used to simulate data over specific distributions. Any distribution may be referred as a function that describes the relationship between observations in a sample space.
+
+`y = b0 + b1 * x + E`
+
+Distributions are often described in terms of their density or density functions, which are usually represented using known mathematical models
+
+## Types of Probability Distribution
+There are various probability distributions avaialable for analysis in R including:
+- Normal Distribution (`norm`)
+- Uniform Distribution (`unif`)
+- Poisson Distribution (`pois`)
+- Binomial Distribution (`binom`)
+
+```{r}
+set.seed(SEED)
+n <- 10
+rnorm(n, mean = 0, sd = 1)
+
+set.seed(SEED)
+n <- 10
+runif(n, min = 0, max = 1)
+
+set.seed(SEED)
+lambda <- 5
+rpois(n, lambda)
+
+set.seed(SEED)
+size <- 3
+prob <- 0.5
+rbinom(n, size, prob)
+```
+
+## Random Sampling
+Random sampling is used to select a certain number of samples on a random basis from a given sample space. It may be used in sample spaces that are not numeric.
+
+```{r}
+x <- 1:10
+
+print('Selecting 5 unique samples from 1:10')
+sample(x, 5)
+
+print('Selecting 10 samples from 1:10 with replacement')
+sample(x, 20, replace = T)
+```
+
+```{r}
+print('10 random letters')
+sample(letters, 10)
+
+print('selecting 20 vowels')
+sample(
+  c("a", "e", "i", "o", "u"), 20,
+  replace = T
+)
+```
+
+
+## Exercise
+Examine the orchis2 data object. Here are column data frame with a response variable `flower` and predictor variable `site`. Produce a histogram for the `site: 'sprayed'`. Now overlay a density plot over it.
+
+```{r}
+orchis2 <- read.csv('orchis2.csv')
+orchis2
+```
+
+Histogram of frequency distribution for `site: sprayed`
+```{r}
+sprayed <- subset(orchis2, orchis2$site == 'sprayed')
+x <- sprayed$flower
+hist(x)
+```
+
+Histogram of density distribution for `site: sprayed`
+```{r}
+hist(x, freq = F)
+```
+
+Histogram of density distribution for `site: sprayed` with overlay density plot.
+```{r}
+hist(x, freq = F)
+dens_x <- density(x)
+lines(dens_x, lty = 'dashed')
+dens_x_rect <- density(x, k = 'rectangular')
+lines(dens_x_rect, lty = 'dotted')
+```
+
+## Other Datasets
+Other datasets available for public use that comes bundled with R using the `datasets` library can be found from the link beneath.
+
+https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
+
+An example of using the `mtcars` dataset.
+
+```{r}
+library(datasets)
+head(mtcars)
+summary(mtcars)
+```
