@@ -4,16 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.gdgu.swghosh.cse2019.PlacesCatalogue</groupId>
-    <artifactId>Places Catalogue</artifactId>
-    <version>0.5-alpha</version>
+    <groupId>org.gdgu.cse2019</groupId>
+    <artifactId>Pointerest</artifactId>
+    <version>0.5-ALPHA</version>
 
     <dependencies>
-        <!-- https://mongodb.github.io/mongo-java-driver/3.9/driver/getting-started/installation/ -->
+        <!-- https://mongodb.github.io/mongo-java-driver/3.10/driver/getting-started/installation/ -->
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver-sync</artifactId>
-            <version>3.9.0</version>
+            <version>3.10.1</version>
         </dependency>
     </dependencies>
 </project>
