@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.gdgu.swghosh.cse2017.osms</groupId>
+  <groupId>org.gdgu.cse2017.osms</groupId>
   <artifactId>osms-api</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
@@ -25,6 +25,12 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-servlet-api</artifactId>
+      <version>9.0.16</version>
     </dependency>
   </dependencies>
 
