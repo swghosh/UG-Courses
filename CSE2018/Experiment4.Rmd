@@ -1,134 +1,104 @@
 ---
-title: 'Experiment 4: Conditionals and Functions'
+title: 'Experiment 5: Recursions'
 output:
   word_document: default
   html_notebook: default
 ---
 
-### Even Odd Number Test
+## Recursions
+
+### nCr
 
 ```{r}
-x <- 20893 # sample input
-if(x %% 2 == 0) {
- print("Even number detected.") 
-} else { 
-  print("Odd number detected.")
+fact <- function(x) {
+  if(x <= 1) return(x) else return(x * fact(x - 1))
 }
-print(x)
-```
-
-### Prime Composite Number Test
-
-```{r}
-y <- 2293 # sample input
-ctr <- 0
-for(index in seq(1, y)) {
-  if(y %% index == 0) ctr <- ctr + 1
+nCr <- function(n, r) {
+  x <- fact(n) / (fact(n - r) * fact(r))
+  return(x)
 }
 
-if(ctr == 2) {
-  print("Prime")
-} else {
-  print("Composite")
+print(paste('15 items can be arranged in', nCr(15, 10), 'ways, when taking 10 items at a time'))
+```
+
+### Quick Sort
+
+```{r}
+swap <- function(vec, i, j) {
+  temp <- vec[i]
+  vec[i] <- vec[j]
+  vec[j] <- temp
+  return(vec)
 }
-```
-
-### Simple Calculator
-
-```{r}
-print('An expression is of the format x1 op x2, where x1, x2 are two numbers, op is an operator like +, -, *, /. Please make sure that x1, op, x2 are space seperated.')
-user_input <- readline('Specify an expression! ')
-parts <- strsplit(user_input, " ")
-parts <- parts[[1]]
-
-x1 <- as.numeric(parts[1])
-op <- parts[2]
-x2 <- as.numeric(parts[3])
-
-value <- switch (op,
-  "+" = x1 + x2,
-  "-" = x1 - x2,
-  "*" = x1 * x2,
-  "/" = x1 / x2
-)
-print(
-  value
-)
-```
-
-## TWO THREE SIX
-
-```{r}
-numset <- 1:100
-for(x in numset) {
-  if(x %% 2 == 0 && x %% 3 == 0) print(paste(x, "SIX"))
-  else if(x %% 2 == 0) print(paste(x, "TWO"))
-  else if (x %% 3 == 0) print(paste(x, "THREE"))
+partition <- function(vec, l, h) {
+  pivot <- vec[h]
+  i <- 1
+  j <- h - 1
+  while(vec[i] > pivot) {
+    if(vec[j] < pivot) { 
+      vec <- swap(vec, i, j)
+    }
+    i <- i + 1
+    j <- j - 1
+  }
+  return(list(vec, i))
+}
+quicksort <- function(vec, l, h) {
+  results <- partition(vec, l, h)
+  vec <- results[1]
+  pivot <- results[2]
+  vec <- quicksort(vec, l, pivot - 1)
+  vec <- quicksort(vec, pivot + 1, h)
+  return(vec)
 }
 ```
 
-### Armstrong Number Test
+### Binary Search
 
 ```{r}
-user_input <- 153L # sample input
-x_temp <- user_input
-dig_sum <- 0
-while(x_temp > 0) {
-  digit <- x_temp %% 10
-  dig_sum <- dig_sum + (digit ^ 3)
-  x_temp <- x_temp %/% 10
+bsearch <- function(haystack, needle, lb, ub) {
+  mid <- (lb + ub) %/% 2
+  if(haystack[mid] == needle) {
+    return(needle)
+  } else if(lb == ub) {
+    return(-1) # not found
+  } else if(haystack[mid] > needle) {
+    return(bsearch(haystack, needle, mid + 1, ub))
+  } else if(haystack[mid] < needle) {
+    return(bsearch(haystack, needle, lb, mid - 1))
+  }
 }
-if(dig_sum == user_input) {
-  print("Armstrong number detected.")
-} else {
-  print("Armstrong number not detected.")
-}
+vec <- seq(1, 100, by = 13)
+vec
+index1 <- bsearch(vec, 10, 1, length(vec))
+print(paste('10 found at', index1))
+index2 <- bsearch(vec, 27, 1, length(vec))
+print(paste('27 found at', index2))
 ```
 
-
-## Functions
+## Row Wise and Column Wise Sum of Matrix
 
 ```{r}
-greet <- function(name) {
-  print(paste('Hello, ', name, '! You are amazing.', sep = ''))
+# find row sums
+rs <- function(mat1) {
+  n_rows <- dim(mat1)[1]
+  for(i in seq(1,n_rows)) {
+    print(paste('Sum of row is', sum(mat1[i,])))
+  }
 }
-greet('Dev')
-```
-
-### Write a function to get square of number in sequence
-
-```{r}
-x <- 1:20
-squared <- function(i) {
-  return(i*i)
+# find column sums
+cs <- function(mat1) {
+  n_cols <- dim(mat1)[2]
+  for(i in seq(1,n_cols)) {
+    print(paste('Sum of column is', sum(mat1[,i])))
+  }
 }
-squared(x)
+matX <- matrix(1:100, nrow = 20)
+print('Matrix is')
+print(matX)
+print('')
+rs(matX)
+print('')
+cs(matX)
 ```
-
-### Write a function to print a factors of a number
-
-```{r}
-factors <- function(x) {
-  y <- seq(1, x)
-  return(y[x %% y == 0])
-}
-
-print('Factors of 10 are')
-print(factors(10))
-
-print('Factors of 9190 are')
-print(factors(9190))
-```
-
-### Write a function to count sum of n natural numbers
-
-```{r}
-sumofnatural <- function(n) {
-  return(sum(0:n))
-}
-
-print('Sum of first 10 natural numbers')
-print(sumofnatural(10))
-```
-
 

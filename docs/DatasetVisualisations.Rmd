@@ -1,0 +1,106 @@
+---
+title: "Datasets and Simple Visualisations"
+output:
+  html_notebook: default
+---
+
+## Datasets in R
+
+R provides us with a few standard datasets using the default library called `datasets`. It can be used as follows:
+
+```{r}
+library(datasets)
+```
+
+A variety of publicly available standard datasets are available as a part of the UCI Machine Learning Repository which can found at https://archive.ics.uci.edu/ml/datasets.html
+
+Similarly, the R datasets library (https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html) has the `iris` dataset.
+
+The data is loaded and a summary of the dataset is generated.
+
+```{r}
+# load iris dataset
+data("iris")
+# generate a summary for it
+summary(iris)
+```
+
+A few rows from the beginning of the dataset are diplayed.
+
+```{r}
+head(iris)
+```
+
+The structure of the `iris` dataset is examined.
+```{r}
+str(iris)
+```
+
+## Simple Visualisations
+
+`plot()` function is used to generate graphs.
+
+```{r}
+# all possible plots from the dataframes
+# using each pair of columns
+plot(iris)
+```
+
+A plot between `iris` flowers' sepal lengths and petal lengths.
+
+```{r}
+x <- iris$Sepal.Length
+y <- iris$Petal.Length
+plot(x, y)
+```
+
+### Histograms
+
+A histogram representing different sepal lengths.
+
+```{r}
+hist(iris$Sepal.Length)
+```
+
+### Subset
+
+`subset()` is used to generate a data frame that consists of only those rows which satisfy a given condition.
+
+```{r}
+# data frame of only 
+# iris setosa
+ss <- subset(iris, Species == 'setosa')
+# display only few elements from
+# the subset, since it has lot of rows
+head(ss)
+```
+
+### Box Plots
+
+`boxplot()` to generate box plots.
+
+```{r}
+boxplot(iris)
+```
+
+`par()` can be used to set many graphical parameters eg. margin. 
+
+```{r}
+par(
+  mar = c(5, 5, 3, 3) # bottom, left, top, right margins (in order)
+)
+boxplot(iris)
+```
+
+## Read and Write Datasets
+
+Reading and writing datasets using the `read.*()` and `write.*()` family of functions.
+
+```{r}
+write.csv(iris,file="iris.csv")
+```
+
+```{r}
+df1 <- read.csv("iris.csv")
+head(df1)
+```
