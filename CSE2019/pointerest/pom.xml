@@ -5,11 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.gdgu.cse2019</groupId>
-    <artifactId>Pointerest</artifactId>
-    <version>0.5-ALPHA</version>
+    <artifactId>pointerest</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!-- https://mongodb.github.io/mongo-java-driver/3.10/driver/getting-started/installation/ -->
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver-sync</artifactId>
