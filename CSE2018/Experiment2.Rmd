@@ -1,184 +1,171 @@
 ---
-title: 'Experiment 3: Data Frames and Factors'
-output:
-  word_document: default
-  html_notebook: default
+title: "Experiment 2: Collections"
+output: html_notebook
 ---
 
-## Data Frames
+## Vectors
 
-### Creating a Data Frame
+### Creating a Vector
 
 ```{r}
-n <- 1:5
-s <- rep('Name', 5)
-x <- c(rep(TRUE, 3), rep(FALSE, 2))
+aVect <- c(1, 3, 5, 7, 9)
+print(aVect)
+class(aVect)
+```
 
-df <- data.frame(n, s, x)
-df
+Automatic coercion in list.
+
+
+```{r}
+vec <- c(1L, 2L, 3L)
+class(vec)
+str(vec)
+```
+
+### Using Sequences and Replicates
+
+```{r}
+# using sequences
+xv <- seq(1, 10, by = 0.1)
+# using replicate
+xu <- rep('a', 5)
+xv
+xu
+```
+
+### Creating a Merged Vector
+
+```{r}
+c(xu, xv)
 ```
 
 ```{r}
-class(df)
-class(df[1])
-class(df[[1]])
-is.vector(df[[1]])
-class(df$n)
+friends <- c("John", "Smith", "Kenny")
+class(friends)
+tutorials <- c("MAT2701", "MAT2702")
+merged <- c(friends, tutorials)
+merged
 ```
 
-### Naming columns 
+### Length of a Vector
 
 ```{r}
-names(df) = c("Number", "Name", "Student")
-df
+print(length(xv))
 ```
 
-### Strings As Factors
+### Get Specific Vector Element
 
 ```{r}
-class(df$Name)
-df2 <- data.frame(n, s, x, stringsAsFactors = F)
-class(df2$s)
-```
-
-### Create a sample data frame
-
-```{r}
-serialNum <- 1:10
-names <- paste("Name", as.character(serialNum))
-salary <- 33000 * serialNum
-joiningDates <- rep(Sys.Date(), length(serialNum))
-
-employees <- data.frame(
-  serialNum, names, salary, joiningDates,
-  stringsAsFactors = F
-)
-print(employees)
-```
-
-## Factors
-
-### Sample factors
-
-```{r}
-gender <- factor(c("Male", "Female", "Others"))
-class(gender)
-directions <- c("East", "West", "North", "South")
-print(directions)
-print(is.factor(directions))
-
-gender[[1]]
-levels(gender) <- c("male", "female", "others")
-gender
+index <- 1
+friends[index] # friends, position 1
 ```
 
 ```{r}
-print(as.factor(directions))
+index <- 2:3
+friends[index] # friends, position 2, 3
 ```
 
-### Create a Data Frame and Check for factors
+### Sorting a Vector
 
 ```{r}
-height <- seq(30, 50, by = 1.8)
-weight <- seq(40, 60, by = 1.8)
-halfLength <- length(height) / 2
-gender <- c(rep('Male', halfLength), rep('Female', halfLength))
-
-bmi <- data.frame(height, weight, gender)
-bmi
+x <- order(friends)
+sort(friends)
+friends[x]
 ```
 
 ```{r}
-is.factor(bmi$gender)
+rev(friends)
+rev(order(friends))
+sort(friends)
 ```
 
-## Simple exercise on factors and dataframes
-
-Execute the following, observe and interpret the output:
-a <- c(1, -5, 3.4, -2, 5, 3)
-factor(a)
-factor(a, 1:5)
-factor(a, 3:5)
-factor(a, -10:5)
+### Remove missing Value
 
 ```{r}
-a <- c(1, -5, 3.4, -2, 5, 3)
-factor(a)
-factor(a, 1:5)
-factor(a, 3:5)
-factor(a, -10:5)
+myVec <- c(1, 2, 3, NA, 4)
+indices <- !is.na(myVec)
+myVec[indices]
 ```
 
-Create the following vectors of size 10
-v1: vector of first names
-v2: vector of last names
-v3: vector of random nos from 1 to 50
+## Random Sampling
 
 ```{r}
-v1 <- c(
-  "John", "Joe", "Jacob", "Steve",
-  "Candis", "Jenny", "Angel", "Jill", "Mary"
-  )
-v2 <- c(
-  "Smith", "Allen", "Manor", "Gosling",
-  "Pegasus", "Trakersky", "Archer", "Jeffry", "Kim"
-  )
-length(v1) == length(v2)
+oneToHundred <- 1:100
+aSample <- sample(oneToHundred, 20)
+aSample
+class(aSample)
 ```
 
 ```{r}
-# 20 random numbers between 1 to 50
-v3 <- sample(
-    seq(0, 50, by = 0.1),
-    length(v1)
-  )
-v3
-```
-
-Create a datafram from these vectors with appropriate headings.
-
-```{r}
-people <- data.frame(v3, v1, v2, stringsAsFactors = F)
-names(people) <- c("UniqueSerial", "FirstName", "LastName")
-people
-```
-
-Add a column ContactNumber to this data frame.
-
-```{r}
-people[[4]] <- c(
-  1e10 + seq(1, length(v1))
-)
-names(people)[4] <- "ContactNumber"
-people
+randSet <- runif(50, 1, 100)
+oneToHundred[randSet]
 ```
 
 ```{r}
-column3 <- people[[1]]
-class(column3)
-column3 <- as.factor(column3)
-people$UniqueSerial <- column3
-class(people$UniqueSerial)
+x <- sample(oneToHundred, 20, replace = T)
+x
 ```
 
-
-Create another df with columns:
-enrolment_number, semester and merge them with existing df
+## Lists
 
 ```{r}
-enN <- 17002020 + seq(1, length(v1))
-sem <- sample(1:8, length(v1), replace = T)
-sem
-enN
+l1 <- list(1L, 2.2, "a", TRUE, Inf)
+l1
 ```
 
 ```{r}
-people <- cbind(people, enN, sem)
-people
+class(l1[[1]])
 ```
 
 ```{r}
-names(people)[5] <- "EnrolmentNumber"
-names(people)[6] <- "Semester"
-people
+names(l1) <- c('a', 'b', 'c', 'd', 'e')
+l1
 ```
+
+## Matrix
+
+```{r}
+matrix(1:100, nrow = 20)
+```
+
+```{r}
+vec1 <- seq(1, 20, 2)
+vec2 <- seq(31, 50, 2)
+m1 <- rbind(vec1, vec2)
+m2 <- cbind(vec1, vec2)
+length(m1)
+```
+
+```{r}
+str(m1)
+dim(m1) <- c(4, 5)
+```
+
+```{r}
+dimnames(m1)
+```
+
+```{r}
+threeDStuff <- array(1:12, c(2, 2, 3))
+threeDStuff
+```
+
+### Vector Recycling
+
+### Addition, Subtraction, etc on Vectors
+
+```{r}
+m1 <- matrix(1:4, nrow = 2)
+m2 <- matrix(1:100, ncol = 5)
+m1
+m2
+```
+
+### Generate a seq like 01230123, 000111222333
+
+```{r}
+paste(rep(0:3, 4), collapse = '')
+paste(strrep(as.character(0:3), 3), collapse = '')
+```
+
+
