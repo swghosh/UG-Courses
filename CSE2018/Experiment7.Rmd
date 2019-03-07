@@ -1,0 +1,50 @@
+---
+title: "Experiment 7"
+output: html_notebook
+---
+
+Create a matrix marks with the following headings,
+
+| SerialNum | StudId | Marks.R | Marks.DSA | Marks.SPM |
+| --- | --- | --- | --- | --- |
+| ... | ... | ... | .... | ... |
+
+Using apply() function find:
+
+a. maximum marks for each student
+b. mean marks for each subject
+c. average marks for each student
+
+```{r}
+s_no <- 1:5
+stud_id <- 170020203000 + 1:5
+marks_r <- runif(5, min = 0, max = 100)
+marks_dsa <- runif(5, min = 0, max = 100)
+marks_spm <- runif(5, min = 0, max = 100)
+
+marksheet <- cbind(s_no, stud_id, marks_r, marks_dsa, marks_spm)
+colnames(marksheet) <- c('SerialNum', 'StudId', 'Marks.R', 'Marks.DSA', 'Marks.SPM')
+
+only_marks <- marksheet[,3:5]
+max_marks <- apply(only_marks, 1, max)
+mean_marks <- apply(only_marks, 1, mean)
+
+report <- cbind(s_no, stud_id, max_marks, mean_marks)
+colnames(report) <- c('SerialNum', 'StudId', 'MaximumMarks', 'MeanMarks')
+report
+```
+
+Create a list of 3 elements.
+
+[1:10, (10, 20, 30, 40, 50), (60, 70, 80, 90, 100)]
+
+Use lapply to find the sum of all 3 list elements.
+
+```{r}
+a_list <- list(
+  1:10, seq(10, 50, by = 10), seq(60, 100, by = 10)
+)
+print('Sum of each list element')
+lapply(a_list, sum)
+```
+
