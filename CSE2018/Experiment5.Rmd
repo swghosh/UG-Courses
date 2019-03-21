@@ -56,12 +56,12 @@ cat(paste('before sort: ', x_str, '\n after sort: ', y_str)) # without cat \n wo
 bsearch <- function(haystack, needle, lb, ub) {
   mid <- (lb + ub) %/% 2
   if(haystack[mid] == needle) {
-    return(needle)
+    return(mid)
   } else if(lb == ub) {
     return(-1) # not found
-  } else if(haystack[mid] > needle) {
-    return(bsearch(haystack, needle, mid + 1, ub))
   } else if(haystack[mid] < needle) {
+    return(bsearch(haystack, needle, mid + 1, ub))
+  } else if(haystack[mid] > needle) {
     return(bsearch(haystack, needle, lb, mid - 1))
   }
 }
