@@ -45,7 +45,7 @@ public class Database {
         Gson gBuilder = new Gson();
         MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
         Document searchQuery = Document.parse(gBuilder.toJson(place));
-        ObjectId placeId;
+        ObjectId placeId = null;
         for(Document found : placesCol.find(searchQuery).limit(1)) {
             placeId = (ObjectId) found.get("_id");
         }
@@ -58,9 +58,11 @@ public class Database {
         searchQuery = new Document();
         searchQuery.append("place", placeId);
         for(Document imageDoc : imagesCol.find(searchQuery)) {
+            imageDoc.remove("place");
             Image image = gBuilder.fromJson(
                 imageDoc.toJson(), Image.class
             );
+            image.setPlace(place);
             images.add(image);
         }
         return images;

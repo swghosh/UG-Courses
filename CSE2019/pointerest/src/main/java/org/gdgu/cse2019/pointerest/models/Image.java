@@ -1,18 +1,23 @@
 package org.gdgu.cse2019.pointerest.models;
 
+import java.net.URL;
+
 public class Image {
     private Place place;
-    private byte[] image;
+    private String imageURL;
 
-    public Image(Place place, byte[] image) {
+    public Image(Place place, String imageUrl) {
         this.place = place;
-        this.image = image;
+        this.imageURL = imageUrl;
     }
 
     public Place getPlace() {
         return this.place;
     }
-    public void setPlace() {
+    public void setPlace(Place place) {
         this.place = place;
+    }
+    public String getImageURL() {
+        return this.imageURL;
     }
 }
