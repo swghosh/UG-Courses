@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.mongodb.ConnectionString;
 import org.bson.Document;
 import com.mongodb.client.*;
+import org.bson.types.ObjectId;
 
 import javax.print.Doc;
 import java.util.ArrayList;
@@ -28,15 +29,40 @@ public class Database {
     }
 
     public static ArrayList<Place> getAllPlaces() {
-        MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
         Gson gBuilder = new Gson();
+        MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
         ArrayList<Place> places = new ArrayList();
-        for(Document a : placesCol.find()) {
+        for(Document placeDoc : placesCol.find()) {
             Place place = gBuilder.fromJson(
-                a.toJson(), Place.class
+                placeDoc.toJson(), Place.class
             );
             places.add(place);
         }
         return places;
+    }
+
+    public static ArrayList<Image> getImagesByPlace(Place place) {
+        Gson gBuilder = new Gson();
+        MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
+        Document searchQuery = Document.parse(gBuilder.toJson(place));
+        ObjectId placeId;
+        for(Document found : placesCol.find(searchQuery).limit(1)) {
+            placeId = (ObjectId) found.get("_id");
+        }
+
+        ArrayList<Image> images = new ArrayList();
+
+        if(placeId == null) return images;
+
+        MongoCollection<Document> imagesCol = db.getCollection(IMAGES_COLLECTION);
+        searchQuery = new Document();
+        searchQuery.append("place", placeId);
+        for(Document imageDoc : imagesCol.find(searchQuery)) {
+            Image image = gBuilder.fromJson(
+                imageDoc.toJson(), Image.class
+            );
+            images.add(image);
+        }
+        return images;
     }
 }
