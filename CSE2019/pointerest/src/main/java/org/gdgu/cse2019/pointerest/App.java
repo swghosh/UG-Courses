@@ -23,7 +23,7 @@ public class App {
                 System.out.println(image.getImageURL());
             }
         }
-        for(Place place : Database.searchPlaces("GD Goenka Shivam")) {
+        for(Place place : Database.searchPlaces("GD Goenka snacks")) {
             System.out.println(place.getName());
         }
     }

@@ -21,6 +21,12 @@
             <artifactId>mongodb-driver-sync</artifactId>
             <version>3.10.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations-java5</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.openstreetmap.jmapviewer/jmapviewer -->
         <!--<dependency>-->

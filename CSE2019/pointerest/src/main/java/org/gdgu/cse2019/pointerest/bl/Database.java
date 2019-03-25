@@ -34,7 +34,7 @@ public class Database {
     public static ArrayList<Place> getAllPlaces() {
         Gson gBuilder = new Gson();
         MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
-        ArrayList<Place> places = new ArrayList();
+        ArrayList<Place> places = new ArrayList<Place>();
         for(Document placeDoc : placesCol.find()) {
             Place place = gBuilder.fromJson(
                     placeDoc.toJson(), Place.class
@@ -53,7 +53,7 @@ public class Database {
             placeId = (ObjectId) found.get("_id");
         }
 
-        ArrayList<Image> images = new ArrayList();
+        ArrayList<Image> images = new ArrayList<Image>();
 
         if(placeId == null) return images;
 
@@ -72,9 +72,10 @@ public class Database {
     }
 
     public static ArrayList<Place> searchPlaces(String query) {
-        HashSet<String> words = new HashSet();
+        query = query.toLowerCase();
+
+        HashSet<String> words = new HashSet<String>();
         for(String word : query.split(" ")) {
-            System.out.println(word);
             words.add(word);
         }
         String search[] = new String[words.size()];
@@ -84,13 +85,27 @@ public class Database {
             iterIndex++;
         }
         String searchRegex = String.join("|", search);
-        System.out.println(searchRegex);
 
         MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
-        Document searchQuery = new Document();
+
+        Document searchQuery1 = new Document();
         Document regexQuery = new Document();
         regexQuery.append("$regex", searchRegex);
-        searchQuery.append("name", regexQuery);
+        regexQuery.append("$options", "i");
+        searchQuery1.append("name", regexQuery);
+
+        Document searchQuery2 = new Document();
+        Document inQuery = new Document();
+        inQuery.append("$in", words);
+        searchQuery2.append("tags", inQuery);
+
+        ArrayList<Document> queries = new ArrayList<Document>();
+        queries.add(searchQuery1);
+        queries.add(searchQuery2);
+        Document searchQuery = new Document();
+        searchQuery.append("$or", queries);
+
+        System.out.println(searchQuery.toJson());
 
         Gson gBuilder = new Gson();
         ArrayList<Place> places = new ArrayList();
