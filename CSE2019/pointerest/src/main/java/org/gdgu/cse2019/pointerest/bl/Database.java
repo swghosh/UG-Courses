@@ -1,13 +1,16 @@
-package org.gdgu.cse2019.pointerest.models;
+package org.gdgu.cse2019.pointerest.bl;
 
 import com.google.gson.Gson;
 import com.mongodb.ConnectionString;
 import org.bson.Document;
 import com.mongodb.client.*;
 import org.bson.types.ObjectId;
+import org.gdgu.cse2019.pointerest.models.Image;
+import org.gdgu.cse2019.pointerest.models.Place;
 
-import javax.print.Doc;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.regex.Pattern;
 
 public class Database {
     private static final String DATABASE_URL = System.getenv("POINTEREST_MONGO_URL");
@@ -34,7 +37,7 @@ public class Database {
         ArrayList<Place> places = new ArrayList();
         for(Document placeDoc : placesCol.find()) {
             Place place = gBuilder.fromJson(
-                placeDoc.toJson(), Place.class
+                    placeDoc.toJson(), Place.class
             );
             places.add(place);
         }
@@ -60,11 +63,43 @@ public class Database {
         for(Document imageDoc : imagesCol.find(searchQuery)) {
             imageDoc.remove("place");
             Image image = gBuilder.fromJson(
-                imageDoc.toJson(), Image.class
+                    imageDoc.toJson(), Image.class
             );
             image.setPlace(place);
             images.add(image);
         }
         return images;
+    }
+
+    public static ArrayList<Place> searchPlaces(String query) {
+        HashSet<String> words = new HashSet();
+        for(String word : query.split(" ")) {
+            System.out.println(word);
+            words.add(word);
+        }
+        String search[] = new String[words.size()];
+        int iterIndex = 0;
+        for(String word : words) {
+            search[iterIndex] = Pattern.quote(word);
+            iterIndex++;
+        }
+        String searchRegex = String.join("|", search);
+        System.out.println(searchRegex);
+
+        MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
+        Document searchQuery = new Document();
+        Document regexQuery = new Document();
+        regexQuery.append("$regex", searchRegex);
+        searchQuery.append("name", regexQuery);
+
+        Gson gBuilder = new Gson();
+        ArrayList<Place> places = new ArrayList();
+        for(Document placeDoc : placesCol.find(searchQuery)) {
+            Place place = gBuilder.fromJson(
+                    placeDoc.toJson(), Place.class
+            );
+            places.add(place);
+        }
+        return places;
     }
 }
