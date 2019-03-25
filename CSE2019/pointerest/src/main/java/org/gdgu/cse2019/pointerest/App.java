@@ -1,6 +1,7 @@
 package org.gdgu.cse2019.pointerest;
 
 import org.bson.Document;
+import org.gdgu.cse2019.pointerest.models.Coordinate;
 import org.gdgu.cse2019.pointerest.models.Image;
 import org.gdgu.cse2019.pointerest.models.Place;
 
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 public class App {
 
     public static void main(String[] args) {
+        // ALL PLACES AND THEIR RESPECTIVE IMAGES
         for(Place place : Database.getAllPlaces()) {
             float[] latLng = place.getPointCoordinates();
             String tags = String.join(", ", place.getTags());
@@ -23,8 +25,22 @@ public class App {
                 System.out.println(image.getImageURL());
             }
         }
+        // SEARCH SPECIFIC PLACES
         for(Place place : Database.searchPlaces("GD Goenka snacks")) {
             System.out.println(place.getName());
         }
+
+        // ADD NEW PLACE
+        ArrayList<String> tags = new ArrayList<String>();
+        tags.add("chill");
+        Place newPlace = new Place(
+                new Coordinate(21.3f, 12.1f),
+                "My Home",
+                tags
+        );
+        Database.addNewPlace(newPlace);
+
+        // ADD NEW IMAGE
+        Database.addNewImage(new Image(newPlace, "http://picsum.photos/300/400"));
     }
 }

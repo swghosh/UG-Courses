@@ -13,6 +13,7 @@ import java.util.HashSet;
 import java.util.regex.Pattern;
 
 public class Database {
+
     private static final String DATABASE_URL = System.getenv("POINTEREST_MONGO_URL");
     private static final String DATABASE_NAME = "pointerest";
 
@@ -20,23 +21,24 @@ public class Database {
     private static final String IMAGES_COLLECTION = "images";
 
     private static MongoDatabase db;
+    private static Gson gson;
+
     static {
-        db = new Database().connectToDatabase();
+        connectToDatabase();
+        gson = new Gson();
     }
 
-    private MongoDatabase connectToDatabase() {
+    private static void connectToDatabase() {
         ConnectionString connUrl = new ConnectionString(DATABASE_URL);
         MongoClient client = MongoClients.create(connUrl);
-        MongoDatabase db = client.getDatabase(DATABASE_NAME);
-        return db;
+        db = client.getDatabase(DATABASE_NAME);
     }
 
     public static ArrayList<Place> getAllPlaces() {
-        Gson gBuilder = new Gson();
         MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
         ArrayList<Place> places = new ArrayList<Place>();
         for(Document placeDoc : placesCol.find()) {
-            Place place = gBuilder.fromJson(
+            Place place = gson.fromJson(
                     placeDoc.toJson(), Place.class
             );
             places.add(place);
@@ -45,9 +47,8 @@ public class Database {
     }
 
     public static ArrayList<Image> getImagesByPlace(Place place) {
-        Gson gBuilder = new Gson();
         MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
-        Document searchQuery = Document.parse(gBuilder.toJson(place));
+        Document searchQuery = Document.parse(gson.toJson(place));
         ObjectId placeId = null;
         for(Document found : placesCol.find(searchQuery).limit(1)) {
             placeId = (ObjectId) found.get("_id");
@@ -62,7 +63,7 @@ public class Database {
         searchQuery.append("place", placeId);
         for(Document imageDoc : imagesCol.find(searchQuery)) {
             imageDoc.remove("place");
-            Image image = gBuilder.fromJson(
+            Image image = gson.fromJson(
                     imageDoc.toJson(), Image.class
             );
             image.setPlace(place);
@@ -107,14 +108,43 @@ public class Database {
 
         System.out.println(searchQuery.toJson());
 
-        Gson gBuilder = new Gson();
+        Gson gson = new Gson();
         ArrayList<Place> places = new ArrayList();
         for(Document placeDoc : placesCol.find(searchQuery)) {
-            Place place = gBuilder.fromJson(
+            Place place = gson.fromJson(
                     placeDoc.toJson(), Place.class
             );
             places.add(place);
         }
         return places;
+    }
+
+    public static void addNewPlace(Place place) {
+        Document placeDoc = Document.parse(
+                gson.toJson(place)
+        );
+        MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
+        placesCol.insertOne(placeDoc);
+    }
+
+    public static void addNewImage(Image image) {
+        Place place = image.getPlace();
+        MongoCollection<Document> placesCol = db.getCollection(PLACES_COLLECTION);
+        Document searchQuery = Document.parse(gson.toJson(place));
+        ObjectId placeId = null;
+        for(Document found : placesCol.find(searchQuery).limit(1)) {
+            placeId = (ObjectId) found.get("_id");
+        }
+
+        if(placeId == null) return;
+
+        Document imageDoc = Document.parse(
+                gson.toJson(image)
+        );
+        imageDoc.remove("place");
+        imageDoc.append("place", placeId);
+
+        MongoCollection<Document> imagesCol = db.getCollection(IMAGES_COLLECTION);
+        imagesCol.insertOne(imageDoc);
     }
 }
