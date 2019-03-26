@@ -1,0 +1,95 @@
+---
+title: 'Experiment 8: Linear Regression and Hypothesis Testing'
+output:
+  word_document: default
+  html_notebook: default
+---
+
+## Linear Regression
+
+Linear regression is a model that is used in supervised learning to predict responses. The model is typically trained by use of a dataset that has features vector (X) and responses vector (y) present.
+
+Any linear regression after training may be represented using the form:
+`y = b0 + b1 * X`
+where b0, b1 are weights/parameters of the model obtained after learning from train data.
+
+Linear regression model can be useful for predicting in case of datasets that possess linear relationship amongst variables. The degree of correlation can be used as a measure of linear relationships.
+
+```{r}
+library(datasets)
+data("faithful")
+str(faithful)
+summary(faithful)
+```
+
+```{r}
+head(faithful)
+```
+
+Plot between eruptions and waiting in faitful dataset.
+```{r}
+plot(eruptions ~ waiting, data = faithful) # same as plot(faithful$waiting, faithful$eruptions)
+```
+
+```{r}
+cor(faithful$eruptions, faithful$waiting)
+```
+Depicts a strong linear relationship.
+
+```{r}
+lr_model <- lm(eruptions ~ waiting, data = faithful)
+plot(eruptions ~ waiting, data = faithful)
+abline(lr_model, col = 'red', lty = 'dashed')
+```
+
+The weights (b0, b1) determined after training phase are as follows:
+```{r}
+lr_model$coefficients
+```
+
+Predicting using linear regression learned model:
+
+```{r}
+y_pred_1 <- sum(lr_model$coefficients * c(1, 65))
+y_pred_1 # predicted y for x = 65
+```
+
+
+## Hypothesis Testing
+
+Hypothesis testing is used to test the hypothesis that we are trying to form on the basis of a given model.
+
+```{r}
+library(datasets)
+data("mtcars")
+```
+
+Q1. Find out the `cyl` and `am` variable in `mtcars` dataset have a strong correlation (use chi square test) null hypothesis: they are correlated or not, find out.
+
+```{r}
+cars_cyl <- mtcars$cyl
+cars_am <- mtcars$am
+table(mtcars$cyl, mtcars$am)
+#chisq.test(cars_cyl, cars_am)
+```
+
+Q2. Find out the relationship between `mpg` and `cyl`.
+
+```{r}
+cars_mpg <- mtcars$mpg
+cars_cyl <- mtcars$cyl
+cor(cars_mpg, cars_cyl)
+```
+
+Q3. Use T test to find the influence `mpg` and `am`.
+
+```{r}
+batch_at <- subset(mtcars, am == 0)$mpg
+batch_at
+batch_mt <- subset(mtcars, am == 1)$mpg
+batch_mt
+
+t.test(batch_at, batch_mt)
+```
+
+Use chisql.test(), t.test() functions.

@@ -1,0 +1,1308 @@
+[
+	{
+		"point": {
+			"latitude": 28.4509257,
+			"longitude": 77.0876091
+		},
+		"name": "Paras Hospitals",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5084497,
+			"longitude": 77.166546
+		},
+		"name": "Heritage International School",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5117155,
+			"longitude": 77.1634819
+		},
+		"name": "Deep Public School",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.462841,
+			"longitude": 77.0759312
+		},
+		"name": "Max Hospital",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.497566,
+			"longitude": 77.0635343
+		},
+		"name": "Max Hospital",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4962233,
+			"longitude": 77.062264
+		},
+		"name": "Max Hospital",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4947599,
+			"longitude": 77.0610023
+		},
+		"name": "Max Hospital",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.489358,
+			"longitude": 77.1378574
+		},
+		"name": "Max Hospital",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4680471,
+			"longitude": 76.8919788
+		},
+		"name": "Sulpantpur Lake Parking",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.2994923,
+			"longitude": 77.1279583
+		},
+		"name": "DumDuma Lake Parking",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.244918,
+			"longitude": 77.0638017
+		},
+		"name": "DumDuma Lake Parking",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4676152,
+			"longitude": 76.8903581
+		},
+		"name": "DumDuma Lake Parking",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.459162,
+			"longitude": 77.0764294
+		},
+		"name": "DumDuma Lake Parking",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4700706,
+			"longitude": 77.0453033
+		},
+		"name": "DumDuma Lake Parking",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4716936,
+			"longitude": 77.0733163
+		},
+		"name": "DumDuma Lake Parking",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4715039,
+			"longitude": 77.0733143
+		},
+		"name": "Umkal Hospital",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4295352,
+			"longitude": 77.0525305
+		},
+		"name": "Delhi Public School, Primary Section",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.433704,
+			"longitude": 77.0632611
+		},
+		"name": "Amity Global School",
+		"tags": [
+			"college"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4463106,
+			"longitude": 77.0458728
+		},
+		"name": "CR Model Public School",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4636101,
+			"longitude": 77.0465147
+		},
+		"name": "Salvan Public School",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4508125,
+			"longitude": 77.0328448
+		},
+		"name": "Pushpanjali Hospital",
+		"tags": [
+			"hospital",
+			"wheelchair",
+			"yes"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4481945,
+			"longitude": 77.0292685
+		},
+		"name": "Pushpanjali Hospital",
+		"tags": [
+			"parking",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4482254,
+			"longitude": 77.0311706
+		},
+		"name": "Pushpanjali Hospital",
+		"tags": [
+			"parking",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4496234,
+			"longitude": 77.0280742
+		},
+		"name": "Pushpanjali Hospital",
+		"tags": [
+			"parking",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4326268,
+			"longitude": 77.0722766
+		},
+		"name": "Artmemis",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.461191,
+			"longitude": 77.0333912
+		},
+		"name": "Artmemis",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4613947,
+			"longitude": 77.0330393
+		},
+		"name": "Artmemis",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5100391,
+			"longitude": 77.1674675
+		},
+		"name": "Artmemis",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5079122,
+			"longitude": 77.166489
+		},
+		"name": "Artmemis",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.3022552,
+			"longitude": 77.123813
+		},
+		"name": "Government Secondary School, Damdama",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.3509265,
+			"longitude": 77.0649209
+		},
+		"name": "Astha Hospital",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.3905755,
+			"longitude": 77.0492399
+		},
+		"name": "Gobind Hospital",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.3978752,
+			"longitude": 77.0455899
+		},
+		"name": "Sai Heart and Trauma Center",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4737292,
+			"longitude": 77.0478919
+		},
+		"name": "Sector-14 Market",
+		"tags": [
+			"parking",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4539934,
+			"longitude": 77.0783203
+		},
+		"name": "Stones2milestones",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.431041,
+			"longitude": 77.1122718
+		},
+		"name": "Ansal Institute of Technology",
+		"tags": [
+			"university",
+			"wikidata",
+			"Q4770495"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.431057,
+			"longitude": 77.1107683
+		},
+		"name": "Sushant College of Arts & Architecture",
+		"tags": [
+			"university"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4443978,
+			"longitude": 77.0598968
+		},
+		"name": "Sushant College of Arts & Architecture",
+		"tags": [
+			"parking",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4257351,
+			"longitude": 77.1460473
+		},
+		"name": "Sushant College of Arts & Architecture",
+		"tags": [
+			"cafe"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4420322,
+			"longitude": 77.0557649
+		},
+		"name": "Sushant College of Arts & Architecture",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.453473,
+			"longitude": 77.0744768
+		},
+		"name": "Sushant College of Arts & Architecture",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.453618,
+			"longitude": 77.0743814
+		},
+		"name": "Sushant College of Arts & Architecture",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4674053,
+			"longitude": 77.0806089
+		},
+		"name": "Sushant College of Arts & Architecture",
+		"tags": [
+			"parking",
+			"source",
+			"Yahoo"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4675603,
+			"longitude": 77.0814521
+		},
+		"name": "CCD",
+		"tags": [
+			"cafe"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4675077,
+			"longitude": 77.0824741
+		},
+		"name": "Sitaram Bhartia",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4616751,
+			"longitude": 77.0787484
+		},
+		"name": "Sitaram Bhartia",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4667261,
+			"longitude": 77.0817341
+		},
+		"name": "Sitaram Bhartia",
+		"tags": [
+			"parking",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4850535,
+			"longitude": 77.080977
+		},
+		"name": "American Montessori",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.418088,
+			"longitude": 77.0612
+		},
+		"name": "Kamla International",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4469205,
+			"longitude": 77.0651743
+		},
+		"name": "St. Angels (Jr)",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4419185,
+			"longitude": 77.0695058
+		},
+		"name": "St. Angels (Sr)",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.3675268,
+			"longitude": 77.3165803
+		},
+		"name": "Nescafe",
+		"tags": [
+			"cafe"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.3670647,
+			"longitude": 77.315412
+		},
+		"name": "Nescafe",
+		"tags": [
+			"parking",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.3831287,
+			"longitude": 77.3278384
+		},
+		"name": "Nescafe",
+		"tags": [
+			"parking",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.3688397,
+			"longitude": 77.3366614
+		},
+		"name": "Nescafe",
+		"tags": [
+			"parking",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.2485039,
+			"longitude": 77.0714498
+		},
+		"name": "Civil Hospital",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4650005,
+			"longitude": 77.070966
+		},
+		"name": "Civil Hospital",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4589101,
+			"longitude": 77.0712589
+		},
+		"name": "Civil Hospital",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.460008,
+			"longitude": 77.0737839
+		},
+		"name": "Civil Hospital",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.2662766,
+			"longitude": 76.8324001
+		},
+		"name": "Govt. Primary Boys School, Sidhrawali",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.2669425,
+			"longitude": 76.8338851
+		},
+		"name": "Govt. Primary Girls School, Sidhrawali",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.2687959,
+			"longitude": 76.8328043
+		},
+		"name": "Govt. Senior Secondary School, Sidhrawali",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.2665063,
+			"longitude": 76.8335477
+		},
+		"name": "Suman Public School",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4428333,
+			"longitude": 77.0661139
+		},
+		"name": "Suman Public School",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4433408,
+			"longitude": 77.0666244
+		},
+		"name": "Suman Public School",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4477972,
+			"longitude": 77.0388138
+		},
+		"name": "Suman Public School",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4600672,
+			"longitude": 77.0518464
+		},
+		"name": "Cafe Coffee Day",
+		"tags": [
+			"cafe"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4459484,
+			"longitude": 77.0442318
+		},
+		"name": "Cafe Coffee Day",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4717157,
+			"longitude": 77.1285742
+		},
+		"name": "Bharat Vasisht Vidya Mandir",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4330265,
+			"longitude": 77.1509893
+		},
+		"name": "Bharat Vasisht Vidya Mandir",
+		"tags": [
+			"parking_entrance"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5090846,
+			"longitude": 77.041581
+		},
+		"name": "Columbia Asia Hospital",
+		"tags": [
+			"addr:city",
+			"Gurgaon",
+			"addr:housenumber",
+			"Sector 23A",
+			"addr:postcode",
+			"122017",
+			"addr:street",
+			"Carterpuri Village",
+			"hospital",
+			"emergency",
+			"yes"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4972434,
+			"longitude": 77.0937388
+		},
+		"name": "Columbia Asia Hospital",
+		"tags": [
+			"cafe",
+			"cuisine",
+			"coffee_shop"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4964348,
+			"longitude": 77.09339
+		},
+		"name": "Columbia Asia Hospital",
+		"tags": [
+			"cafe",
+			"cuisine",
+			"coffee_shop"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4702663,
+			"longitude": 77.0161911
+		},
+		"name": "St. Michaels Sr. Sec. School",
+		"tags": [
+			"school",
+			"website",
+			"http://www.stmichaelsschoolggn.com/"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4524063,
+			"longitude": 77.1416722
+		},
+		"name": "Regional Skill Development Centre",
+		"tags": [
+			"college"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4530389,
+			"longitude": 77.1477573
+		},
+		"name": "Regional Skill Development Centre",
+		"tags": [
+			"college",
+			"website",
+			"http://www.skilldevelopment.gov.in/sites/default/files/resources/initiatives/6.3%20-%20Delhi%20Singapore.pdf"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4379774,
+			"longitude": 77.0588518
+		},
+		"name": "Manav Rachna School",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4618627,
+			"longitude": 77.0327425
+		},
+		"name": "govt sec school",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4441907,
+			"longitude": 77.0562098
+		},
+		"name": "govt sec school",
+		"tags": [
+			"parking",
+			"fee",
+			"yes"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4139784,
+			"longitude": 77.3139529
+		},
+		"name": "St. Peters School",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4694883,
+			"longitude": 77.0683104
+		},
+		"name": "Roots",
+		"tags": [
+			"cafe"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.425882,
+			"longitude": 77.106348
+		},
+		"name": "Roots",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5006053,
+			"longitude": 77.1857471
+		},
+		"name": "subway, lavazza",
+		"tags": [
+			"addr:street",
+			"100 Feet Road",
+			"cafe",
+			"cuisine",
+			"burger;regional;ice_cream;cake;coffee_shop;asian;pasta;noodles;pancake;donut;pizza;diner;indian;curry;vegan;fish;breakfast;tea;chinese;deli;vegetarian;barbecue",
+			"internet_access",
+			"wlan"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.446227,
+			"longitude": 77.0613212
+		},
+		"name": "subway, lavazza",
+		"tags": [
+			"addr:street",
+			"b-1, green wood city, sector -45",
+			"hospital",
+			"email",
+			"gurgaon@vatikagroub.com",
+			"phone",
+			"01244555788"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5116773,
+			"longitude": 77.0419219
+		},
+		"name": "Cafe Coffee Day",
+		"tags": [
+			"cafe",
+			"cuisine",
+			"coffee_shop"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5114891,
+			"longitude": 77.0418352
+		},
+		"name": "Ansals plaza underground car parking",
+		"tags": [
+			"access",
+			"customers",
+			"parking",
+			"operator",
+			"Ansals plaza",
+			"park_ride",
+			"no",
+			"parking",
+			"underground",
+			"supervised",
+			"yes"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.511301,
+			"longitude": 77.0423891
+		},
+		"name": "Ansals Plaza above ground car parking",
+		"tags": [
+			"parking",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5194596,
+			"longitude": 77.037658
+		},
+		"name": "Chiranjiv Bharati School",
+		"tags": [
+			"school",
+			"operator",
+			"Ansals"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.518174,
+			"longitude": 77.0388234
+		},
+		"name": "Metro Hospitals and Heart Institute",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5107738,
+			"longitude": 77.0486395
+		},
+		"name": "HUDA sector 23 parking",
+		"tags": [
+			"addr:city",
+			"Gurugram",
+			"parking",
+			"parking",
+			"multi-storey",
+			"supervised",
+			"no",
+			"surface",
+			"asphalt"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5157955,
+			"longitude": 77.0502838
+		},
+		"name": "Swiss Cottage school",
+		"tags": [
+			"addr:city",
+			"Bijwasan",
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4601898,
+			"longitude": 77.0754852
+		},
+		"name": "Fortis Hospital",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.2860264,
+			"longitude": 76.8659642
+		},
+		"name": "Government High School, Bilaspur",
+		"tags": [
+			"addr:postcode",
+			"122413",
+			"addr:street",
+			"Bilaspur Tauru Road, Bilaspur",
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4460767,
+			"longitude": 77.0615689
+		},
+		"name": "\u0627\u0644\u0633\u0643\u0646",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.434446,
+			"longitude": 77.1125874
+		},
+		"name": "\u0627\u0644\u0633\u0643\u0646",
+		"tags": [
+			"addr:postcode",
+			"122002",
+			"addr:street",
+			"Sector-54",
+			"school",
+			"phone",
+			"+911244845300",
+			"website",
+			"http://www.suncityschool.in"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4569466,
+			"longitude": 77.0483513
+		},
+		"name": "\u0627\u0644\u0633\u0643\u0646",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4569466,
+			"longitude": 77.0483513
+		},
+		"name": "\u0627\u0644\u0633\u0643\u0646",
+		"tags": [
+			"parking",
+			"fee",
+			"no",
+			"parking",
+			"surface"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4065208,
+			"longitude": 77.3179232
+		},
+		"name": "\u0627\u0644\u0633\u0643\u0646",
+		"tags": [
+			"addr:postcode",
+			"121001",
+			"addr:street",
+			"Sector - 16 A Rd",
+			"hospital",
+			"opening_hours",
+			"24/7"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4736928,
+			"longitude": 77.1217455
+		},
+		"name": "\u0627\u0644\u0633\u0643\u0646",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4139599,
+			"longitude": 77.0712523
+		},
+		"name": "\u0627\u0644\u0633\u0643\u0646",
+		"tags": [
+			"parking",
+			"capacity",
+			"20",
+			"fee",
+			"no",
+			"operator",
+			"Unitech",
+			"parking",
+			"surface",
+			"supervised",
+			"yes",
+			"surface",
+			"asphalt"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4336469,
+			"longitude": 77.1028475
+		},
+		"name": "IILM",
+		"tags": [
+			"addr:housenumber",
+			"1",
+			"addr:postcode",
+			"122002",
+			"addr:street",
+			"Golf Course Extension Road",
+			"college"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4676414,
+			"longitude": 77.0816279
+		},
+		"name": "IILM",
+		"tags": [
+			"cafe"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4676069,
+			"longitude": 77.0816003
+		},
+		"name": "IILM",
+		"tags": [
+			"addr:street",
+			"DLF Galleria Road",
+			"cafe",
+			"cuisine",
+			"burger;sandwich;breakfast;ice_cream;coffee_shop;american;pasta;chicken",
+			"opening_hours",
+			"Mo-Su 07:30-23:59"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4676141,
+			"longitude": 77.0824177
+		},
+		"name": "IILM",
+		"tags": [
+			"cafe",
+			"cuisine",
+			"american;bagel;breakfast;coffee_shop",
+			"email",
+			"getcoffee@bluetokaicoffee.com",
+			"opening_hours",
+			"Mo-Su 09:00-22:00",
+			"phone",
+			"+91 98211 26015",
+			"website",
+			"https://bluetokaicoffee.com/"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4394254,
+			"longitude": 77.0407179
+		},
+		"name": "Medanta - The Medicity",
+		"tags": [
+			"addr:city",
+			"Gurgaon",
+			"addr:postcode",
+			"122001",
+			"addr:street",
+			"Ch Bakhtawar Singh Road",
+			"hospital",
+			"emergency",
+			"yes",
+			"healthcare",
+			"hospital",
+			"healthcare:speciality",
+			"general;paediatrics;orthopaedics;surgery;ophthalmology;gynaecology;emergency;radiology;dermatology;cardiology;maternity;neurology",
+			"wheelchair",
+			"yes"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4832404,
+			"longitude": 77.1071305
+		},
+		"name": "Anahat Hospital",
+		"tags": [
+			"hospital"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.5014001,
+			"longitude": 77.1671574
+		},
+		"name": "Barista",
+		"tags": [
+			"cafe"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4899855,
+			"longitude": 77.1389634
+		},
+		"name": "Government Boys Senior Secondary School",
+		"tags": [
+			"addr:place",
+			"Ghitorni",
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4783458,
+			"longitude": 77.0337175
+		},
+		"name": "Lieutenant Atul Kataria School",
+		"tags": [
+			"school"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4589689,
+			"longitude": 77.034532
+		},
+		"name": "Lieutenant Atul Kataria School",
+		"tags": [
+			"parking_space"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4584324,
+			"longitude": 77.0340437
+		},
+		"name": "Lieutenant Atul Kataria School",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4581486,
+			"longitude": 77.03287
+		},
+		"name": "Lieutenant Atul Kataria School",
+		"tags": [
+			"parking",
+			"fee",
+			"no"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4572695,
+			"longitude": 77.0335047
+		},
+		"name": "Lieutenant Atul Kataria School",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4573996,
+			"longitude": 77.033959
+		},
+		"name": "Lieutenant Atul Kataria School",
+		"tags": [
+			"parking"
+		]
+	},
+	{
+		"point": {
+			"latitude": 28.4349952,
+			"longitude": 77.0352265
+		},
+		"name": "Lieutenant Atul Kataria School",
+		"tags": [
+			"hospital"
+		]
+	}
+]
