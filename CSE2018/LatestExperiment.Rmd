@@ -1,0 +1,41 @@
+---
+title: "Linear Regression and Hypothesis Testing"
+output: html_notebook
+---
+
+
+
+```{r}
+library(datasets)
+data("mtcars")
+```
+
+Q1. Find out the `cyl` and `am` variable in `mtcars` dataset have a strong correlation (use chi square test) null hypothesis: they are correlated or not, find out.
+
+```{r}
+cars_cyl <- mtcars$cyl
+cars_am <- mtcars$am
+table(mtcars$cyl, mtcars$am)
+#chisq.test(cars_cyl, cars_am)
+```
+
+Q2. Find out the relationship between `mpg` and `cyl`.
+
+```{r}
+cars_mpg <- mtcars$mpg
+cars_cyl <- mtcars$cyl
+cor(cars_mpg, cars_cyl)
+```
+
+Q3. Use T test to find the influence `mpg` and `am`.
+
+```{r}
+batch_at <- subset(mtcars, am == 0)$mpg
+batch_at
+batch_mt <- subset(mtcars, am == 1)$mpg
+batch_mt
+
+t.test(batch_at, batch_mt)
+```
+
+Use chisql.test(), t.test() functions.
