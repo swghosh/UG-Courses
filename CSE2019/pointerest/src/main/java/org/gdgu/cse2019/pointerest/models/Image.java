@@ -1,7 +1,5 @@
 package org.gdgu.cse2019.pointerest.models;
 
-import java.net.URL;
-
 public class Image {
     private Place place;
     private String imageURL;

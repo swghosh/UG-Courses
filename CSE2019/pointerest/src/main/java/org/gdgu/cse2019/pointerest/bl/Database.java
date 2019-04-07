@@ -10,6 +10,8 @@ import org.gdgu.cse2019.pointerest.models.Place;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 public class Database {
@@ -29,6 +31,9 @@ public class Database {
     }
 
     private static void connectToDatabase() {
+        Logger mongoLogger = Logger.getLogger( "org.mongodb.driver" );
+        mongoLogger.setLevel(Level.SEVERE);
+
         ConnectionString connUrl = new ConnectionString(DATABASE_URL);
         MongoClient client = MongoClients.create(connUrl);
         db = client.getDatabase(DATABASE_NAME);
@@ -105,8 +110,6 @@ public class Database {
         queries.add(searchQuery2);
         Document searchQuery = new Document();
         searchQuery.append("$or", queries);
-
-        System.out.println(searchQuery.toJson());
 
         Gson gson = new Gson();
         ArrayList<Place> places = new ArrayList();
