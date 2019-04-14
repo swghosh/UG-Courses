@@ -1,0 +1,112 @@
+---
+title: "Lab Assignment"
+output: html_notebook
+---
+## Question 1
+
+Load the mtcars dataset. Use the lm() function to perform a simple linear regression with mpg as the response and horsepower as the predictor.  Use the summary() function to print the results. Comment on the output: 
+
+```{r}
+library(datasets)
+data("mtcars")
+summary(mtcars)
+
+str(mtcars)
+```
+
+i. Is there a relationship between the predictor and response variable?
+
+```{r}
+cov(mtcars$mpg, mtcars$hp)
+```
+
+ii. How strong is the relationship between the predictor and the response?
+
+```{r}
+cor_deg <- cor(mtcars$mpg, mtcars$hp)
+cor_deg
+```
+
+
+iii. Is the relationship between the predictor and the response positive or negative?
+
+```{r}
+ifelse(cor_deg > 0, "positive linear relationship", "negative linear relationship")
+```
+
+iv. Predict the value of mpg for associated horsepower of 210, 250, 300 and 380.
+
+```{r}
+model <- lm(mpg ~ hp, data = mtcars)
+summary(model)
+```
+
+```{r}
+attach(mtcars)
+test_data <- data.frame(
+  hp = c(210, 250, 300, 380)
+)
+pred_mpg <- predict(model, newdata = test_data)
+test_data$pred_mpg <- pred_mpg
+test_data
+```
+
+v. Plot the response and the predictor using plot() function. Use the abline() function to display the least squares regression line.
+
+```{r}
+plot(mpg ~ hp, data = mtcars)
+abline(model, lty = 'dashed', col = 'red')
+```
+
+vi. Compute the correlation matrix of all the variables in the dataset. You can exclude the first column called names, because this is a qualitative variable. Identify which pair of variables have high correlation.
+
+```{r}
+cr_matrix <- cor(mtcars)
+cr_matrix
+```
+
+```{r}
+# high corelation
+cr_matrix > 0.65 | cr_matrix < -0.65
+```
+
+
+vii. Use the lm function again to fit multiple linear regression model with mpg as the response variable and variables identified in (vi) as the predictor variable.
+
+```{r}
+model2 <- lm(mpg ~ cyl + disp + hp + drat + wt + vs, data = mtcars)
+summary(model2)
+```
+
+viii. Use the plot function again to produce diagnostic plots of the linear regression fit. Comment on your findings.
+
+```{r}
+
+```
+
+## Question 2
+
+This question should be answered using the Smarket data set, which is part of the ISLR package.
+
+```{r}
+library(ISLR)
+head(Smarket)
+```
+
+a. Produce some numerical and graphical summaries of the Weekly data. Do there appear to be any patterns?
+
+```{r}
+summary(Smarket)
+help("Smarket")
+```
+
+```{r}
+plot(Year ~ Lag1, data = Smarket)
+```
+
+
+b. Use the full data set to perform a logistic regression with Direction as the response and the five lag variables plus Volume as predictors. Use the summary function to print the results. Do any of the predictors appear to be statistically significant? If so, which ones? 
+
+```{r}
+
+```

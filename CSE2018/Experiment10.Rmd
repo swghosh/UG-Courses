@@ -1,0 +1,7 @@
+---
+title: "Experiment 10: Stationary Markov Chain"
+output: html_notebook
+---
+
+## Stationary Markov Chain
+

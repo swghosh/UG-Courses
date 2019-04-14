@@ -4,6 +4,8 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
+
 import com.google.gson.*;
 
 @WebServlet("/api/*")
@@ -18,4 +20,20 @@ public class HelloWorldServlet extends HttpServlet {
         out.println(jsonRepr);
         out.close();
     }
+
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws IOException {
+        Scanner sc = new Scanner(request.getReader());
+        String in = "";
+        while(sc.hasNext()) {
+            in += " " + sc.next();
+        }
+        sc.close();
+        response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
+        out.println(in);
+        out.close();
+    }
+
 }

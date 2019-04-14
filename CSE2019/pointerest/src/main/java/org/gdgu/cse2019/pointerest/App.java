@@ -104,6 +104,13 @@ public class App {
     static void searchAction(String query) {
         ArrayList<Place> places = Database.searchPlaces(query);
         System.out.println();
+
+        if(places.size() == 0) {
+            System.out.println(ANSI_RED + " No places were found.");
+            System.out.println(ANSI_RESET);
+            return;
+        }
+
         for(Place place : places) {
             System.out.println(ANSI_RESET);
             System.out.println(ANSI_GREEN + place.getName());
