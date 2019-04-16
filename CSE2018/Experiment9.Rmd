@@ -1,84 +1,11 @@
 ---
-title: "Decision Trees and Random Forest"
+title: "Experiment 9: Multiple Regression with Train Test Split"
 output: html_notebook
 ---
 
-Performing classification tasks on the basis of decision trees.
-Please perform dataset split for Train / test.
+# Multiple Regression
 
 ```{r}
-library(datasets)
-data("iris")
-head(iris)
-```
-
-```{r}
-summary(iris)
-```
- 
- Split the data into train and test.
-```{r}
-TEST_SIZE <- 0.2
-SEED <- 10
-
-m <- length(iris)
-n <- nrow(iris)
-
-n_test <- TEST_SIZE * n
-
-set.seed(SEED)
-test_indices <- sample(1:n, n_test)
-
-iris_test <- iris[test_indices, ]
-iris_train <- iris[-test_indices, ]
-
-head(iris_train)
-```
- 
- 
-```{r}
-library(partykit)
-output.tree <- ctree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris_train)
-```
-
-```{r}
-plot(output.tree)
-```
-
-```{r}
-library(rpart)
-library(rpart.plot)
-fit <- rpart(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris)
-rpart.plot(fit)
-```
-
-```{r}
-predicted <- predict(fit, iris_test, type = 'class')
-cf <- table(predicted, iris_test$Species)
-print('Confusion Matrix')
-cf
-```
-
-```{r}
-print("Accuracy")
-true_predicts <- predicted == iris_test$Species
-which_tp <- which(true_predicts)
-acc <- (length(which_tp) / n_test) * 100
-print(paste(acc, '%', sep = ''))
-```
-
-```{r}
-library(randomForest)
-set.seed(10)
-rfClf <- randomForest(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris_train, ntree = 100)
-plot(rfClf)
-```
-
-
-```{r}
-predicted <- predict(rfClf, iris_test, type = 'class')
-cf <- table(predicted, iris_test$Species)
-print('Confusion Matrix')
-cf
 
 ```
+

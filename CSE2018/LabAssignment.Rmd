@@ -1,6 +1,8 @@
 ---
 title: "Lab Assignment"
-output: html_notebook
+output:
+  word_document: default
+  html_notebook: default
 ---
 ## Question 1
 
@@ -81,7 +83,8 @@ summary(model2)
 viii. Use the plot function again to produce diagnostic plots of the linear regression fit. Comment on your findings.
 
 ```{r}
-
+par(mfrow = c(2, 2))
+plot(model2)
 ```
 
 ## Question 2
@@ -93,7 +96,7 @@ library(ISLR)
 head(Smarket)
 ```
 
-a. Produce some numerical and graphical summaries of the Weekly data. Do there appear to be any patterns?
+a. Produce some numerical and graphical summaries of the Smarket data. Do there appear to be any patterns?
 
 ```{r}
 summary(Smarket)
@@ -101,12 +104,23 @@ help("Smarket")
 ```
 
 ```{r}
-plot(Year ~ Lag1, data = Smarket)
+plot(Today~Lag1, data = Weekly)
+plot(Today~Lag2, data = Weekly)
+plot(Today~Lag3, data = Weekly)
+plot(Today~Lag4, data = Weekly)
 ```
 
 
 b. Use the full data set to perform a logistic regression with Direction as the response and the five lag variables plus Volume as predictors. Use the summary function to print the results. Do any of the predictors appear to be statistically significant? If so, which ones? 
 
 ```{r}
-
+sdirection_lr <- glm(Direction ~ Lag1 + Lag2 + Lag3 + Lag4 + Lag5 + Volume, family = binomial(link = "logit"), data = Smarket)
+summary(sdirection_lr)
 ```
+
+```{r}
+coef <- summ <- summary(sdirection_lr)$coefficients
+print('P Values')
+coef[,4]
+```
+
