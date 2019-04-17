@@ -14,8 +14,7 @@ public class Administrator extends User {
         this.name = name;
         this.phone = phone;
     }
-    public static boolean login(String username, String password) throws SQLException, ClassNotFoundException {
-        Database.connect();
+    public static boolean login(String username, String password) throws SQLException {
         PreparedStatement st = Database.conn.prepareStatement("SELECT username, password FROM administrator WHERE username = ? AND password = ?");
         st.setString(1, username);
         st.setString(2, password);

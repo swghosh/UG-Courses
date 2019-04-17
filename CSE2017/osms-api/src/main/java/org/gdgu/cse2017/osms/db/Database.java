@@ -6,16 +6,20 @@ public class Database {
 
     public static Connection conn;
 
-    public static void connect() throws ClassNotFoundException, SQLException {
-        Class.forName("org.postgresql.Driver");
-        conn = DriverManager.getConnection(
-            System.getenv("JDBC_DATABASE_URL"),
-            System.getenv("JDBC_DATABASE_USERNAME"),
-            System.getenv("JDBC_DATABASE_PASSWORD")
-        );
-    }
-
-    public static void close() throws SQLException {
-        conn.close();
+    static {
+        try {
+            Class.forName("org.postgresql.Driver");
+            conn = DriverManager.getConnection(
+                    System.getenv("JDBC_DATABASE_URL"),
+                    System.getenv("JDBC_DATABASE_USERNAME"),
+                    System.getenv("JDBC_DATABASE_PASSWORD")
+            );
+        }
+        catch(ClassNotFoundException ex) {
+            System.err.println(ex.getMessage());
+        }
+        catch(SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
     }
 }

@@ -1,6 +1,5 @@
 package org.gdgu.cse2017.osms;
 
-import com.google.gson.Gson;
 import org.gdgu.cse2017.osms.db.Database;
 
 import java.sql.PreparedStatement;
@@ -16,7 +15,7 @@ public class Customer extends User {
         this.phone = phone;
         this.address = address;
     }
-    public static boolean login(String username, String password) throws SQLException, ClassNotFoundException {
+    public static boolean login(String username, String password) throws SQLException {
         PreparedStatement st = Database.conn.prepareStatement("SELECT username, password FROM customer WHERE username = ? AND password = ?");
         st.setString(1, username);
         st.setString(2, password);
@@ -25,8 +24,7 @@ public class Customer extends User {
         while(rs.next()) count++;
         return count == 1;
     }
-    public static Customer signup(String username, String password, String email, String name, long phone, String address) throws SQLException, ClassNotFoundException {
-        Database.connect();
+    public Customer signup() throws SQLException {
         PreparedStatement st = Database.conn.prepareStatement("INSERT INTO customer (username, password, email, name, phone, address) VALUES (?, ?, ?, ?, ?, ?)");
         st.setString(1, username);
         st.setString(2, password);
@@ -35,6 +33,6 @@ public class Customer extends User {
         st.setLong(5, phone);
         st.setString(6, address);
         int count = st.executeUpdate();
-        return ((count == 1) ? new Customer(username, password, email, name, phone, address) : null);
+        return ((count == 1) ? this : null);
     }
 }
