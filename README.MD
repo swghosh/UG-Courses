@@ -18,4 +18,4 @@ This repository will constantly be updated until completion of degree.
 
 Course codes are solely in accordance with the B.Tech CSE programme curriculum at [GD Goenka University](http://gdgoenkauniversity.com/schoolofengineering) for batch of 2021 (August 2017 - May 2021 spanned across 8 semesters).
 
-&copy; [Swarup Ghosh](https://github.com/swghosh)
+&copy; [Swarup Ghosh](https://github.com/swghosh) and others (only if explicitly specified)
