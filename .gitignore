@@ -10,3 +10,4 @@ CSE2018/*.docx
 CSE2018/*.nb.html
 .Rhistory
 CSE2017/osms-api/target/
+*.jar

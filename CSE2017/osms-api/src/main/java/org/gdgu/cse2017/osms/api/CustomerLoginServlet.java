@@ -11,23 +11,30 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet("/api/users/customers/signup")
-public class CustomerSignupServlet extends HttpServlet {
+@WebServlet("/api/users/customers/login")
+public class CustomerLoginServlet extends HttpServlet {
+    class Credentials {
+        String username, password;
+    }
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
         Gson gson = new Gson();
-        Customer provCust = gson.fromJson(request.getReader(), Customer.class);
+        Credentials creds = gson.fromJson(request.getReader(), Credentials.class);
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
+        boolean isLoggedIn = false;
         try {
-            String jsonRepr = gson.toJson(provCust.signup());
-            out.println(jsonRepr);
+            isLoggedIn = Customer.login(creds.username, creds.password);
         }
         catch (SQLException ex) {
             System.err.println(ex.getMessage());
-            out.println(gson.toJson(null));
+        }
+        finally {
+            out.println(gson.toJson(isLoggedIn));
         }
         out.close();
     }
+
 }
