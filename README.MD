@@ -14,6 +14,7 @@ This repository will constantly be updated until completion of degree.
 - CSE2017 - Software Engineering and Testing Methodologies
 - CSE2018 - Introduction to R Programming
 - CSE2019 - NoSQL Databases
+- IPT2001 - Inter Disciplinary Project
 
 Course codes are solely in accordance with the B.Tech CSE programme curriculum at [GD Goenka University](http://gdgoenkauniversity.com/schoolofengineering) for batch of 2021 (August 2017 - May 2021 spanned across 8 semesters).
 
