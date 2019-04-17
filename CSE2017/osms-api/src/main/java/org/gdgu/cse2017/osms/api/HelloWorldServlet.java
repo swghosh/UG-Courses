@@ -9,14 +9,13 @@ import java.util.Scanner;
 import com.google.gson.*;
 import org.gdgu.cse2017.osms.Product;
 
-@WebServlet("/api/*")
+@WebServlet("/api/hello")
 public class HelloWorldServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws IOException {
         Gson gson = new Gson();
-        Product product = new Product(12001, "Mop", 2000.0f, 10);
-        String jsonRepr = gson.toJson(product);
+        String jsonRepr = gson.toJson(true);
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
         out.println(jsonRepr);
