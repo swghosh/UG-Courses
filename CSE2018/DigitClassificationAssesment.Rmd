@@ -1,0 +1,74 @@
+---
+title: "Digit Classification"
+output: html_notebook
+---
+
+```{r}
+digits <- read.csv(
+  url("https://swghosh.github.io/UG-Courses/digits.lab.csv")
+)
+head(digits)
+```
+
+```{r}
+str(digits)
+```
+
+```{r}
+dataset_modified <- digits
+dataset_modified[
+  dataset_modified$digit > 0, "digit" 
+] <- 1
+```
+
+```{r}
+n <- nrow(dataset_modified)
+test_size <- 0.2
+
+n_test <- ceiling(test_size * n)
+n_train <- n - n_test
+
+train_indices <- sample(1:n, n_train)
+train_dataset <- dataset_modified[train_indices, ]
+test_dataset <- dataset_modified[-train_indices, ]
+
+print(paste("Training samples:", n_train))
+print(paste("Test samples:", n_test))
+```
+
+```{r}
+library(partykit)
+dt <- ctree(digit ~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + x10 + x11 + x12 + x13 + x14 + x15 + x16, data = train_dataset)
+plot(dt)
+```
+
+```{r}
+predicted <- 
+head(predicted)
+```
+
+```{r}
+y_test <- test_dataset$digit
+y_predict <- predict(dt, test_dataset)
+test <- which(y_test == y_predict)
+length(test) / n_test
+```
+
+```{r}
+library(rfUtilities)
+accuracy(y_predict, y_test)
+```
+
+```{r}
+lr <- glm(digit ~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + x10 + x11 + x12 + x13 + x14 + x15 + x16, data = train_dataset, family = binomial())
+summary(lr)
+```
+```{r}
+y_test <- test_dataset$digit
+y_predict <- as.integer(predict(lr, test_dataset, type = 'response') > 0.5)
+test <- which(y_test == y_predict)
+length(test) / n_test
+```
+```{r}
+accuracy(y_predict, y_test)
+```
