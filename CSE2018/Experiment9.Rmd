@@ -1,11 +1,45 @@
 ---
-title: "Experiment 9: Multiple Regression with Train Test Split"
-output: html_notebook
+title: 'Experiment 9: Multiple Regression with Train Test Split'
+output:
+  word_document: default
+  html_notebook: default
 ---
 
-# Multiple Regression
+## Multiple Regression
 
 ```{r}
-
+library(datasets)
+data("mtcars")
+head(mtcars)
 ```
 
+```{r}
+train_size <- 0.3
+n <- nrow(mtcars)
+m <- ncol(mtcars) - 1
+
+print(paste(n, 'samples', ',', m, 'features'))
+
+n_train <- train_size * n
+n_test <- n - n_train
+
+set.seed(90)
+train_indices <- sample(1:n_train, replace = F)
+
+train <- mtcars[train_indices,]
+test <- mtcars[-train_indices,]
+```
+
+```{r}
+model <- glm(mpg ~ hp + wt + cyl, data = train)
+summary(model)
+```
+
+```{r}
+predicted <- predict(model, test)
+predicted
+```
+
+```{r}
+test$mpg
+```

@@ -1,7 +1,72 @@
 ---
-title: "Experiment 10: Stationary Markov Chain"
-output: html_notebook
+title: 'Experiment 12: Stationary Markov Chain'
+output:
+  word_document: default
+  html_notebook: default
 ---
 
 ## Stationary Markov Chain
 
+A stationary distribution of a Markov chain is a probability distribution that remains unchanged in the Markov chain as time progresses. Typically, it is represented as a row vector π whose entries are probabilities summing to 1, and given transition matrix P, it satisfies `π = π * P`.
+
+In other words, π is invariant by the matrix P.
+
+```{r}
+P <- t(
+  matrix(c(
+    0.7, 0.2, 0.1,
+    0.4, 0.6, 0.0,
+    0, 1, 0
+  ), nrow = 3, ncol = 3)
+)
+P
+```
+
+```{r}
+# simulate discrete Markov chains according to transition matrix P
+run.mc.sim <- function( P, num.iters = 50 ) {
+  
+  # number of possible states
+  num.states <- nrow(P)
+  
+  # stores the states X_t through time
+  states     <- numeric(num.iters)
+
+  # initialize variable for first state 
+  states[1]    <- 1
+
+  for(t in 2:num.iters) {
+    
+    # probability vector to simulate next state X_{t+1}
+    p  <- P[states[t-1], ]
+    
+    ## draw from multinomial and determine state
+    states[t] <-  which(rmultinom(1, 1, p) == 1)
+  }
+  return(states)
+}
+```
+
+
+```{r}
+num.chains <- 3
+num.iterations <- 50
+chain.states <- matrix(NA, nrow = num.chains, ncol = num.iterations)
+```
+
+```{r}
+length(run.mc.sim(P))
+```
+
+
+```{r}
+for(i in seq(1, num.chains)) {
+  chain.states[i,] <- run.mc.sim(P, num.iterations)
+}
+```
+
+```{r}
+matplot(chain.states, type='l', lty=1, col=1:5, ylab='state', xlab='time')
+abline(h=1, lty=3)
+abline(h=3, lty=3)
+```
