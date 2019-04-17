@@ -1,4 +1,4 @@
-package org.gdgu.swghosh.cse2017.osms.api;
+package org.gdgu.cse2017.osms.api;
 
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 import com.google.gson.*;
+import org.gdgu.cse2017.osms.Product;
 
 @WebServlet("/api/*")
 public class HelloWorldServlet extends HttpServlet {
@@ -14,7 +15,8 @@ public class HelloWorldServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws IOException {
         Gson gson = new Gson();
-        String jsonRepr = gson.toJson(new Test());
+        Product product = new Product(12001, "Mop", 2000.0f, 10);
+        String jsonRepr = gson.toJson(product);
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
         out.println(jsonRepr);
@@ -35,5 +37,4 @@ public class HelloWorldServlet extends HttpServlet {
         out.println(in);
         out.close();
     }
-
 }
