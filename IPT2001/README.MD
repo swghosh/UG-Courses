@@ -1,3 +1,5 @@
+A presentation describing the literature survey had been delivered at GD Goenka University on 6th May 2019.
+
 ![](./slides/slides.001.png)
 
 ![](./slides/slides.002.png)
@@ -25,3 +27,13 @@
 ![](./slides/slides.013.png)
 
 ![](./slides/slides.014.png)
+
+![](./slides/slides.015.png)
+
+![](./slides/slides.016.png)
+
+![](./slides/slides.017.png)
+
+![](./slides/slides.018.png)
+
+![](./slides/slides.019.png)
