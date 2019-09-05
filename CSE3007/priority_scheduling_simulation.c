@@ -39,7 +39,7 @@ int main() {
     // saves from internal fragmentation
     processes = malloc(sizeof(PROCESS) * count);
 
-    // user input of burst time for each process
+    // user input of burst time, priority for each process
     for(iter_index = 0; iter_index < count; iter_index++) {
         printf("--- Process %d ---\n", iter_index);
         processes[iter_index].ppid = ppid;
