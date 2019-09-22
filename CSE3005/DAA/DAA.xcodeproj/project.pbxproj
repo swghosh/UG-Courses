@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C88AD5BD230E54160088124D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C88AD5BC230E54160088124D /* main.c */; };
 		C8CF38F42332D30C00CD852C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8CF38F32332D30C00CD852C /* main.c */; };
+		C8CF38FF23333E2300CD852C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8CF38FE23333E2300CD852C /* main.c */; };
 		C8F17B7E232A022100108297 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8F17B7D232A022100108297 /* main.c */; };
 		C8F17B89232A025D00108297 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8F17B88232A025D00108297 /* main.c */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		C8CF38EF2332D30B00CD852C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C8CF38FA23333E2300CD852C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -57,6 +67,8 @@
 		C88AD5BC230E54160088124D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8CF38F12332D30B00CD852C /* Quick Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Quick Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CF38F32332D30C00CD852C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C8CF38FC23333E2300CD852C /* Merge Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Merge Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8CF38FE23333E2300CD852C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8F17B7B232A022100108297 /* Selection Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Selection Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F17B7D232A022100108297 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8F17B86232A025D00108297 /* Bubble Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Bubble Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +84,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C8CF38EE2332D30B00CD852C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8CF38F923333E2300CD852C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -102,6 +121,7 @@
 				C8F17B7C232A022100108297 /* Selection Sort */,
 				C8F17B87232A025D00108297 /* Bubble Sort */,
 				C8CF38F22332D30C00CD852C /* Quick Sort */,
+				C8CF38FD23333E2300CD852C /* Merge Sort */,
 				C88AD5AD230E53EC0088124D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,6 +133,7 @@
 				C8F17B7B232A022100108297 /* Selection Sort */,
 				C8F17B86232A025D00108297 /* Bubble Sort */,
 				C8CF38F12332D30B00CD852C /* Quick Sort */,
+				C8CF38FC23333E2300CD852C /* Merge Sort */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +152,14 @@
 				C8CF38F32332D30C00CD852C /* main.c */,
 			);
 			path = "Quick Sort";
+			sourceTree = "<group>";
+		};
+		C8CF38FD23333E2300CD852C /* Merge Sort */ = {
+			isa = PBXGroup;
+			children = (
+				C8CF38FE23333E2300CD852C /* main.c */,
+			);
+			path = "Merge Sort";
 			sourceTree = "<group>";
 		};
 		C8F17B7C232A022100108297 /* Selection Sort */ = {
@@ -186,6 +215,23 @@
 			productReference = C8CF38F12332D30B00CD852C /* Quick Sort */;
 			productType = "com.apple.product-type.tool";
 		};
+		C8CF38FB23333E2300CD852C /* Merge Sort */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8CF390223333E2300CD852C /* Build configuration list for PBXNativeTarget "Merge Sort" */;
+			buildPhases = (
+				C8CF38F823333E2300CD852C /* Sources */,
+				C8CF38F923333E2300CD852C /* Frameworks */,
+				C8CF38FA23333E2300CD852C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Merge Sort";
+			productName = "Merge Sort";
+			productReference = C8CF38FC23333E2300CD852C /* Merge Sort */;
+			productType = "com.apple.product-type.tool";
+		};
 		C8F17B7A232A022100108297 /* Selection Sort */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8F17B81232A022100108297 /* Build configuration list for PBXNativeTarget "Selection Sort" */;
@@ -235,6 +281,9 @@
 					C8CF38F02332D30B00CD852C = {
 						CreatedOnToolsVersion = 10.3;
 					};
+					C8CF38FB23333E2300CD852C = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					C8F17B7A232A022100108297 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -259,6 +308,7 @@
 				C8F17B7A232A022100108297 /* Selection Sort */,
 				C8F17B85232A025D00108297 /* Bubble Sort */,
 				C8CF38F02332D30B00CD852C /* Quick Sort */,
+				C8CF38FB23333E2300CD852C /* Merge Sort */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +327,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8CF38F42332D30C00CD852C /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8CF38F823333E2300CD852C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8CF38FF23333E2300CD852C /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +504,24 @@
 			};
 			name = Release;
 		};
+		C8CF390023333E2300CD852C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C8CF390123333E2300CD852C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C8F17B7F232A022100108297 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -508,6 +584,15 @@
 			buildConfigurations = (
 				C8CF38F52332D30C00CD852C /* Debug */,
 				C8CF38F62332D30C00CD852C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8CF390223333E2300CD852C /* Build configuration list for PBXNativeTarget "Merge Sort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8CF390023333E2300CD852C /* Debug */,
+				C8CF390123333E2300CD852C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
