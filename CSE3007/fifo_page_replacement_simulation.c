@@ -20,12 +20,13 @@ struct frame {
 #define FRAME struct frame
 
 void print_frames(FRAME *frames, int f_count) {
-    int iter_index, page_id;
+    int iter_index;
+    char page_disp[20];
     for(iter_index = 0; iter_index < f_count; iter_index++) {
-        page_id = -1;
-        if(frames[iter_index].is_allocated) page_id = frames[iter_index].page_id;
-        printf("| Frame %d | Page %d | %s |\n", frames[iter_index].id, 
-            page_id, (frames[iter_index].is_allocated ? "Allocated" : "Not Allocated"));
+        sprintf(page_disp, "Page%02d", frames[iter_index].page_id);
+        printf("| Frame%04d | %s | %s |\n", frames[iter_index].id, 
+            (frames[iter_index].is_allocated ? page_disp : "NoPage"), 
+            (frames[iter_index].is_allocated ? "✔" : "x"));
     }
 }
 
@@ -62,7 +63,7 @@ void fifo_entry(FRAME *frames, int f_count, PAGE *page) {
 bool is_page_present(FRAME *frames, int f_count, int page_id) {
     int iter_index;
     for(iter_index = 0; iter_index < f_count; iter_index++) {
-        if(frames[iter_index].page_id == page_id) {
+        if(frames[iter_index].is_allocated && frames[iter_index].page_id == page_id) {
             return true;
         }
     }
@@ -84,9 +85,6 @@ int main() {
     for(iter_index = 0; iter_index < p_count; iter_index++) {
         // assign each page an id
         pages[iter_index].id = iter_index;
-    }
-
-    for(iter_index = 0; iter_index < p_count; iter_index++) {
         printf("| Page%d ", pages[iter_index].id);
     }
     printf("|\n\n");
@@ -123,14 +121,16 @@ int main() {
     
     puts("Using FIFO page replacement.");
     fault_count = 0;
+    print_frames(frames, f_count);
     for(iter_index = 0; iter_index < r_count; iter_index++) {
-        // print_frames(frames, f_count);
+        printf("Step %d:\n", iter_index + 1);
         extra_id = page_requirements[iter_index];
         if(!is_page_present(frames, f_count, extra_id)) {
-            fifo_entry(frames, f_count, &pages[extra_id]);
+            fifo_entry(frames, f_count, pages + extra_id);
             fault_count++;
         }
+        print_frames(frames, f_count);
     }
-    printf("Total page faults: %d.\n", fault_count);
+    printf("Total page faults: %d\n", fault_count);
     return 0;
 }
