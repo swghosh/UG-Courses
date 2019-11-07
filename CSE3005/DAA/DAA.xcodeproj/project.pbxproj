@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		C80B17EA235F441600F87968 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C80B17E9235F441600F87968 /* main.c */; };
 		C80B17F0235F443700F87968 /* graph.c in Sources */ = {isa = PBXBuildFile; fileRef = C80B17EF235F443700F87968 /* graph.c */; };
-		C80B17F8235F500900F87968 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C80B17F7235F500900F87968 /* main.c */; };
-		C80B17FE235F52CA00F87968 /* bstree.c in Sources */ = {isa = PBXBuildFile; fileRef = C80B17FD235F52CA00F87968 /* bstree.c */; };
 		C8294B93233C797700DDB915 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8294B92233C797700DDB915 /* main.c */; };
 		C8294BB2233C849A00DDB915 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8294BB1233C849A00DDB915 /* main.c */; };
+		C85590DA2373E266004A7206 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C85590D92373E266004A7206 /* main.c */; };
+		C85590E02373E40D004A7206 /* charset.c in Sources */ = {isa = PBXBuildFile; fileRef = C85590DF2373E40D004A7206 /* charset.c */; };
 		C88AD5BD230E54160088124D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C88AD5BC230E54160088124D /* main.c */; };
 		C8CF38F42332D30C00CD852C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8CF38F32332D30C00CD852C /* main.c */; };
 		C8CF38FF23333E2300CD852C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8CF38FE23333E2300CD852C /* main.c */; };
@@ -49,6 +49,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		C8294BAD233C849A00DDB915 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C85590D52373E266004A7206 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -110,13 +119,14 @@
 		C80B17EE235F443700F87968 /* graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = graph.h; sourceTree = "<group>"; };
 		C80B17EF235F443700F87968 /* graph.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = graph.c; sourceTree = "<group>"; };
 		C80B17F5235F500900F87968 /* Tree Traversal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Tree Traversal"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C80B17F7235F500900F87968 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		C80B17FC235F52CA00F87968 /* bstree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bstree.h; sourceTree = "<group>"; };
-		C80B17FD235F52CA00F87968 /* bstree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bstree.c; sourceTree = "<group>"; };
 		C8294B90233C797700DDB915 /* Counting Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Counting Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8294B92233C797700DDB915 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8294BAF233C849A00DDB915 /* Heap Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Heap Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8294BB1233C849A00DDB915 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C85590D72373E266004A7206 /* Minimum Spanning Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Minimum Spanning Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85590D92373E266004A7206 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C85590DE2373E40D004A7206 /* charset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charset.h; sourceTree = "<group>"; };
+		C85590DF2373E40D004A7206 /* charset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = charset.c; sourceTree = "<group>"; };
 		C88AD5BA230E54160088124D /* Insertion Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Insertion Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88AD5BC230E54160088124D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8CF38F12332D30B00CD852C /* Quick Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Quick Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +162,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C8294BAC233C849A00DDB915 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85590D42373E266004A7206 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -206,16 +223,6 @@
 			path = "Graph Traversal";
 			sourceTree = "<group>";
 		};
-		C80B17F6235F500900F87968 /* Tree Traversal */ = {
-			isa = PBXGroup;
-			children = (
-				C80B17F7235F500900F87968 /* main.c */,
-				C80B17FC235F52CA00F87968 /* bstree.h */,
-				C80B17FD235F52CA00F87968 /* bstree.c */,
-			);
-			path = "Tree Traversal";
-			sourceTree = "<group>";
-		};
 		C8294B91233C797700DDB915 /* Counting Sort */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +239,16 @@
 			path = "Heap Sort";
 			sourceTree = "<group>";
 		};
+		C85590D82373E266004A7206 /* Minimum Spanning Tree */ = {
+			isa = PBXGroup;
+			children = (
+				C85590D92373E266004A7206 /* main.c */,
+				C85590DE2373E40D004A7206 /* charset.h */,
+				C85590DF2373E40D004A7206 /* charset.c */,
+			);
+			path = "Minimum Spanning Tree";
+			sourceTree = "<group>";
+		};
 		C88AD5A3230E53EC0088124D = {
 			isa = PBXGroup;
 			children = (
@@ -243,7 +260,7 @@
 				C8294B91233C797700DDB915 /* Counting Sort */,
 				C8294BB0233C849A00DDB915 /* Heap Sort */,
 				C80B17E8235F441600F87968 /* Graph Traversal */,
-				C80B17F6235F500900F87968 /* Tree Traversal */,
+				C85590D82373E266004A7206 /* Minimum Spanning Tree */,
 				C88AD5AD230E53EC0088124D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -260,6 +277,7 @@
 				C8294BAF233C849A00DDB915 /* Heap Sort */,
 				C80B17E7235F441600F87968 /* Graph Traversal */,
 				C80B17F5235F500900F87968 /* Tree Traversal */,
+				C85590D72373E266004A7206 /* Minimum Spanning Tree */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,6 +393,23 @@
 			productReference = C8294BAF233C849A00DDB915 /* Heap Sort */;
 			productType = "com.apple.product-type.tool";
 		};
+		C85590D62373E266004A7206 /* Minimum Spanning Tree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85590DB2373E266004A7206 /* Build configuration list for PBXNativeTarget "Minimum Spanning Tree" */;
+			buildPhases = (
+				C85590D32373E266004A7206 /* Sources */,
+				C85590D42373E266004A7206 /* Frameworks */,
+				C85590D52373E266004A7206 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Minimum Spanning Tree";
+			productName = "Minimum Spanning Tree";
+			productReference = C85590D72373E266004A7206 /* Minimum Spanning Tree */;
+			productType = "com.apple.product-type.tool";
+		};
 		C88AD5B9230E54160088124D /* Insertion Sort */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C88AD5BE230E54160088124D /* Build configuration list for PBXNativeTarget "Insertion Sort" */;
@@ -481,6 +516,9 @@
 					C8294BAE233C849A00DDB915 = {
 						CreatedOnToolsVersion = 10.3;
 					};
+					C85590D62373E266004A7206 = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					C88AD5B9230E54160088124D = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -519,6 +557,7 @@
 				C8294BAE233C849A00DDB915 /* Heap Sort */,
 				C80B17E6235F441600F87968 /* Graph Traversal */,
 				C80B17F4235F500900F87968 /* Tree Traversal */,
+				C85590D62373E266004A7206 /* Minimum Spanning Tree */,
 			);
 		};
 /* End PBXProject section */
@@ -537,8 +576,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C80B17FE235F52CA00F87968 /* bstree.c in Sources */,
-				C80B17F8235F500900F87968 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +592,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8294BB2233C849A00DDB915 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85590D32373E266004A7206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85590E02373E40D004A7206 /* charset.c in Sources */,
+				C85590DA2373E266004A7206 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +719,26 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C85590DC2373E266004A7206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C85590DD2373E266004A7206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -913,6 +979,15 @@
 			buildConfigurations = (
 				C8294BB3233C849A00DDB915 /* Debug */,
 				C8294BB4233C849A00DDB915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85590DB2373E266004A7206 /* Build configuration list for PBXNativeTarget "Minimum Spanning Tree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85590DC2373E266004A7206 /* Debug */,
+				C85590DD2373E266004A7206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
