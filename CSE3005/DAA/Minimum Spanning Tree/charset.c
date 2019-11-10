@@ -9,7 +9,7 @@
 #include "charset.h"
 
 void init(CHARSET *cs) {
-    cs->presence = calloc(SET_MAX, sizeof(bool));
+    cs->presence = calloc(CHARSET_MAX, sizeof(bool));
 }
 void reinit(CHARSET *cs) {
     free(cs->presence);
@@ -18,9 +18,21 @@ void reinit(CHARSET *cs) {
 void insert(CHARSET *cs, char item) {
     cs->presence[item] = true;
 }
-void delete(CHARSET *cs, char item) {
+void remove(CHARSET *cs, char item) {
     cs->presence[item] = false;
 }
 bool contains(CHARSET *cs, char item) {
     return cs->presence[item];
 }
+
+CHARSET *difference(CHARSET *cs1, CHARSET *cs2) {
+    CHARSET *diff;
+    diff = malloc(sizeof(CHARSET));
+    init(diff);
+    
+    int iter;
+    for(iter = 0; iter < CHARSET_MAX; iter++) {
+        diff->presence[iter] = cs1->presence[iter] - cs2->presence[iter];
+    }
+}
+

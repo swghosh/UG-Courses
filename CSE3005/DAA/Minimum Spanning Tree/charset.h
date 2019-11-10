@@ -21,17 +21,18 @@
 // vertices in the graph for use with
 // Prim's algorithm
 
-#define SET_MAX 256
-
 struct charset {
     bool *presence;
 };
 #define CHARSET struct charset
+#define CHARSET_MAX 256
 
 void init(CHARSET *cs);
 void reinit(CHARSET *cs);
 void insert(CHARSET *cs, char item);
-void delete(CHARSET *cs, char item);
+void remove(CHARSET *cs, char item);
 bool contains(CHARSET *cs, char item);
+
+CHARSET *difference(CHARSET *cs1, CHARSET *cs2);
 
 #endif /* charset_h */
