@@ -28,25 +28,28 @@ void permute(TYPE *prefix, TYPE *remaining, int pre_len, int rem_len, void (*cal
     // base case
     if(rem_len == 0) {
         (*callback)(prefix, pre_len);
-        return;
+    }
+    else {
+        int i;
+        TYPE *rem_copy, rem_copy_len;
+        TYPE *pre_copy, pre_copy_len;
+        for(i = 0; i < rem_len; i++) {
+            pre_copy = copy_array(prefix, pre_len);
+            pre_copy_len = pre_len;
+            pre_copy[pre_copy_len] = remaining[i];
+            pre_copy_len++;
+
+            rem_copy = copy_array(remaining, rem_len);
+            rem_copy_len = rem_len;
+            swap(rem_copy + i, rem_copy + rem_copy_len - 1);
+            rem_copy_len--;
+
+            permute(pre_copy, rem_copy, pre_copy_len, rem_copy_len, callback);
+        }
     }
 
-    int i;
-    TYPE *rem_copy, rem_copy_len;
-    TYPE *pre_copy, pre_copy_len;
-    for(i = 0; i < rem_len; i++) {
-        pre_copy = copy_array(prefix, pre_len);
-        pre_copy_len = pre_len;
-        pre_copy[pre_copy_len] = remaining[i];
-        pre_copy_len++;
-
-        rem_copy = copy_array(remaining, rem_len);
-        rem_copy_len = rem_len;
-        swap(rem_copy + i, rem_copy + rem_copy_len - 1);
-        rem_copy_len--;
-
-        permute(pre_copy, rem_copy, pre_copy_len, rem_copy_len, callback);
-    }
+    free(remaining);
+    free(prefix);
 }
 
 // int main() {
