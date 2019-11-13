@@ -36,7 +36,7 @@ int prims(int **graph, int len_vertices, int start_vertex) {
     
     int ctr = 0;
     int cost = 0;
-    while(ctr < len_vertices) {
+    while(true) {
         v_s = difference(&v, &s);
         min = INT_MAX;
         for(iter1 = 0; iter1 < len_vertices; iter1++) {
@@ -53,9 +53,11 @@ int prims(int **graph, int len_vertices, int start_vertex) {
         }
         insert(&s, tracker % len_vertices);
         insert(&tree, tracker);
+        free(v_s);
+        if(min == INT_MAX) break;
+        
         cost += min;
         ctr++;
-        free(v_s);
     }
     
     
@@ -72,7 +74,7 @@ int prims(int **graph, int len_vertices, int start_vertex) {
 
 int main() {
     int **graph, len_vertices;
-    printf("Number of vertices? -> (integer expected) ");
+    printf("Number of vertices? (integer expected) -> ");
     scanf("%d", &len_vertices);
     
     int iter_a, iter_b;
@@ -92,7 +94,7 @@ int main() {
     
     int cost;
     cost = prims(graph, len_vertices, 0);
-    printf("Spanning cost: %d", cost);
+    printf("Spanning cost: %d\n", cost);
     
     return 0;
 }
