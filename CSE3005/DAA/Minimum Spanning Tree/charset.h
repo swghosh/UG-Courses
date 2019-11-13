@@ -30,9 +30,9 @@ struct charset {
 void init(CHARSET *cs);
 void reinit(CHARSET *cs);
 void insert(CHARSET *cs, char item);
-void remove(CHARSET *cs, char item);
 bool contains(CHARSET *cs, char item);
 
 CHARSET *difference(CHARSET *cs1, CHARSET *cs2);
+int element(CHARSET *cs, int position);
 
 #endif /* charset_h */
