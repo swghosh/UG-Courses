@@ -1,18 +1,18 @@
 #include "permute.h"
 
-TYPE *copy_array(TYPE *array, TYPE len) {
+TYPE *copy_array(TYPE *array, int len) {
     int i;
     TYPE *new;
     // whenever copying an array, allow 
     // allocation of 1 extra integer
     new = malloc(sizeof(TYPE) * (len + 1)); 
     for(i = 0; i < len; i++) {
-        new[i] = array[i];
+        *(new + i) = *(array + i);
     }
     return new; // allocated memory space can hold (len + 1) integers
 }
 
-void print_array(int *array, int len) {
+void print_int_array(int *array, int len) {
     int i;
     for(i = 0; i < len; i++) printf("| %d |", array[i]);
     puts("");

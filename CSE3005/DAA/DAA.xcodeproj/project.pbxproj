@@ -14,6 +14,8 @@
 		C85590DA2373E266004A7206 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C85590D92373E266004A7206 /* main.c */; };
 		C85590E02373E40D004A7206 /* charset.c in Sources */ = {isa = PBXBuildFile; fileRef = C85590DF2373E40D004A7206 /* charset.c */; };
 		C88AD5BD230E54160088124D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C88AD5BC230E54160088124D /* main.c */; };
+		C8A3A4E9237CB4E400344433 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8A3A4E8237CB4E400344433 /* main.c */; };
+		C8A3A4EF237CB50E00344433 /* sort.c in Sources */ = {isa = PBXBuildFile; fileRef = C8A3A4EE237CB50E00344433 /* sort.c */; };
 		C8CF38F42332D30C00CD852C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8CF38F32332D30C00CD852C /* main.c */; };
 		C8CF38FF23333E2300CD852C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8CF38FE23333E2300CD852C /* main.c */; };
 		C8F17B7E232A022100108297 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8F17B7D232A022100108297 /* main.c */; };
@@ -67,6 +69,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		C88AD5B8230E54160088124D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C8A3A4E4237CB4E400344433 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -129,6 +140,10 @@
 		C85590DF2373E40D004A7206 /* charset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = charset.c; sourceTree = "<group>"; };
 		C88AD5BA230E54160088124D /* Insertion Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Insertion Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88AD5BC230E54160088124D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C8A3A4E6237CB4E400344433 /* Radix Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Radix Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A3A4E8237CB4E400344433 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C8A3A4ED237CB50E00344433 /* sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sort.h; sourceTree = "<group>"; };
+		C8A3A4EE237CB50E00344433 /* sort.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sort.c; sourceTree = "<group>"; };
 		C8CF38F12332D30B00CD852C /* Quick Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Quick Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CF38F32332D30C00CD852C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8CF38FC23333E2300CD852C /* Merge Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Merge Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +191,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C88AD5B7230E54160088124D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A3A4E3237CB4E400344433 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,6 +283,7 @@
 				C8294BB0233C849A00DDB915 /* Heap Sort */,
 				C80B17E8235F441600F87968 /* Graph Traversal */,
 				C85590D82373E266004A7206 /* Minimum Spanning Tree */,
+				C8A3A4E7237CB4E400344433 /* Radix Sort */,
 				C88AD5AD230E53EC0088124D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -278,6 +301,7 @@
 				C80B17E7235F441600F87968 /* Graph Traversal */,
 				C80B17F5235F500900F87968 /* Tree Traversal */,
 				C85590D72373E266004A7206 /* Minimum Spanning Tree */,
+				C8A3A4E6237CB4E400344433 /* Radix Sort */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -288,6 +312,16 @@
 				C88AD5BC230E54160088124D /* main.c */,
 			);
 			path = "Insertion Sort";
+			sourceTree = "<group>";
+		};
+		C8A3A4E7237CB4E400344433 /* Radix Sort */ = {
+			isa = PBXGroup;
+			children = (
+				C8A3A4E8237CB4E400344433 /* main.c */,
+				C8A3A4ED237CB50E00344433 /* sort.h */,
+				C8A3A4EE237CB50E00344433 /* sort.c */,
+			);
+			path = "Radix Sort";
 			sourceTree = "<group>";
 		};
 		C8CF38F22332D30C00CD852C /* Quick Sort */ = {
@@ -427,6 +461,23 @@
 			productReference = C88AD5BA230E54160088124D /* Insertion Sort */;
 			productType = "com.apple.product-type.tool";
 		};
+		C8A3A4E5237CB4E400344433 /* Radix Sort */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8A3A4EC237CB4E400344433 /* Build configuration list for PBXNativeTarget "Radix Sort" */;
+			buildPhases = (
+				C8A3A4E2237CB4E400344433 /* Sources */,
+				C8A3A4E3237CB4E400344433 /* Frameworks */,
+				C8A3A4E4237CB4E400344433 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Radix Sort";
+			productName = "Radix Sort";
+			productReference = C8A3A4E6237CB4E400344433 /* Radix Sort */;
+			productType = "com.apple.product-type.tool";
+		};
 		C8CF38F02332D30B00CD852C /* Quick Sort */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8CF38F72332D30C00CD852C /* Build configuration list for PBXNativeTarget "Quick Sort" */;
@@ -522,6 +573,9 @@
 					C88AD5B9230E54160088124D = {
 						CreatedOnToolsVersion = 10.3;
 					};
+					C8A3A4E5237CB4E400344433 = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					C8CF38F02332D30B00CD852C = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -558,6 +612,7 @@
 				C80B17E6235F441600F87968 /* Graph Traversal */,
 				C80B17F4235F500900F87968 /* Tree Traversal */,
 				C85590D62373E266004A7206 /* Minimum Spanning Tree */,
+				C8A3A4E5237CB4E400344433 /* Radix Sort */,
 			);
 		};
 /* End PBXProject section */
@@ -609,6 +664,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C88AD5BD230E54160088124D /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A3A4E2237CB4E400344433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A3A4E9237CB4E400344433 /* main.c in Sources */,
+				C8A3A4EF237CB50E00344433 /* sort.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +936,26 @@
 			};
 			name = Release;
 		};
+		C8A3A4EA237CB4E400344433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C8A3A4EB237CB4E400344433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C8CF38F52332D30C00CD852C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1006,6 +1090,15 @@
 			buildConfigurations = (
 				C88AD5BF230E54160088124D /* Debug */,
 				C88AD5C0230E54160088124D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8A3A4EC237CB4E400344433 /* Build configuration list for PBXNativeTarget "Radix Sort" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8A3A4EA237CB4E400344433 /* Debug */,
+				C8A3A4EB237CB4E400344433 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
