@@ -11,7 +11,7 @@
 
 void sort(float *array, int *array1, int *array2, int length);
 
-int main(int argc, const char * argv[]) {
+int main() {
     int *weights, *costs;
     float *v;
     int n, capacity;
