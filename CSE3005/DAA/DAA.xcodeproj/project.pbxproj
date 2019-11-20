@@ -11,6 +11,7 @@
 		C80B17F0235F443700F87968 /* graph.c in Sources */ = {isa = PBXBuildFile; fileRef = C80B17EF235F443700F87968 /* graph.c */; };
 		C8294B93233C797700DDB915 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8294B92233C797700DDB915 /* main.c */; };
 		C8294BB2233C849A00DDB915 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8294BB1233C849A00DDB915 /* main.c */; };
+		C85457422385D1240075EFBF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C85457412385D1240075EFBF /* main.c */; };
 		C85590DA2373E266004A7206 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C85590D92373E266004A7206 /* main.c */; };
 		C85590E02373E40D004A7206 /* charset.c in Sources */ = {isa = PBXBuildFile; fileRef = C85590DF2373E40D004A7206 /* charset.c */; };
 		C88AD5BD230E54160088124D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C88AD5BC230E54160088124D /* main.c */; };
@@ -51,6 +52,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		C8294BAD233C849A00DDB915 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C854573D2385D1240075EFBF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -134,6 +144,8 @@
 		C8294B92233C797700DDB915 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8294BAF233C849A00DDB915 /* Heap Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Heap Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8294BB1233C849A00DDB915 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C854573F2385D1240075EFBF /* Knapsack Problem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Knapsack Problem"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85457412385D1240075EFBF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C85590D72373E266004A7206 /* Minimum Spanning Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Minimum Spanning Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85590D92373E266004A7206 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C85590DE2373E40D004A7206 /* charset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charset.h; sourceTree = "<group>"; };
@@ -177,6 +189,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C8294BAC233C849A00DDB915 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C854573C2385D1240075EFBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,6 +280,14 @@
 			path = "Heap Sort";
 			sourceTree = "<group>";
 		};
+		C85457402385D1240075EFBF /* Knapsack Problem */ = {
+			isa = PBXGroup;
+			children = (
+				C85457412385D1240075EFBF /* main.c */,
+			);
+			path = "Knapsack Problem";
+			sourceTree = "<group>";
+		};
 		C85590D82373E266004A7206 /* Minimum Spanning Tree */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +311,7 @@
 				C80B17E8235F441600F87968 /* Graph Traversal */,
 				C85590D82373E266004A7206 /* Minimum Spanning Tree */,
 				C8A3A4E7237CB4E400344433 /* Radix Sort */,
+				C85457402385D1240075EFBF /* Knapsack Problem */,
 				C88AD5AD230E53EC0088124D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -302,6 +330,7 @@
 				C80B17F5235F500900F87968 /* Tree Traversal */,
 				C85590D72373E266004A7206 /* Minimum Spanning Tree */,
 				C8A3A4E6237CB4E400344433 /* Radix Sort */,
+				C854573F2385D1240075EFBF /* Knapsack Problem */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -425,6 +454,23 @@
 			name = "Heap Sort";
 			productName = "Heap Sort";
 			productReference = C8294BAF233C849A00DDB915 /* Heap Sort */;
+			productType = "com.apple.product-type.tool";
+		};
+		C854573E2385D1240075EFBF /* Knapsack Problem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85457452385D1240075EFBF /* Build configuration list for PBXNativeTarget "Knapsack Problem" */;
+			buildPhases = (
+				C854573B2385D1240075EFBF /* Sources */,
+				C854573C2385D1240075EFBF /* Frameworks */,
+				C854573D2385D1240075EFBF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Knapsack Problem";
+			productName = "Knapsack Problem";
+			productReference = C854573F2385D1240075EFBF /* Knapsack Problem */;
 			productType = "com.apple.product-type.tool";
 		};
 		C85590D62373E266004A7206 /* Minimum Spanning Tree */ = {
@@ -567,6 +613,9 @@
 					C8294BAE233C849A00DDB915 = {
 						CreatedOnToolsVersion = 10.3;
 					};
+					C854573E2385D1240075EFBF = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					C85590D62373E266004A7206 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -613,6 +662,7 @@
 				C80B17F4235F500900F87968 /* Tree Traversal */,
 				C85590D62373E266004A7206 /* Minimum Spanning Tree */,
 				C8A3A4E5237CB4E400344433 /* Radix Sort */,
+				C854573E2385D1240075EFBF /* Knapsack Problem */,
 			);
 		};
 /* End PBXProject section */
@@ -647,6 +697,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8294BB2233C849A00DDB915 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C854573B2385D1240075EFBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85457422385D1240075EFBF /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +841,26 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C85457432385D1240075EFBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C85457442385D1240075EFBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1063,6 +1141,15 @@
 			buildConfigurations = (
 				C8294BB3233C849A00DDB915 /* Debug */,
 				C8294BB4233C849A00DDB915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85457452385D1240075EFBF /* Build configuration list for PBXNativeTarget "Knapsack Problem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85457432385D1240075EFBF /* Debug */,
+				C85457442385D1240075EFBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
