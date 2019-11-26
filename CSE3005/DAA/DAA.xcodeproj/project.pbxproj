@@ -17,6 +17,7 @@
 		C85590E02373E40D004A7206 /* charset.c in Sources */ = {isa = PBXBuildFile; fileRef = C85590DF2373E40D004A7206 /* charset.c */; };
 		C88AD5BD230E54160088124D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C88AD5BC230E54160088124D /* main.c */; };
 		C8A37E90238D65CD00059A37 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8A37E8F238D65CD00059A37 /* main.c */; };
+		C8A37E9B238DC57200059A37 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8A37E9A238DC57200059A37 /* main.c */; };
 		C8A3A4E9237CB4E400344433 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8A3A4E8237CB4E400344433 /* main.c */; };
 		C8A3A4EF237CB50E00344433 /* sort.c in Sources */ = {isa = PBXBuildFile; fileRef = C8A3A4EE237CB50E00344433 /* sort.c */; };
 		C8CF38F42332D30C00CD852C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C8CF38F32332D30C00CD852C /* main.c */; };
@@ -107,6 +108,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		C8A37E96238DC57100059A37 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		C8A3A4E4237CB4E400344433 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,6 +186,8 @@
 		C88AD5BC230E54160088124D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8A37E8D238D65CD00059A37 /* Kruskals MST */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Kruskals MST"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A37E8F238D65CD00059A37 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C8A37E98238DC57100059A37 /* Queens Problem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Queens Problem"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8A37E9A238DC57200059A37 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8A3A4E6237CB4E400344433 /* Radix Sort */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Radix Sort"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A3A4E8237CB4E400344433 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C8A3A4ED237CB50E00344433 /* sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sort.h; sourceTree = "<group>"; };
@@ -248,6 +260,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C8A37E8A238D65CD00059A37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A37E95238DC57100059A37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,6 +379,7 @@
 				C85457402385D1240075EFBF /* Knapsack Problem */,
 				C854574E2385DBC10075EFBF /* Travelling Salesman Problem */,
 				C8A37E8E238D65CD00059A37 /* Kruskals MST */,
+				C8A37E99238DC57200059A37 /* Queens Problem */,
 				C88AD5AD230E53EC0088124D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -381,6 +401,7 @@
 				C854573F2385D1240075EFBF /* Knapsack Problem */,
 				C854574D2385DBC10075EFBF /* Travelling Salesman Problem */,
 				C8A37E8D238D65CD00059A37 /* Kruskals MST */,
+				C8A37E98238DC57100059A37 /* Queens Problem */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,6 +420,14 @@
 				C8A37E8F238D65CD00059A37 /* main.c */,
 			);
 			path = "Kruskals MST";
+			sourceTree = "<group>";
+		};
+		C8A37E99238DC57200059A37 /* Queens Problem */ = {
+			isa = PBXGroup;
+			children = (
+				C8A37E9A238DC57200059A37 /* main.c */,
+			);
+			path = "Queens Problem";
 			sourceTree = "<group>";
 		};
 		C8A3A4E7237CB4E400344433 /* Radix Sort */ = {
@@ -599,6 +628,23 @@
 			productReference = C8A37E8D238D65CD00059A37 /* Kruskals MST */;
 			productType = "com.apple.product-type.tool";
 		};
+		C8A37E97238DC57100059A37 /* Queens Problem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8A37E9C238DC57200059A37 /* Build configuration list for PBXNativeTarget "Queens Problem" */;
+			buildPhases = (
+				C8A37E94238DC57100059A37 /* Sources */,
+				C8A37E95238DC57100059A37 /* Frameworks */,
+				C8A37E96238DC57100059A37 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Queens Problem";
+			productName = "Queens Problem";
+			productReference = C8A37E98238DC57100059A37 /* Queens Problem */;
+			productType = "com.apple.product-type.tool";
+		};
 		C8A3A4E5237CB4E400344433 /* Radix Sort */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8A3A4EC237CB4E400344433 /* Build configuration list for PBXNativeTarget "Radix Sort" */;
@@ -721,6 +767,9 @@
 					C8A37E8C238D65CD00059A37 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
+					C8A37E97238DC57100059A37 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					C8A3A4E5237CB4E400344433 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -764,6 +813,7 @@
 				C854573E2385D1240075EFBF /* Knapsack Problem */,
 				C854574C2385DBC10075EFBF /* Travelling Salesman Problem */,
 				C8A37E8C238D65CD00059A37 /* Kruskals MST */,
+				C8A37E97238DC57100059A37 /* Queens Problem */,
 			);
 		};
 /* End PBXProject section */
@@ -839,6 +889,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8A37E90238D65CD00059A37 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A37E94238DC57100059A37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8A37E9B238DC57200059A37 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1173,6 +1231,24 @@
 			};
 			name = Release;
 		};
+		C8A37E9D238DC57200059A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C8A37E9E238DC57200059A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C8A3A4EA237CB4E400344433 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1354,6 +1430,15 @@
 			buildConfigurations = (
 				C8A37E92238D65CD00059A37 /* Debug */,
 				C8A37E93238D65CD00059A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8A37E9C238DC57200059A37 /* Build configuration list for PBXNativeTarget "Queens Problem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8A37E9D238DC57200059A37 /* Debug */,
+				C8A37E9E238DC57200059A37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
