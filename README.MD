@@ -20,7 +20,7 @@ This repository will constantly be updated until completion of degree.
 - CSE3007 - Operating Systems
 - CSE2721 - Image Processing
 - CSE2705 - Multivariate Analysis
-- CSE4003 - Artificial Intelligence
+- CSE2022 - Artificial Intelligence Techniques and Methods
 - CSE3001 - Data Warehousing and Data Mining
 
 Course codes are solely in accordance with the B.Tech CSE programme curriculum at [GD Goenka University](http://gdgoenkauniversity.com/schoolofengineering) for batch of 2021 (August 2017 - May 2021 spanned across 8 semesters).
