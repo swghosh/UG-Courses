@@ -27,9 +27,19 @@ costs_recurse(Start, [State | RemainingStates], InitHeap, FinalHeap) :-
     add_to_heap(InitHeap, Cost, State, ResHeap),
     costs_recurse(Start, RemainingStates, ResHeap, FinalHeap).
 
-add(A,B,[A|B]).
+increase_heap(Heap, Cost, IncreasedHeap) :-
+    (
+        empty_heap(Heap), IncreasedHeap = Heap
+    );
+    (
+        get_from_heap(Heap, Pri, Key, Heap1),
+        Total is Cost + Pri,
+        increase_heap(Heap1, Cost, Heap2),
+        add_to_heap(Heap2, Total, Key, IncreasedHeap)
+    ).
 
 bfs(Start, Goal) :-
+    write(Start), write('-->'),
     costs(Start, Costs),
     bfs_recurse(Goal, Costs).
     
@@ -44,7 +54,10 @@ bfs_recurse(Goal, Heap) :-
     (
         get_from_heap(Heap, Cost, Start, Heap1),
         (
-            Start == Goal;
+            (   
+                Start == Goal, 
+                write(Start), write(', Total Cost:'), write(Cost)
+            );
             (
                 write(Start), write('-->'), 
                 costs(Start, Heap2),
@@ -55,13 +68,3 @@ bfs_recurse(Goal, Heap) :-
         )
     ).
 
-increase_heap(Heap, Cost, IncreasedHeap) :-
-    (
-        empty_heap(Heap), IncreasedHeap = Heap
-    );
-    (
-        get_from_heap(Heap, Pri, Key, Heap1),
-        Total is Cost + Pri,
-        increase_heap(Heap1, Cost, Heap2),
-        add_to_heap(Heap2, Total, Key, IncreasedHeap)
-    ).
