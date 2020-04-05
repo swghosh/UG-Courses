@@ -77,8 +77,9 @@ bfs_recurse(Goal, Heap) :-
             (   
                 Start == Goal, 
 
-                % versbose
-                write(Start), write(', Total Cost:'), write(Cost)
+                % verbose
+                write(Start), 
+                write(', Total Cost:'), write(Cost)
             );
             % recursive case
             (
