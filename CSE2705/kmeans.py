@@ -29,12 +29,13 @@ def kmeans(X: np.ndarray, k: int, n_iter: int=10) -> (np.ndarray, np.ndarray):
     init_centroids = X[random_select]
 
     centroids = init_centroids
-    for _ in range(n_iter):
+    for _ in range(n_iter + 1):
         squared_diffs = np.square(X[None, :, :] - centroids[:, None, :])
         euclidean_dists = np.sum(squared_diffs, axis=-1) ** 0.5
         clusters = np.argmin(euclidean_dists, axis=0)
 
         selector = np.arange(k)[:, None] == clusters[None, :]
+        prev_centroids = centroids
         centroids = np.zeros_like(centroids, dtype=np.float32)
         for c in range(k):
             select = selector[c]
@@ -42,4 +43,4 @@ def kmeans(X: np.ndarray, k: int, n_iter: int=10) -> (np.ndarray, np.ndarray):
             mean_points = np.mean(points, axis=0)
             centroids[c] = mean_points
 
-    return centroids, clusters
+    return prev_centroids, clusters
