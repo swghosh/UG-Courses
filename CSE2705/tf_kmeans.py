@@ -18,22 +18,26 @@ def kmeans(X: Union[tf.Tensor, np.ndarray],
 
     clusters = tf.zeros([m, ], dtype=tf.int64)
     centroids = init_centroids
+    prev_centroids = centroids
 
-    for _ in tf.range(n_iter):
+    for _ in tf.range(n_iter + 1):
         squared_diffs = tf.square(X[None, :, :] - centroids[:, None, :])
         euclidean_dists = tf.reduce_sum(squared_diffs, axis=-1) ** 0.5
         clusters = tf.argmin(euclidean_dists, axis=0)
 
         selector = tf.range(k, dtype=tf.int64)[:, None] == clusters[None, :]
         centroids_array = tf.TensorArray(tf.float32, size=k)
+        prev_centroids = centroids
+
         for c in tf.range(k):
             select = selector[c]
             points = X[select]
             mean_points = tf.reduce_mean(points, axis=0)
             centroids_array = centroids_array.write(c, mean_points)
+        
         centroids = centroids_array.stack()
 
-    return centroids, clusters
+    return prev_centroids, clusters
 
 class KMeans:
     @typechecked
