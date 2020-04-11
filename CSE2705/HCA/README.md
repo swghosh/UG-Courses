@@ -6,4 +6,4 @@ In our case, we use data points with a pre-computed matrix of distances between 
 
 ![Dendogram, HCA of Indian Cities](./dendogram.png)
 
-The source code used to perform the clustering and generate the dendogram can be found in this [notebook]("Hierarchial_Clustering_of_Indian_Cities.ipynb").
+The source code used to perform the clustering and generate the dendogram can be found in this [notebook](./Hierarchial_Clustering_of_Indian_Cities.ipynb).
