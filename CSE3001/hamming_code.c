@@ -18,8 +18,8 @@ int main() {
     unsigned int m, r;
     bool *input_data, *output_data;
 
-    unsigned int iter_index, another_index, count, another_count;
-    unsigned int temp;
+    int iter_index, another_index, count, another_count;
+    unsigned int temp, rotor;
 
     printf("How many bits of data do you have? (integer < 10 expected): ");
     scanf("%u", &m);
@@ -32,9 +32,6 @@ int main() {
         if(temp == 0) input_data[iter_index] = false;
         else input_data[iter_index] = true;
     }
-
-    print_bits(input_data, m);
-    printf("\n");
 
     r = R[m];
     output_data = malloc(sizeof(bool) * (m + r));
@@ -52,22 +49,25 @@ int main() {
         }
     }
 
-    print_bits(output_data, m + r);
-    printf("\n");
-
     count = 0;
     for(iter_index = m + r - 1; iter_index >= 0; iter_index--) {
         if(iter_index == (m + r - 1 - (int) pow(2, count) + 1)) {
             
             temp = ~(1 << count);
+            another_count = 0;
             for(another_index = 0; another_index < m + r; another_index++) {
-                if((temp | (another_index + 1)) == UINT_MAX) {
-                    printf("%d\n", another_index + 1);
+                if((temp | (unsigned int)(another_index + 1)) == UINT_MAX) {
+                    rotor = (m + r - 1) - another_index;
+                    if(output_data[rotor]) another_count++;
                 }
             }
 
+            if(another_count % 2 != 0) output_data[iter_index] = true;
             count++;
         }
     }
-    
+
+    printf("Hamming code is: \n");
+    print_bits(output_data, m + r);
+    printf("\n");
 }
