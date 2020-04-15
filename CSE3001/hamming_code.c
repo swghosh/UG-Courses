@@ -70,4 +70,7 @@ int main() {
     printf("Hamming code is: \n");
     print_bits(output_data, m + r);
     printf("\n");
+
+    free(input_data);
+    free(output_data);
 }
