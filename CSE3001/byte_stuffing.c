@@ -65,6 +65,7 @@ int main() {
 
     printf("\n");
     printf("Frames after performing byte stuffing: \n");
+    printf("FLAG is %c. ESC is %c.\n", FLAG, ESC);
     FRAMES f;
     f = byte_stuff(input, len);
     for(iter_index = 0; iter_index < f.len_frames; iter_index++) {
