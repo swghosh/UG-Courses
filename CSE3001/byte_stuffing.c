@@ -71,4 +71,12 @@ int main() {
     for(iter_index = 0; iter_index < f.len_frames; iter_index++) {
         printf("Frame %d: \"%s\"\n", iter_index + 1, f.frames[iter_index]);
     }
+
+    printf("\n");
+    printf("Complete message is: \n");
+    printf("\"");
+    for(iter_index = 0; iter_index < f.len_frames; iter_index++) {
+        printf("%s%c", f.frames[iter_index], FLAG);
+    }
+    printf("\"\n");
 }
