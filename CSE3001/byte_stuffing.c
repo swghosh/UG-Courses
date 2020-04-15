@@ -63,9 +63,11 @@ int main() {
         scanf("%c", input + iter_index);
     }
 
+    printf("\n");
+    printf("Frames after performing byte stuffing: \n");
     FRAMES f;
     f = byte_stuff(input, len);
     for(iter_index = 0; iter_index < f.len_frames; iter_index++) {
-        printf("%s\n", f.frames[iter_index]);
+        printf("Frame %d: \"%s\"\n", iter_index + 1, f.frames[iter_index]);
     }
 }
