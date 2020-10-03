@@ -15,7 +15,7 @@ This repository will constantly be updated until completion of degree.
 - [CSE2018](./CSE2018) - Introduction to R Programming
 - [CSE2019](./CSE2019) - NoSQL Databases
 - [IPT2001](./IPT2001) - Inter Disciplinary Project
-- PET2015 - [Project on Emerging Technological Trends](https://github.com/swghosh/realtime-attendance)
+- PET2015 - 🔗[Project on Emerging Technological Trends](https://github.com/swghosh/realtime-attendance)
 - [CSE3005](./CSE3005) - Design and Analysis of Algorithms
 - [CSE3007](./CSE3007) - Operating Systems
 - [CSE2721](./CSE2721) - Image Processing
@@ -23,7 +23,7 @@ This repository will constantly be updated until completion of degree.
 - [CSE2022](./CSE2022) - Artificial Intelligence Techniques and Methods
 - [CSE3001](./CSE3001) - Data Communications and Computer Networking
 - [CSE3810](./CSE3810) - Artificial Neural Networks
-
+- [CSE4001](./CSE4001) - Compiler Design
 - [Others](./Others)
 - [docs](./docs)
 
