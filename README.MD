@@ -2,9 +2,7 @@
 
 This repository contains my personal course work done during under-graduate studies as a part of partial fulfilment of Bachelor of Technology (B.Tech Computer Science and Engineering) degree. 
 
-Primarily, it will contain the source codes to various programs done as a part of assignments, class and laboratory work. The content has been organised course-wise and uses course codes to identify the different courses.
-
-This repository will constantly be updated until completion of degree.
+Primarily, it contains the source codes to various programs done as a part of assignments, class and laboratory work. The content has been organised course-wise and uses course codes to identify the different courses.
 
 - [CSE1007](./CSE1007) - Introduction to Computer Science 
 - [CSE1003](./CSE1003) - Web Programming through PHP and HTML
